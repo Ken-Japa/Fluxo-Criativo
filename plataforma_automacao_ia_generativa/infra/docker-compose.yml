@@ -1,0 +1,31 @@
+# infra/docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build: ../app_saas/backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ../app_saas/backend/.env
+    depends_on:
+      - db
+
+  frontend:
+    build: ../app_saas/frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../app_saas/frontend/.env.local
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:13
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    env_file:
+      - ../app_saas/backend/.env # Usar o mesmo .env para as credenciais do DB
+
+volumes:
+  db_data:

@@ -1,0 +1,9 @@
+# backend/requirements.txt
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary # Para PostgreSQL
+pydantic
+pydantic-settings
+python-dotenv
+google-generativeai

@@ -1,0 +1,20 @@
+{
+    "client_name": "Nome do Cliente Exemplo",
+    "subniche": "Marketing Digital para Pequenas Empresas",
+    "contact_info": "email@exemplo.com",
+    "public_target": "Pequenos empresários e empreendedores",
+    "tone_of_voice": "Profissional e inspirador",
+    "niche_examples": [
+        "Marketing de Conteúdo",
+        "SEO Local",
+        "Redes Sociais para Negócios"
+    ],
+    "marketing_goals": "Aumentar engajamento e gerar leads",
+    "distribution_channels": ["Instagram", "Facebook", "LinkedIn"],
+    "main_topics": ["Estratégias de Marketing Digital", "Dicas para Pequenas Empresas", "Tendências do Mercado"],
+    "keywords": ["marketing digital", "pequenas empresas", "empreendedorismo", "redes sociais"],
+    "call_to_action": "Visite nosso site para mais dicas!",
+    "restrictions_guidelines": "Evitar linguagem muito técnica, focar em soluções práticas.",
+    "additional_info": "O cliente prefere posts com exemplos reais e cases de sucesso.",
+    "competitors_references": ["Agência X Marketing", "Consultoria Y Digital"]
+}

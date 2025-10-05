@@ -1,0 +1,38 @@
+# .gitignore
+# Ignorar diretórios de módulos de nó
+node_modules/
+
+# Ignorar diretórios de cache de Python
+__pycache__/
+*.pyc
+
+# Ignorar arquivos de ambiente
+.env
+.env.local
+
+# Ignorar arquivos de banco de dados
+*.sqlite
+*.sqlite3
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos de IDE (VS Code)
+.vscode/
+
+# Ignorar arquivos de build do Next.js
+.next/
+out/
+
+# Ignorar arquivos de Terraform
+.terraform/
+*.tfplan
+*.tfstate
+*.tfstate.backup
+
+# Ignorar arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+#Ignorar os docs de orientação do projeto
+docs_projeto/
