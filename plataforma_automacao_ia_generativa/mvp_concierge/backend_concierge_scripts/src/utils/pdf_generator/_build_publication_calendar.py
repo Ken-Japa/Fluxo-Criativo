@@ -15,8 +15,7 @@ def _build_publication_calendar(styles: dict, publication_calendar: list) -> lis
     calendar_story.append(NextPageTemplate('NormalPage'))
     calendar_story.append(PageBreak())
     calendar_story.append(Paragraph("Calendário de Publicação Sugerido", styles['SectionTitle']))
-    calendar_story.append(Spacer(1, 0.3 * inch))
-
+    calendar_story.append(Spacer(1, 21.6))
     if not publication_calendar:
         calendar_story.append(Paragraph("Nenhum calendário de publicação sugerido disponível.", styles['NormalText']))
         return calendar_story
@@ -24,7 +23,7 @@ def _build_publication_calendar(styles: dict, publication_calendar: list) -> lis
     for day_entry in publication_calendar:
         calendar_story.append(Paragraph(day_entry.get('day', 'N/A'), styles['CalendarTitle']))
         for entry in day_entry.get('entries', []):
-            calendar_story.append(Paragraph(f"- {entry.get('time', 'N/A')} - {entry.get('content', 'N/A')}", styles['CalendarEntry']))
-        calendar_story.append(Spacer(1, 0.2 * inch))
+            calendar_story.append(Paragraph(f"Post {entry.get('post_number')}: {entry.get('content', 'N/A')}", styles['CalendarEntry']))
+        calendar_story.append(Spacer(1, 14.4))
 
     return calendar_story

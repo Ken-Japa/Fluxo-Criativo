@@ -22,7 +22,7 @@ def save_content_to_database(brief_data, nome_do_cliente, generated_content, pro
             client_name=nome_do_cliente,
             subniche=subniche,
             brief_data=brief_data,
-            generated_content=json.loads(generated_content), # Convertendo para dict
+            generated_content=generated_content, # Removido json.loads()
             prompt_used=prompt_used_for_content_generation,
             tokens_consumed=tokens_consumed,
             api_cost_usd=api_cost_usd,

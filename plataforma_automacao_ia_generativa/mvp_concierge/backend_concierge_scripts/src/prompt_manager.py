@@ -11,13 +11,14 @@ class PromptManager:
     Gerencia a construção de prompts otimizados para LLMs como o Google Gemini.
     """
 
-    def __init__(self):
+    def __init__(self, client_profile: dict, niche_guidelines: dict):
         """
-        Inicializa o PromptManager.
+        Inicializa o PromptManager com o perfil do cliente e as diretrizes de nicho.
         """
-        pass
+        self.client_profile = client_profile
+        self.niche_guidelines = niche_guidelines
 
-    def build_prompt(self, client_profile: dict, niche_guidelines: dict, content_type: str, weekly_themes: list[str], weekly_goal: str, strategic_analysis: dict = None) -> str:
+    def build_prompt(self, content_type: str, weekly_themes: list[str], weekly_goal: str, strategic_analysis: dict = None) -> str:
         """
         Constrói o prompt completo para a API do Gemini, utilizando a função build_prompt refatorada.
 
@@ -32,7 +33,7 @@ class PromptManager:
         Returns:
             str: O prompt completo formatado para a API do Gemini.
         """
-        return build_prompt(client_profile, niche_guidelines, content_type, weekly_themes, weekly_goal, strategic_analysis)
+        return build_prompt(self.client_profile, self.niche_guidelines, content_type, weekly_themes, weekly_goal, strategic_analysis)
 
     def analyze_briefing_for_strategy(self, client_profile: dict, niche_guidelines: dict = None) -> dict:
         """

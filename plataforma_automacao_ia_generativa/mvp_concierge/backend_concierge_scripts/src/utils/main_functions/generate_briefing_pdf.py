@@ -18,7 +18,7 @@ def generate_briefing_pdf(generated_content, nome_do_cliente, output_dir):
     timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     output_pdf_filename = os.path.join(output_dir, f"briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.pdf")
     try:
-        create_briefing_pdf(generated_content, nome_do_cliente, output_pdf_filename)
+        create_briefing_pdf(generated_content, nome_do_cliente, f"Período: {timestamp}", output_pdf_filename)
         print(f"PDF do briefing gerado em: {output_pdf_filename}")
         return output_pdf_filename
     except Exception as e:

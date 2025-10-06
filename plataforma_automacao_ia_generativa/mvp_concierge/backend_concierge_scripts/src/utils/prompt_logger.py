@@ -1,6 +1,7 @@
 import os
 import json
 from datetime import datetime
+from src.config import BASE_DIR
 
 def log_prompt(client_name: str, prompt: str, log_type: str = "content_generation"):
     """
@@ -11,7 +12,7 @@ def log_prompt(client_name: str, prompt: str, log_type: str = "content_generatio
         prompt (str): O prompt completo enviado para a IA.
         log_type (str): Tipo de log (ex: "content_generation", "image_prompt").
     """
-    log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "logs")
+    log_dir = os.path.join(BASE_DIR, "src", "output_files", "logs_para_IA")
     os.makedirs(log_dir, exist_ok=True)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

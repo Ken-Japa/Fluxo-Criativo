@@ -19,13 +19,24 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
     """
     print("\n--- Gerando Conteúdo para Redes Sociais ---")
     try:
-        # generate_content_for_client espera dicionários para profile e guidelines
-        # Extrair os objetivos individuais dos dicionários em conteudos_semanais
         weekly_themes_list = [item.get("objetivo_do_conteudo_individual", "") for item in conteudos_semanais]
 
+        client_data = {
+            "nome_do_cliente": nome_do_cliente,
+            "informacoes_de_contato": brief_data.get("informacoes_de_contato"),
+            "publico_alvo": brief_data.get("publico_alvo"),
+            "tom_de_voz": brief_data.get("tom_de_voz"),
+            "exemplos_de_nicho": brief_data.get("exemplos_de_nicho")
+        }
+
+        niche_data = {
+            "subnicho": brief_data.get("subnicho"),
+            "exemplos_de_nicho": brief_data.get("exemplos_de_nicho")
+        }
+
         generated_data = generate_content_for_client(
-            client_profile=brief_data, # Usando brief_data como client_profile para este exemplo
-            content_type=tipo_de_conteudo,
+            client_data=client_data,
+            niche_data=niche_data,
             weekly_themes=weekly_themes_list,
             weekly_goal=objetivos_de_marketing
         )

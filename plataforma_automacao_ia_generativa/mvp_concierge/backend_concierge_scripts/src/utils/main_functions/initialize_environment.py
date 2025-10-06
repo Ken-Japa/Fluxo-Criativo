@@ -10,7 +10,7 @@ def initialize_environment():
     init_db()
     print("Banco de dados pronto.")
 
-    output_dir = os.path.join(BASE_DIR, "output_files")
+    output_dir = os.path.join(BASE_DIR, "src", "output_files", "briefings")
     os.makedirs(output_dir, exist_ok=True)
     print(f"Diretório de saída para arquivos gerados: {output_dir}")
     return output_dir
