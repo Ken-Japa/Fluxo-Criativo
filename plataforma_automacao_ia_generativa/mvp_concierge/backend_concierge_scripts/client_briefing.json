@@ -1,23 +1,30 @@
 {
-    "client_name": "Loja do Ken",
-    "subniche": "Venda de produtos para pet",
-    "contact_info": "email@exemplo.com",
-    "public_target": "Donos de pet",
-    "tone_of_voice": "Brincalhão, divertido, amoroso",
-    "niche_examples": [
-        "Marketing de Conteúdo",
-        "SEO Local",
-        "Redes Sociais para Negócios"
-    ],
-    "marketing_goals": "Aumentar engajamento, gerar leads e principalmente vender produtos para pet",
-    "distribution_channels": ["Instagram", "Facebook", "YouTube"],
-    "main_topics": ["Produtos criativos para animais de estimação", "Produtos para pet", "Pais de pet"],
-    "keywords": ["produtos para pet", "cachorros", "gatos", "utilitários"],
-    "call_to_action": "Compre esse produto!",
-    "restrictions_guidelines": "Evitar termos como 'barato' ou 'descartável'. Focar na qualidade e durabilidade.",
-    "additional_info": "Lançamento de novos produtos fantásticos.",
-    "competitors_references": [],
-    "content_type": "instagram_post",
-  "weekly_themes": ["Novo produto para pet", "Compre agora, oferta imperdível"],
-  "weekly_goal": "Gerar novas vendas do produto para pets."
+  "nome_do_cliente": "Tech Solutions Ltda.",
+  "subnicho": "Software de Gestão Empresarial",
+  "publico_alvo": "Pequenas e Médias Empresas (PMEs) no setor de serviços",
+  "tom_de_voz": "Profissional, Inovador e Acessível",
+  "objetivos_de_marketing": "Aumentar o reconhecimento da marca em 20% e gerar 100 novos leads qualificados no próximo trimestre.",
+  "canais_de_distribuicao": ["LinkedIn", "Instagram", "Blog Corporativo", "Email Marketing"],
+  "topicos_principais": ["Otimização de Processos", "Automação de Tarefas", "Gestão Financeira Simplificada", "Produtividade da Equipe"],
+  "palavras_chave": ["software gestão PME", "automação empresarial", "gestão financeira", "produtividade equipe", "soluções tecnológicas"],
+  "chamada_para_acao": "Agende uma demonstração gratuita e descubra como otimizar sua gestão!",
+  "restricoes_e_diretrizes": "Evitar jargões excessivamente técnicos. Focar nos benefícios práticos para o cliente. Usar exemplos reais de sucesso.",
+  "informacoes_adicionais": "A empresa lançará um novo módulo de RH em breve, que deve ser mencionado sutilmente em alguns conteúdos.",
+  "referencias_de_concorrentes": ["SoftwareX (foco em preço)", "GestãoTotal (foco em grandes empresas)"],
+  "referencias_de_estilo_e_formato": "Artigos de blog com 800-1200 palavras, posts de LinkedIn com dicas rápidas e carrosséis no Instagram com infográficos.",
+  "tipo_de_conteudo": "Redes Sociais e Blog",
+  "conteudos_semanais": [
+    {
+      "chamada_para_acao_individual": "Baixe nosso e-book gratuito!",
+      "objetivo_do_conteudo_individual": "Apresentar os 5 pilares da gestão eficiente para PMEs."
+    },
+    {
+      "chamada_para_acao_individual": "Assista ao nosso webinar!",
+      "objetivo_do_conteudo_individual": "Demonstrar como a automação pode economizar tempo e dinheiro."
+    },
+    {
+      "chamada_para_acao_individual": "Solicite um orçamento personalizado!",
+      "objetivo_do_conteudo_individual": "Destacar os benefícios do novo módulo de RH para a gestão de talentos."
+    }
+  ]
 }

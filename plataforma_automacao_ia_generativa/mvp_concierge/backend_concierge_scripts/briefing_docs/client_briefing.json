@@ -1,0 +1,23 @@
+{
+    "nome_do_cliente": "Loja do Ken",
+    "subnicho": "Venda de produtos para pet",
+    "informacoes_de_contato": "email@exemplo.com",
+    "publico_alvo": "Donos de pet",
+    "tom_de_voz": "Brincalhão, divertido, amoroso",
+    "exemplos_de_nicho": [
+        "Marketing de Conteúdo",
+        "SEO Local",
+        "Redes Sociais para Negócios"
+    ],
+    "objetivos_de_marketing": "Aumentar engajamento, gerar leads e principalmente vender produtos para pet",
+    "canais_de_distribuicao": ["Instagram", "Facebook", "YouTube"],
+    "topicos_principais": ["Produtos criativos para animais de estimação", "Produtos para pet", "Pais de pet"],
+    "palavras_chave": ["produtos para pet", "cachorros", "gatos", "utilitários"],
+    "chamada_para_acao": "Compre esse produto!",
+    "restricoes_e_diretrizes": "Evitar termos como 'barato' ou 'descartável'. Focar na qualidade e durabilidade.",
+    "informacoes_adicionais": "Lançamento de novos produtos fantásticos.",
+    "referencias_de_concorrentes": [],
+    "referencias_de_estilo_e_formato": [],
+    "tipo_de_conteudo": [],
+    "conteudos_semanais": []
+}

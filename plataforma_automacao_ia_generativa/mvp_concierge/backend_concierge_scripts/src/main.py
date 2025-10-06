@@ -3,12 +3,13 @@ import json
 from datetime import datetime
 from dotenv import load_dotenv
 
-from .data_storage import init_db, insert_brief, get_client_profile, insert_client_profile
-from .content_generator import generate_content_for_client
-from .pdf_generator import create_briefing_pdf
-from .html_generator import create_briefing_html
-from .utils.briefing_loader import load_briefing_from_json
-from .utils.prompt_logger import log_prompt
+from src.data_storage import init_db, insert_brief, get_client_profile, get_all_briefs, insert_client_profile
+from src.content_generator import generate_content_for_client
+from src.pdf_generator import create_briefing_pdf
+from src.html_generator import create_briefing_html
+from src.utils.briefing_loader import load_briefing_from_json
+from src.utils.prompt_logger import log_prompt
+from src.config import COMPANY_NAME, BASE_DIR
 
 
 # backend_concierge_scripts/main.py
@@ -26,10 +27,55 @@ def main():
     """
     print("\n--- Iniciando Concierge MVP ---")
 
+def validate_briefing_data(brief_data: dict):
+    """
+    Valida os dados do briefing do cliente para garantir que todos os campos obrigatórios estejam presentes
+    e com os tipos corretos.
+
+    Args:
+        brief_data (dict): Dicionário contendo os dados do briefing do cliente.
+
+    Raises:
+        ValueError: Se algum campo obrigatório estiver faltando ou for inválido.
+    """
+    required_fields = {
+        "nome_do_cliente": str,
+        "subnicho": str,
+        "publico_alvo": str,
+        "tom_de_voz": str,
+        "objetivos_de_marketing": str,
+        "chamada_para_acao": str,
+        "tipo_de_conteudo": str,
+        "conteudos_semanais": list
+    }
+
+    for field, expected_type in required_fields.items():
+        if field not in brief_data:
+            raise ValueError(f"Campo obrigatório '{field}' faltando no briefing do cliente.")
+        if not isinstance(brief_data[field], expected_type):
+            raise ValueError(f"Campo '{field}' deve ser do tipo {expected_type.__name__}, mas é {type(brief_data[field]).__name__}.")
+
+    # Validação específica para conteudos_semanais
+    if "conteudos_semanais" in brief_data:
+        if not brief_data["conteudos_semanais"]:
+            raise ValueError("A lista 'conteudos_semanais' não pode estar vazia.")
+        for i, item in enumerate(brief_data["conteudos_semanais"]):
+            if not isinstance(item, dict):
+                raise ValueError(f"Item {i} em 'conteudos_semanais' deve ser um dicionário.")
+            if "objetivo_do_conteudo_individual" not in item:
+                raise ValueError(f"Campo 'objetivo_do_conteudo_individual' faltando no item {i} de 'conteudos_semanais'.")
+            if not isinstance(item["objetivo_do_conteudo_individual"], str):
+                raise ValueError(f"Campo 'objetivo_do_conteudo_individual' no item {i} de 'conteudos_semanais' deve ser uma string.")
+
     # 1. Inicializar o Banco de Dados
     print("Inicializando o banco de dados...")
     init_db()
     print("Banco de dados pronto.")
+
+    # Definir e criar diretório de saída para os arquivos gerados
+    output_dir = os.path.join(BASE_DIR, "output_files")
+    os.makedirs(output_dir, exist_ok=True)
+    print(f"Diretório de saída para arquivos gerados: {output_dir}")
 
     # 2. Coletar Briefing do Cliente a partir de arquivo JSON
     print("\n--- Coleta de Briefing do Cliente (via JSON) ---")
@@ -40,52 +86,65 @@ def main():
         print("Não foi possível carregar os dados do briefing. Encerrando.")
         return
 
-    client_name = brief_data.get("client_name", "")
-    subniche = brief_data.get("subniche", "")
-    contact_info = brief_data.get("contact_info", "")
-    public_target = brief_data.get("public_target", "")
-    tone_of_voice = brief_data.get("tone_of_voice", "")
-    niche_examples = brief_data.get("niche_examples", [])
-    content_type = brief_data.get("content_type", "")
-    weekly_themes = brief_data.get("weekly_themes", [])
-    weekly_goal = brief_data.get("weekly_goal", "")
-
-    if not client_name:
-        print("Erro: 'client_name' não encontrado no arquivo de briefing. Encerrando.")
+    try:
+        validate_briefing_data(brief_data)
+    except ValueError as e:
+        print(f"Erro de validação no briefing: {e}")
         return
 
-    print(f"Briefing carregado para o cliente: {client_name}")
+    nome_do_cliente = brief_data.get("nome_do_cliente", "")
+    subnicho = brief_data.get("subnicho", "")
+    informacoes_de_contato = brief_data.get("informacoes_de_contato", "")
+    publico_alvo = brief_data.get("publico_alvo", "")
+    tom_de_voz = brief_data.get("tom_de_voz", "")
+    exemplos_de_nicho = brief_data.get("exemplos_de_nicho", [])
+    tipo_de_conteudo = brief_data.get("tipo_de_conteudo", "")
+    conteudos_semanais = brief_data.get("conteudos_semanais", [])
+    objetivos_de_marketing = brief_data.get("objetivos_de_marketing", "")
+
+    if not nome_do_cliente:
+        print("Erro: 'nome_do_cliente' não encontrado no arquivo de briefing. Encerrando.")
+        return
+
+    print(f"Briefing carregado para o cliente: {nome_do_cliente}")
 
     # 3. Obter/Criar Perfil do Cliente
-    print(f"\nVerificando perfil para '{client_name}'...")
-    client_profile = get_client_profile(client_name)
+    print(f"\nVerificando perfil para '{nome_do_cliente}'...")
+    client_profile = get_client_profile(nome_do_cliente)
 
     if not client_profile:
-        print(f"Perfil para '{client_name}' não encontrado. Criando novo perfil...")
+        print(f"Perfil para '{nome_do_cliente}' não encontrado. Criando novo perfil...")
         insert_client_profile(
-            client_name=client_name,
-            contact_info=contact_info,
-            public_target=public_target,
-            tone_of_voice=tone_of_voice,
-            niche_examples=niche_examples,
+            client_name=nome_do_cliente,
+            contact_info=informacoes_de_contato,
+            public_target=publico_alvo,
+            tone_of_voice=tom_de_voz,
+            niche_examples=exemplos_de_nicho,
             status='active'
         )
-        client_profile = get_client_profile(client_name) # Recupera o perfil recém-criado
+        client_profile = get_client_profile(nome_do_cliente) # Recupera o perfil recém-criado
         print("Novo perfil de cliente criado.")
     else:
-        print(f"Perfil para '{client_name}' encontrado. Usando perfil existente.")
+        print(f"Perfil para '{nome_do_cliente}' encontrado. Usando perfil existente.")
 
     # 4. Gerar Conteúdo
     print("\n--- Gerando Conteúdo para Redes Sociais ---")
     try:
         # generate_content_for_client espera dicionários para profile e guidelines
+        # Extrair os objetivos individuais dos dicionários em conteudos_semanais
+        weekly_themes_list = [item.get("objetivo_do_conteudo_individual", "") for item in conteudos_semanais]
+
         generated_data = generate_content_for_client(
             client_profile=brief_data, # Usando brief_data como client_profile para este exemplo
-            niche_guidelines={"subniche": subniche, "examples": niche_examples},
-            content_type=content_type,
-            weekly_themes=weekly_themes,
-            weekly_goal=weekly_goal
+            content_type=tipo_de_conteudo,
+            weekly_themes=weekly_themes_list,
+            weekly_goal=objetivos_de_marketing
         )
+
+        if generated_data.get("status") == "error":
+            print(f"Erro ao gerar conteúdo: {generated_data.get("message", "Erro desconhecido")}")
+            return
+
         generated_content = generated_data["generated_content"]
         prompt_used_for_content_generation = generated_data["prompt_sent"]
         tokens_consumed = generated_data["token_usage"]["estimated_input_tokens"]
@@ -93,7 +152,7 @@ def main():
         print("Conteúdo gerado com sucesso!")
 
         # Log do prompt utilizado
-        log_prompt(client_name, prompt_used_for_content_generation, "content_generation")
+        log_prompt(nome_do_cliente, prompt_used_for_content_generation, "content_generation")
 
     except Exception as e:
         print(f"Erro ao gerar conteúdo: {e}")
@@ -101,10 +160,16 @@ def main():
 
     # 5. Salvar Briefing e Conteúdo no Banco de Dados
     print("\nSalvando briefing e conteúdo no banco de dados...")
+    # Usar um formato de data/hora mais detalhado para evitar sobrescrita
+    timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     delivery_date = datetime.now().strftime('%Y-%m-%d')
+
+    # Adicionar a data de entrega ao conteúdo gerado para uso no HTML
+    generated_content["generation_date"] = delivery_date
+
     insert_brief(
-        client_name=client_name,
-        subniche=subniche,
+        client_name=nome_do_cliente,
+        subniche=subnicho,
         brief_data=brief_data,
         generated_content=generated_content,
         prompt_used=prompt_used_for_content_generation,
@@ -112,13 +177,25 @@ def main():
         api_cost_usd=api_cost_usd,
         delivery_date=delivery_date
     )
+    print(f"Briefing para '{nome_do_cliente}' inserido com sucesso.")
     print("Briefing e conteúdo salvos no DB.")
+
+    # Verificar se os dados foram realmente salvos
+    all_briefs = get_all_briefs()
+    print("\n--- Verificando dados no banco de dados ---")
+    if all_briefs:
+        print(f"Total de {len(all_briefs)} briefings encontrados no DB.")
+        for brief in all_briefs:
+            print(f"  - ID: {brief['id']}, Cliente: {brief['client_name']}, Subnicho: {brief['subniche']}")
+    else:
+        print("Nenhum briefing encontrado no DB.")
+    print("------------------------------------------")
 
     # 6. Gerar PDF
     print("\n--- Gerando PDF do Briefing ---")
-    output_pdf_filename = f"briefing_{client_name.replace(' ', '_')}_{delivery_date}.pdf"
+    output_pdf_filename = os.path.join(output_dir, f"briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.pdf")
     try:
-        create_briefing_pdf(generated_content, client_name, output_pdf_filename)
+        create_briefing_pdf(generated_content, nome_do_cliente, output_pdf_filename)
         print(f"PDF do briefing gerado em: {output_pdf_filename}")
     except Exception as e:
         print(f"Erro ao gerar PDF: {e}")
@@ -126,9 +203,9 @@ def main():
 
     # 7. Gerar HTML
     print("\n--- Gerando Relatório HTML ---")
-    output_html_filename = f"briefing_{client_name.replace(' ', '_')}_{delivery_date}.html"
+    output_html_filename = os.path.join(output_dir, f"briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.html")
     try:
-        create_briefing_html(generated_content, client_name, output_html_filename)
+        create_briefing_html(generated_content, nome_do_cliente, output_html_filename)
         print(f"Relatório HTML gerado em: {output_html_filename}")
     except Exception as e:
         print(f"Erro ao gerar HTML: {e}")

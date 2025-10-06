@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 def create_briefing_html(content_json: dict, client_name: str, output_filename: str = "briefing.html"):
     """
@@ -11,6 +12,13 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         client_name (str): O nome do cliente para o qual o briefing está sendo gerado.
         output_filename (str): O nome do arquivo HTML de saída. Padrão é "briefing.html".
     """
+    # Determine the generation date
+    generation_date_str = content_json.get("generation_date")
+    if not generation_date_str:
+        generation_date_str = content_json.get("generated_content", {}).get("generation_date")
+    if not generation_date_str:
+        generation_date_str = datetime.now().strftime("%d/%m/%Y")
+
     html_content = f"""
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -39,7 +47,7 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         <div class="cover">
             <h1>Briefing de Conteúdo Profissional</h1>
             <p>Para: {client_name}</p>
-            <p>Data: {content_json.get("generation_date", "N/A")}</p>
+            <p>Data: {generation_date_str}</p>
         </div>
 
         <h2>Visão Geral do Conteúdo</h2>
@@ -51,7 +59,7 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
     for i, post in enumerate(content_json.get("posts", [])):
         html_content += f"""
         <div class="post-section">
-            <h3>Post #{i + 1}: {post.get("legenda_principal", "Sem Título")}</h3>
+            <h3>Post #{i + 1}: {post.get("titulo", "Sem Título")}</h3>
             <p><strong>Legenda:</strong> {post.get("legenda_principal", "N/A")}</p>
             <p><strong>Variações:</strong></p>
             <ul>
@@ -75,7 +83,7 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
 
     html_content += """
         <div class="footer">
-            <p>&copy; 2023 Gerador de Conteúdo IA. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Conteúdo gerado por Fluxo Criativo. Todos os direitos reservados.</p>
         </div>
     </div>
 </body>

@@ -1,29 +1,28 @@
 --- Prompt Log (content_generation) ---
 Cliente: Loja do Ken
-Data/Hora: 2025-10-05 21:18:44
+Data/Hora: 2025-10-05 23:17:37
 -------------------------------------
 
 Você é um copywriter especializado em mídias sociais. para Venda de produtos para pet. Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente.
 
-Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para instagram_post.
+Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para [].
 
 **Perfil do Cliente:**
 - Nome do Cliente: Loja do Ken
 - Subnicho: Venda de produtos para pet
 - Tom de Voz: Brincalhão, divertido, amoroso
 - Público-Alvo: Donos de pet
-- Exemplos de Nicho: Marketing de Conteúdo, SEO Local, Redes Sociais para Negócios
 - Objetivos de Marketing: Aumentar engajamento, gerar leads e principalmente vender produtos para pet
+- Exemplos de Nicho: Marketing de Conteúdo, SEO Local, Redes Sociais para Negócios
 - Canais de Distribuição: Instagram, Facebook, YouTube
 - Tópicos Principais: Produtos criativos para animais de estimação, Produtos para pet, Pais de pet
 - Palavras-Chave: produtos para pet, cachorros, gatos, utilitários
 - Chamada para Ação (CTA): Compre esse produto!
-- Restrições/Diretrizes: Evitar termos como 'barato' ou 'descartável'. Focar na qualidade e durabilidade.
+- Restrições e Diretrizes: Evitar termos como 'barato' ou 'descartável'. Focar na qualidade e durabilidade.
 - Informações Adicionais: Lançamento de novos produtos fantásticos.
 
 **Contexto Semanal:**
-- Temas da Semana: Novo produto para pet, Compre agora, oferta imperdível
-- Objetivo Semanal: Gerar novas vendas do produto para pets.
+- Objetivo Semanal: Aumentar engajamento, gerar leads e principalmente vender produtos para pet
 
 **Instruções de Formato:**
 Gere 5 ideias de posts. Para cada post, inclua:

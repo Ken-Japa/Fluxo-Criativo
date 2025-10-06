@@ -1,14 +1,29 @@
 import sqlite3
 import json
+import os # Importar o módulo os
 from datetime import datetime
 
-DATABASE_PATH = 'data/db.sqlite'
+# Construir o caminho absoluto para o diretório 'data'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+DATABASE_PATH = os.path.join(DATA_DIR, 'db.sqlite')
 
 def init_db():
     """
     Conecta-se ao banco de dados SQLite e cria as tabelas 'client_briefs' e 'client_profiles'
-    se elas não existirem.
+    se elas não existirem. Garante que o diretório 'data' exista.
     """
+    print(f"[DEBUG] BASE_DIR: {BASE_DIR}")
+    print(f"[DEBUG] DATA_DIR: {DATA_DIR}")
+    print(f"[DEBUG] DATABASE_PATH: {DATABASE_PATH}")
+    # Criar o diretório 'data' se ele não existir
+    try:
+        os.makedirs(DATA_DIR, exist_ok=True)
+        print(f"[DEBUG] Diretório 'data' criado ou já existente: {DATA_DIR}")
+    except Exception as e:
+        print(f"[ERROR] Erro ao criar diretório 'data': {e}")
+        raise # Re-raise a exceção para não mascarar o erro
+
     conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
 
@@ -163,6 +178,32 @@ def get_client_profile(client_name: str) -> dict:
         }
     return None
 
+def get_all_briefs() -> list:
+    """
+    Retorna todos os briefings e conteúdos gerados no banco de dados.
+    """
+    conn = sqlite3.connect(DATABASE_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM client_briefs")
+    rows = cursor.fetchall()
+    conn.close()
+
+    briefs = []
+    for row in rows:
+        briefs.append({
+            "id": row[0],
+            "client_name": row[1],
+            "subniche": row[2],
+            "brief_data": json.loads(row[3]),
+            "generated_content": json.loads(row[4]),
+            "prompt_used": row[5],
+            "tokens_consumed": row[6],
+            "api_cost_usd": row[7],
+            "delivery_date": row[8],
+            "feedback_summary": row[9]
+        })
+    return briefs
+
 def update_brief_feedback(brief_id: int, feedback_summary: str):
     """
     Atualiza um registro de briefing com um resumo do feedback do cliente.
@@ -181,3 +222,27 @@ def update_brief_feedback(brief_id: int, feedback_summary: str):
     conn.commit()
     conn.close()
     print(f"Feedback para o briefing ID {brief_id} atualizado com sucesso.")
+
+def export_all_briefs_to_json(output_filename: str = "all_briefs.json"):
+    """
+    Exporta todos os briefings armazenados no banco de dados para um arquivo JSON.
+
+    Args:
+        output_filename (str): O nome do arquivo JSON de saída.
+    """
+    briefs = get_all_briefs()
+    output_dir = os.path.join(BASE_DIR, '..', 'output_files') # Ajuste para a pasta output_files
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, output_filename)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(briefs, f, ensure_ascii=False, indent=4)
+    print(f"Todos os briefings foram exportados para '{output_path}'")
+
+if __name__ == '__main__':
+    init_db()
+    # Exemplo de uso:
+    # insert_brief("Loja do Ken", "Venda de produtos para pet", {"data": "exemplo"}, {"content": "gerado"}, "prompt", 100, 0.001)
+    # briefs = get_briefs_by_client("Loja do Ken")
+    # print(briefs)
+    export_all_briefs_to_json() # Adicione esta linha para exportar os dados
