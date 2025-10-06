@@ -56,10 +56,22 @@ def generate_content_for_client(
 
     try:
         response_data = generate_text_content(prompt)
+        if response_data.get("status") == "error":
+            print(f"Erro ao gerar conteúdo: {response_data.get("message", "Erro desconhecido")}")
+            return {
+                "status": "error",
+                "message": response_data.get("message", "Erro desconhecido"),
+                "prompt_sent": prompt,
+                "token_usage": {
+                    "estimated_input_tokens": estimated_tokens,
+                    "estimated_cost_usd": estimated_cost
+                }
+            }
+
         if response_data["status"] == "success":
             generated_content = response_data["generated_content"]
         else:
-            raise Exception(response_data["message"])
+            raise Exception(response_data["message"]) 
 
         result = {
             "status": "success",

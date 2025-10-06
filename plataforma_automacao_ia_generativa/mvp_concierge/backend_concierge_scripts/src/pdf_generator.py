@@ -101,7 +101,7 @@ def create_briefing_pdf(content_json: dict, client_name: str, output_filename: s
     story.append(Paragraph("Ideias de Conteúdo para a Semana", styles['SectionTitle']))
     story.append(Spacer(1, 0.2 * inch))
 
-    for i, post in enumerate(content_json.get('generated_content', {}).get('posts', [])):
+    for i, post in enumerate(content_json.get('posts', [])):
         story.append(Paragraph(f"Post {i+1}: {post.get('legenda_principal', 'Título da Ideia do Post')}", styles['PostTitle']))
         
         story.append(Paragraph("Legenda Principal:", styles['NormalText']))

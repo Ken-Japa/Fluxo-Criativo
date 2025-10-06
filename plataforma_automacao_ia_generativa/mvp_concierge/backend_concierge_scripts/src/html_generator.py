@@ -48,7 +48,7 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         <h2>Posts Sugeridos</h2>
     """
 
-    for i, post in enumerate(content_json.get("generated_content", {}).get("posts", [])):
+    for i, post in enumerate(content_json.get("posts", [])):
         html_content += f"""
         <div class="post-section">
             <h3>Post #{i + 1}: {post.get("legenda_principal", "Sem Título")}</h3>

@@ -1,20 +1,23 @@
 {
-    "client_name": "Nome do Cliente Exemplo",
-    "subniche": "Marketing Digital para Pequenas Empresas",
+    "client_name": "Loja do Ken",
+    "subniche": "Venda de produtos para pet",
     "contact_info": "email@exemplo.com",
-    "public_target": "Pequenos empresários e empreendedores",
-    "tone_of_voice": "Profissional e inspirador",
+    "public_target": "Donos de pet",
+    "tone_of_voice": "Brincalhão, divertido, amoroso",
     "niche_examples": [
         "Marketing de Conteúdo",
         "SEO Local",
         "Redes Sociais para Negócios"
     ],
-    "marketing_goals": "Aumentar engajamento e gerar leads",
-    "distribution_channels": ["Instagram", "Facebook", "LinkedIn"],
-    "main_topics": ["Estratégias de Marketing Digital", "Dicas para Pequenas Empresas", "Tendências do Mercado"],
-    "keywords": ["marketing digital", "pequenas empresas", "empreendedorismo", "redes sociais"],
-    "call_to_action": "Visite nosso site para mais dicas!",
-    "restrictions_guidelines": "Evitar linguagem muito técnica, focar em soluções práticas.",
-    "additional_info": "O cliente prefere posts com exemplos reais e cases de sucesso.",
-    "competitors_references": ["Agência X Marketing", "Consultoria Y Digital"]
+    "marketing_goals": "Aumentar engajamento, gerar leads e principalmente vender produtos para pet",
+    "distribution_channels": ["Instagram", "Facebook", "YouTube"],
+    "main_topics": ["Produtos criativos para animais de estimação", "Produtos para pet", "Pais de pet"],
+    "keywords": ["produtos para pet", "cachorros", "gatos", "utilitários"],
+    "call_to_action": "Compre esse produto!",
+    "restrictions_guidelines": "Evitar termos como 'barato' ou 'descartável'. Focar na qualidade e durabilidade.",
+    "additional_info": "Lançamento de novos produtos fantásticos.",
+    "competitors_references": [],
+    "content_type": "instagram_post",
+  "weekly_themes": ["Novo produto para pet", "Compre agora, oferta imperdível"],
+  "weekly_goal": "Gerar novas vendas do produto para pets."
 }

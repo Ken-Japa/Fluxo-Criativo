@@ -16,14 +16,19 @@ def generate_text_content(prompt: str) -> dict:
     Returns:
         dict: Um dicionário contendo o conteúdo gerado ou uma mensagem de erro.
     """
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-2.5-pro')
     try:
         response = model.generate_content(prompt)
         try:
-            generated_content = json.loads(response.text)
+            # Remove os delimitadores de bloco de código Markdown se presentes
+            json_string = response.text.strip()
+            if json_string.startswith('```json') and json_string.endswith('```'):
+                json_string = json_string[len('```json'):-len('```')].strip()
+            
+            generated_content = json.loads(json_string)
+            return {"status": "success", "generated_content": generated_content}
         except json.JSONDecodeError:
-            generated_content = {"error": "Não foi possível decodificar JSON da resposta da IA", "raw_response": response.text}
-        return {"status": "success", "generated_content": generated_content}
+            return {"status": "error", "message": f"Não foi possível decodificar JSON da resposta da IA: {response.text}"}
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
