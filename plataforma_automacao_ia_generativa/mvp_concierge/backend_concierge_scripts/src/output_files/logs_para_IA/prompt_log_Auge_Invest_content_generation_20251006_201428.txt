@@ -1,0 +1,80 @@
+--- Prompt Log (content_generation) ---
+Cliente: Auge Invest
+Data/Hora: 2025-10-06 20:14:28
+-------------------------------------
+
+Você é um copywriter especializado em mídias sociais. Atuando sob as diretrizes de nicho: {"subnicho": "Investimentos e tecnologia financeira", "exemplos_de_nicho": ["Educa\u00e7\u00e3o financeira", "An\u00e1lise de a\u00e7\u00f5es, FIIs e ETFs", "Macroeconomia e pol\u00edtica monet\u00e1ria", "Tecnologia e inova\u00e7\u00e3o no mercado financeiro"]}. Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente.
+
+Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para social_media_post.
+
+**Perfil do Cliente:**
+- Nome do Cliente: Auge Invest
+- Tom de Voz: Profissional, confiável, educativo e inspirador — com uma linguagem acessível e visual moderno, transmitindo autoridade e inovação.
+- Público-Alvo: Investidores iniciantes e intermediários no Brasil que buscam entender o mercado financeiro, encontrar oportunidades de investimento e utilizar ferramentas modernas para análise de ativos.
+
+**Análise Estratégica Inicial:**
+- Informações Adicionais e Diretrizes Específicas:  subnicho: Investimentos e tecnologia financeira. exemplos_de_nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro.. Incorpore essas informações para refinar a estratégia de conteúdo.
+- Exemplos de Nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro
+- Informações Adicionais:  subnicho: Investimentos e tecnologia financeira. exemplos_de_nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro.
+
+**Contexto Semanal:**
+- Temas da Semana: Apresentar a plataforma e gerar curiosidade sobre seus diferenciais e ferramentas exclusivas., Educar o público e mostrar como a Auge Invest facilita essas análises com dados e gráficos intuitivos., Oferecer valor informativo e posicionar a marca como fonte confiável de insights macroeconômicos., Mostrar a praticidade e a tecnologia da plataforma, reforçando o uso diário e o trial gratuito., Explicar conceitos e apresentar a Auge Invest como aliada para decisões conscientes., Destacar os diferenciais tecnológicos e criar percepção de valor no serviço premium., Converter seguidores e visitantes em usuários da plataforma durante o lançamento.
+- Objetivo Semanal: Lançar a plataforma Auge Invest, atrair os primeiros usuários, gerar autoridade no mercado e incentivar o cadastro na versão gratuita e no período de testes.
+
+**Instruções de Formato:**
+Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 ideias de posts. Para cada post, inclua:
+A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando:
+- Post 1: Apresentação do Problema/Desafio do público-alvo.
+- Post 2: Introdução da Solução (produto/serviço do cliente).
+- Post 3: Detalhamento dos Benefícios e Vantagens da solução.
+- Post 4: Prova Social/Exemplos de Sucesso/Depoimentos.
+- Post 5: Chamada para Ação (CTA) clara e direta.
+- `titulo`: Um título conciso para o post.
+- `legenda_principal`: A legenda principal do post.
+- `variacoes_legenda`: Uma lista de 2-3 variações da legenda principal.
+- `hashtags`: Uma lista de hashtags relevantes.
+- `sugestao_formato`: Sugestão de formato (ex: "Carrossel de imagens", "Vídeo curto", "Infográfico").
+- `post_strategy_rationale`: Uma justificativa estratégica detalhada para este post, explicando como ele se encaixa na narrativa semanal e contribui para os objetivos gerais.
+- `micro_briefing`: Um breve resumo do objetivo e foco principal do post, para contextualização.
+- `micro_roteiro`: Se `sugestao_formato` for "Vídeo curto" ou "Reel", inclua um micro-roteiro detalhando cenas, falas/textos e chamadas para ação.
+- `carrossel_slides`: Se `sugestao_formato` for "Carrossel de imagens", inclua uma lista de objetos, onde cada objeto representa um slide do carrossel, contendo `titulo_slide`, `texto_slide` e `sugestao_visual_slide`.
+- `visual_prompt_suggestion`: Uma descrição detalhada da imagem ou vídeo principal para o post, incluindo estilo, cores, elementos e atmosfera, para ser usada por uma IA de geração de imagens.
+- `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.
+
+Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
+```json
+{{
+    "weekly_strategy_summary": "Resumo da estratégia semanal para a campanha.",
+    "posts": [
+        {{
+            "titulo": "Título do Post 1",
+            "legenda_principal": "Legenda principal do post 1.",
+            "variacoes_legenda": [
+                "Variação 1 da legenda 1.",
+                "Variação 2 da legenda 1."
+            ],
+            "hashtags": ["#Hashtag1", "#Hashtag2"],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Justificativa estratégica para este post.",
+            "micro_briefing": "Breve resumo do objetivo do post.",
+            "visual_prompt_suggestion": "Descrição detalhada para IA de geração de imagens.",
+            "visual_description_portuguese": "Descrição em português da imagem ou vídeo principal.",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Pessoa sorrindo",
+                    "texto_tela": "Problema resolvido!",
+                    "fala": "Você sabia que...?"
+                }
+            ],
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "Título do Slide 1",
+                    "texto_slide": "Texto do slide 1",
+                    "sugestao_visual_slide": "Visual para slide 1"
+                }
+            ]
+        }}
+    ]
+}}
+```

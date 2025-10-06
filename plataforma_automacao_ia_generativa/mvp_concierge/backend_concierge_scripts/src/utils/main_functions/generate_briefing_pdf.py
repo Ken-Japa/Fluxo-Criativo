@@ -1,26 +1,40 @@
+import json
 import os
 from datetime import datetime
-from src.pdf_generator import create_briefing_pdf
 
-def generate_briefing_pdf(generated_content, nome_do_cliente, output_dir):
+from src.utils.pdf_generator.create_briefing_pdf import create_briefing_pdf
+
+def generate_briefing_pdf(content_json: dict, client_name: str, output_filename: str):
     """
-    Gera um arquivo PDF do briefing com o conteúdo gerado.
+    Gera um briefing em PDF com base no conteúdo JSON fornecido.
 
     Args:
-        generated_content (str): O conteúdo gerado para incluir no PDF.
-        nome_do_cliente (str): O nome do cliente para nomear o arquivo PDF.
-        output_dir (str): O diretório onde o PDF será salvo.
-
-    Returns:
-        str: O caminho completo do arquivo PDF gerado, ou None em caso de erro.
+        content_json (dict): O conteúdo JSON gerado pela IA.
+        client_name (str): O nome do cliente.
+        output_filename (str): O nome do arquivo de saída do PDF.
     """
-    print("\n--- Gerando PDF do Briefing ---")
-    timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    output_pdf_filename = os.path.join(output_dir, f"briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.pdf")
-    try:
-        create_briefing_pdf(generated_content, nome_do_cliente, f"Período: {timestamp}", output_pdf_filename)
-        print(f"PDF do briefing gerado em: {output_pdf_filename}")
-        return output_pdf_filename
-    except Exception as e:
-        print(f"Erro ao gerar PDF: {e}")
-        return None
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+    # Caminho para o client_briefing.json
+    briefing_path = os.path.join(os.path.dirname(__file__), "..", "client_briefing.json")
+    
+    target_audience = "N/A"
+    tone_of_voice = "N/A"
+    marketing_objectives = "N/A"
+
+    if os.path.exists(briefing_path):
+        with open(briefing_path, 'r', encoding='utf-8') as f:
+            briefing_data = json.load(f)
+            target_audience = briefing_data.get("publico_alvo", "N/A")
+            tone_of_voice = briefing_data.get("tom_de_voz", "N/A")
+            marketing_objectives = briefing_data.get("objetivos_de_marketing", "N/A")
+
+    create_briefing_pdf(
+        content_json=content_json,
+        client_name=client_name,
+        period=timestamp,
+        output_filename=output_filename,
+        target_audience=target_audience,
+        tone_of_voice=tone_of_voice,
+        marketing_objectives=marketing_objectives
+    )

@@ -1,19 +1,24 @@
 {
   "nome_do_cliente": "",
   "subnicho": "",
-  "informacoes_de_contato": "",
+  "informacoes_de_contato": "capitalauge@gmail.com.br",
   "publico_alvo": "",
   "tom_de_voz": "",
-  "exemplos_de_nicho": [],
+  "exemplos_de_nicho": [""],
   "objetivos_de_marketing": "",
-  "canais_de_distribuicao": [],
-  "topicos_principais": [],
-  "palavras_chave": [],
+  "canais_de_distribuicao": [""],
+  "topicos_principais": [""],
+  "palavras_chave": [""],
   "chamada_para_acao": "",
-   "restricoes_e_diretrizes": "",
+  "restricoes_e_diretrizes": "",
   "informacoes_adicionais": "",
-  "referencias_de_concorrentes": [],
-  "referencias_de_estilo_e_formato": [],
-  "tipo_de_conteudo": [],
-  "conteudos_semanais": []
+  "referencias_de_concorrentes": [""],
+  "referencias_de_estilo_e_formato": [""],
+  "tipo_de_conteudo": "",
+  "conteudos_semanais": [
+    {
+      "chamada_para_acao_individual": "",
+      "objetivo_do_conteudo_individual": ""
+    }
+  ]
 }

@@ -1,0 +1,238 @@
+{
+    "weekly_strategy_summary": "Esta campanha semanal foi desenhada para guiar PMEs do setor de serviços através de uma jornada de descoberta. Começamos validando suas dores de gestão (Post 1), apresentamos nosso software como a solução centralizadora (Post 2), detalhamos os benefícios tangíveis de automação e nosso novo módulo de RH (Post 3), construímos confiança com um caso de sucesso (Post 4) e, finalmente, convertemos o interesse em ação com um CTA direto para a geração de leads (Post 5), alinhando-se aos objetivos de aumento de reconhecimento e captação de leads qualificados.",
+    "posts": [
+        {
+            "titulo": "O malabarismo da gestão na sua PME de serviços",
+            "legenda_principal": "Planilhas, e-mails, apps de mensagens... Gerenciar finanças, projetos, clientes e a equipe parece um jogo de malabarismo sem fim? 🤹\n\nVocê não está sozinho. Muitas PMEs de serviços enfrentam o desafio de manter todos os pratos girando, o que leva a prazos perdidos, falta de clareza financeira e muito estresse.\n\nA base para o crescimento sustentável está em 5 pilares essenciais. Você consegue identificar em qual deles sua empresa mais precisa de ajuda hoje?\n\nArraste para o lado e veja se você se identifica. 👀",
+            "variacoes_legenda": [
+                "Sua rotina é apagar incêndios em vez de focar na estratégia? Se a gestão da sua PME de serviços parece caótica, é hora de entender os 5 pilares que sustentam um negócio de sucesso. Descubra quais são e avalie a saúde da sua empresa.",
+                "De finanças a gestão de talentos, uma PME de serviços tem muitos desafios. Quando as ferramentas estão espalhadas, o controle se perde. Apresentamos os 5 pilares da gestão eficiente. Qual deles é o seu maior gargalo hoje? Comente aqui! 👇"
+            ],
+            "hashtags": [
+                "#GestaoEmpresarial",
+                "#PME",
+                "#Empreendedorismo",
+                "#SoftwareDeGestao",
+                "#GestaoDeServicos",
+                "#EficienciaOperacional",
+                "#TechSolutions"
+            ],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Este post inicial estabelece o problema e gera empatia. Ao apresentar os desafios comuns em 'pilares', estruturamos a dor do cliente de forma clara, fazendo com que ele se identifique e sinta que entendemos seu negócio. Isso prepara o terreno para a introdução da nossa solução como a resposta para fortalecer esses pilares.",
+            "micro_briefing": "Conectar-se com as dores do público-alvo (PMEs de serviços), validando seus desafios diários de gestão e introduzindo o conceito dos 5 pilares como o ideal a ser alcançado.",
+            "visual_prompt_suggestion": "A sleek, modern infographic-style image for a carousel cover. A stressed but professional business owner in the center, juggling five glowing icons representing finance (dollar sign), projects (checklist), clients (user group), HR (person silhouette), and data (bar chart). The background is a clean, corporate blue gradient. The style is flat design with subtle shadows. The atmosphere is empathetic but hints at a solution.",
+            "visual_description_portuguese": "Capa de carrossel com um(a) empresário(a) de aparência profissional, mas sobrecarregado(a), no centro, fazendo malabarismo com cinco ícones brilhantes: finanças, projetos, clientes, RH e dados. O estilo é de design flat, moderno, com um fundo azul corporativo.",
+            "micro_roteiro": null,
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "Sua PME parece um jogo de malabarismo?",
+                    "texto_slide": "Controlar finanças, projetos, clientes e equipe ao mesmo tempo é um desafio constante. Vamos analisar os pilares da sua gestão.",
+                    "sugestao_visual_slide": "Imagem principal descrita no 'visual_prompt_suggestion'."
+                },
+                {
+                    "titulo_slide": "Pilar 1: Finanças no Caos",
+                    "texto_slide": "Faturas perdidas, fluxo de caixa imprevisível, relatórios que levam horas... Soou familiar?",
+                    "sugestao_visual_slide": "Ícone estilizado de uma calculadora e pilhas de papel bagunçadas sobre um fundo azul claro."
+                },
+                {
+                    "titulo_slide": "Pilar 2: Projetos sem Rumo",
+                    "texto_slide": "Prazos estourados, comunicação falha entre equipes e clientes insatisfeitos. Onde está o erro?",
+                    "sugestao_visual_slide": "Ícone de um gráfico de Gantt confuso e emaranhado."
+                },
+                {
+                    "titulo_slide": "Pilar 3: Clientes Desconectados",
+                    "texto_slide": "Dificuldade em acompanhar o histórico de cada cliente e oferecer um serviço verdadeiramente personalizado.",
+                    "sugestao_visual_slide": "Ícone de um CRM (livro de contatos) com anotações soltas e post-its ao redor."
+                },
+                {
+                    "titulo_slide": "Pilar 4: Equipe Desengajada",
+                    "texto_slide": "Gerenciar férias, desempenho e desenvolvimento de talentos se torna uma tarefa secundária e burocrática.",
+                    "sugestao_visual_slide": "Ícone de um organograma com peças de quebra-cabeça faltando."
+                },
+                {
+                    "titulo_slide": "Pilar 5: Decisões no Escuro",
+                    "texto_slide": "Sem dados centralizados, cada decisão estratégica é baseada mais em intuição do que em informação.",
+                    "sugestao_visual_slide": "Ícone de um(a) empresário(a) vendado(a) olhando para gráficos confusos."
+                },
+                {
+                    "titulo_slide": "Existe uma forma mais inteligente de gerir.",
+                    "texto_slide": "E se você pudesse unificar todos esses pilares em um só lugar? Fique de olho no nosso próximo post.",
+                    "sugestao_visual_slide": "Logo da Tech Solutions com um fundo gradiente e a frase 'Aguarde'."
+                }
+            ]
+        },
+        {
+            "titulo": "Chega de caos. Olá, gestão integrada.",
+            "legenda_principal": "Você se identificou com o caos? 🙋‍♂️🙋‍♀️\n\nA boa notícia é que a tecnologia pode ser sua maior aliada. Chega de alternar entre 10 abas diferentes para encontrar uma informação.\n\nApresentamos o software de gestão da Tech Solutions: a plataforma única que integra finanças, projetos, clientes e RH, transformando dados confusos em decisões inteligentes.\n\nDê o play e veja a transformação acontecer. ✨",
+            "variacoes_legenda": [
+                "Cansado da desorganização? É hora de trocar o estresse pela estratégia. Nosso software centraliza toda a sua operação, dando a você o controle e a clareza que precisa para crescer. Veja como em 10 segundos.",
+                "A diferença entre uma PME que sobrevive e uma que prospera está na eficiência. Centralize, automatize e otimize com a Tech Solutions. A gestão inteligente que sua empresa de serviços merece está a um clique de distância."
+            ],
+            "hashtags": [
+                "#SoftwareDeGestao",
+                "#GestaoIntegrada",
+                "#Automacao",
+                "#Inovacao",
+                "#PMEservicos",
+                "#TransformacaoDigital",
+                "#TechSolutions"
+            ],
+            "sugestao_formato": "Vídeo curto (Reel)",
+            "post_strategy_rationale": "Este post é o ponto de virada na narrativa semanal. Após o público se identificar com o problema, apresentamos nosso produto como o 'herói' da história. O formato de vídeo curto e dinâmico é ideal para capturar a atenção e demonstrar visualmente a transição do 'caos' para a 'ordem', posicionando a Tech Solutions como a solução moderna e eficaz.",
+            "micro_briefing": "Apresentar o software da Tech Solutions como a solução centralizada e inovadora para os desafios de gestão abordados no post anterior, focando no impacto visual da transformação.",
+            "visual_prompt_suggestion": "A dynamic, short video reel. Scene 1: A chaotic desk view with scattered papers, messy spreadsheets on a monitor, and sticky notes everywhere. Fast-paced, slightly stressful music. Scene 2: A clean 'swipe' transition to a minimalist, modern desk with a laptop showing a beautiful, intuitive software dashboard (Tech Solutions UI). The music becomes upbeat and optimistic. The colors are brand-aligned: deep blue, white, and a vibrant accent color like teal. The overall feel is a transformation from chaos to control.",
+            "visual_description_portuguese": "Vídeo curto (Reel) que mostra a transformação de uma mesa de trabalho caótica e cheia de papéis para uma mesa limpa e organizada, exibindo o dashboard elegante e intuitivo do software da Tech Solutions, com uma trilha sonora que evolui de tensa para otimista.",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Visão de uma mesa bagunçada com papéis, post-its e uma tela de computador com planilhas confusas. Movimentos rápidos e som de teclado frenético.",
+                    "texto_tela": "Sua gestão é assim?",
+                    "fala": null
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Um efeito de 'swipe' limpa a tela, revelando uma mesa minimalista com um laptop exibindo o dashboard limpo e organizado do software Tech Solutions. A música se torna positiva e inspiradora.",
+                    "texto_tela": "Imagine assim.",
+                    "fala": null
+                },
+                {
+                    "cena": 3,
+                    "descricao": "Cortes rápidos mostrando o cursor clicando em diferentes áreas do software: um gráfico financeiro, uma lista de tarefas de projeto, a ficha de um cliente e o novo módulo de RH.",
+                    "texto_tela": "Finanças. Projetos. Clientes. Equipe. Tudo em um só lugar.",
+                    "fala": null
+                },
+                {
+                    "cena": 4,
+                    "descricao": "O logo da Tech Solutions aparece centralizado na tela.",
+                    "texto_tela": "Tech Solutions: Gestão inteligente. Resultados reais.",
+                    "fala": null
+                }
+            ],
+            "carrossel_slides": []
+        },
+        {
+            "titulo": "Mais tempo, menos custos: O poder da automação",
+            "legenda_principal": "Tempo é o ativo mais valioso de uma PME. E se você pudesse comprar mais tempo?\n\nCom a automação, você pode. Nosso software foi projetado para eliminar tarefas repetitivas e manuais que consomem seu dia e abrem margem para erros caros.\n\nDesde o envio de faturas até a gestão de férias da sua equipe, a automação libera você e seu time para focarem no que realmente gera valor: atender bem seus clientes e inovar.\n\nArraste para o lado e veja como a automação pode impactar diretamente o caixa e a produtividade da sua empresa, incluindo nosso NOVO módulo de RH! ✨",
+            "variacoes_legenda": [
+                "Fazer mais com menos não é mágica, é tecnologia. Descubra como a automação de processos financeiros, de projetos e de RH pode reduzir custos e aumentar a eficiência da sua PME de serviços. Veja os benefícios na prática.",
+                "Apresentamos nosso novo módulo de RH! 🎉 Além de otimizar finanças e projetos, agora simplificamos a gestão de pessoas. Veja como a automação completa da Tech Solutions pode revolucionar sua empresa e valorizar seus talentos."
+            ],
+            "hashtags": [
+                "#AutomacaoDeProcessos",
+                "#Eficiencia",
+                "#ReducaoDeCustos",
+                "#Produtividade",
+                "#GestaoDeRH",
+                "#SoftwareParaPME",
+                "#TechSolutions"
+            ],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Depois de apresentar a solução, este post aprofunda os benefícios tangíveis, respondendo à pergunta 'O que eu ganho com isso?'. Focamos em resultados mensuráveis (tempo e dinheiro) para tornar a proposta de valor concreta e irresistível. A introdução do novo módulo de RH cumpre um dos objetivos temáticos da semana e demonstra que o produto está em constante evolução.",
+            "micro_briefing": "Detalhar os benefícios específicos da automação proporcionada pelo software, conectando funcionalidades a ganhos reais de tempo e dinheiro, e destacando o lançamento do novo módulo de RH.",
+            "visual_prompt_suggestion": "A professional and clean carousel design. Each slide features a large, bold icon on the left (e.g., a piggy bank with wings for 'save money') and a clear, concise headline and text on the right. Use a consistent color palette of corporate blue, white, and a light gray background. The typography is modern and easily readable. The overall style is trustworthy and informative.",
+            "visual_description_portuguese": "Carrossel de imagens com design limpo e profissional. Cada slide apresenta um ícone grande e impactante à esquerda e texto claro à direita, explicando um benefício específico da automação. A paleta de cores é corporativa e a tipografia moderna.",
+            "micro_roteiro": null,
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "Transforme horas de trabalho em segundos",
+                    "texto_slide": "Descubra como a automação do nosso software impulsiona a eficiência da sua PME de serviços.",
+                    "sugestao_visual_slide": "Um ícone de relógio se transformando em um ícone de engrenagens de automação."
+                },
+                {
+                    "titulo_slide": "Economize até 10h/semana no financeiro",
+                    "texto_slide": "Gere faturas, envie lembretes de cobrança e concilie extratos bancários automaticamente. Tempo de volta para a estratégia.",
+                    "sugestao_visual_slide": "Ícone de uma fatura com um cifrão ($) e uma seta circular de 'atualização' ao redor."
+                },
+                {
+                    "titulo_slide": "Reduza em até 30% os erros em projetos",
+                    "texto_slide": "Centralize a comunicação e automatize a atribuição de tarefas. Menos retrabalho, clientes mais felizes.",
+                    "sugestao_visual_slide": "Ícone de um checklist sendo preenchido por um braço robótico."
+                },
+                {
+                    "titulo_slide": "NOVO Módulo de RH: Gestão de talentos simplificada",
+                    "texto_slide": "Automatize o controle de ponto, a gestão de férias e as avaliações de desempenho. Valorize sua equipe sem a burocracia.",
+                    "sugestao_visual_slide": "Ícone de um perfil de funcionário com um coração e um gráfico de crescimento ao lado."
+                },
+                {
+                    "titulo_slide": "Sua PME está pronta para o próximo nível?",
+                    "texto_slide": "A automação não é futuro, é o presente da gestão eficiente. Fale conosco para saber mais.",
+                    "sugestao_visual_slide": "Logo da Tech Solutions com um CTA sutil: 'Descubra o poder da automação'."
+                }
+            ]
+        },
+        {
+            "titulo": "Como a Agência Criativa V dobrou sua produtividade",
+            "legenda_principal": "Teoria é uma coisa, mas e na prática? Conheça a história da Agência Criativa V.\n\nEles enfrentavam os mesmos desafios que você: projetos atrasados, falta de visibilidade sobre a lucratividade e uma equipe sobrecarregada com tarefas administrativas.\n\nAo adotar a plataforma de gestão da Tech Solutions, eles não apenas organizaram a casa, mas criaram uma base sólida para o crescimento.\n\nArraste para o lado e veja a transformação e os resultados impressionantes que eles alcançaram. 🚀",
+            "variacoes_legenda": [
+                "Esta é a história de uma agência de serviços como a sua. Veja como a Centralização e Automação da Tech Solutions transformaram o dia a dia da Agência Criativa V, resultando em mais produtividade e lucratividade.",
+                "Resultados reais falam mais alto. A Agência Criativa V reduziu em 40% o tempo com tarefas administrativas e entregou 100% dos projetos no prazo após implementar nossa solução. Inspire-se nesse caso de sucesso!"
+            ],
+            "hashtags": [
+                "#CaseDeSucesso",
+                "#ProvaSocial",
+                "#ResultadosReais",
+                "#GestaoDeAgencias",
+                "#PMEdeSucesso",
+                "#Produtividade",
+                "#TechSolutions"
+            ],
+            "sugestao_formato": "Carrossel de imagens (Mini Case)",
+            "post_strategy_rationale": "A prova social é um gatilho de conversão poderoso em B2B. Este post transforma os benefícios abstratos do post anterior em uma história concreta e aspiracional. Ao usar um exemplo de uma empresa do mesmo setor do nosso público-alvo, criamos uma conexão forte ('se funcionou para eles, pode funcionar para mim'), aumentando a credibilidade e diminuindo a barreira para a compra.",
+            "micro_briefing": "Apresentar um caso de sucesso de um cliente (fictício ou real) para gerar credibilidade e confiança, demonstrando os resultados práticos e transformadores do software.",
+            "visual_prompt_suggestion": "A carousel telling a success story. The design is clean and uses brand elements of the fictional 'Agência Criativa V' and Tech Solutions. Use a mix of professional stock photos of people in an office setting and clean infographics. The 'before' slides can use muted, slightly chaotic visuals, while the 'after' slides use a bright, organized, and positive design. Use a high-quality, professional-looking photo for the CEO's testimonial.",
+            "visual_description_portuguese": "Carrossel contando um caso de sucesso com um design que mescla fotos profissionais de pessoas em um ambiente de agência com infográficos claros. A narrativa visual mostra uma transição do 'antes' (caótico, com cores sóbrias) para o 'depois' (organizado e bem-sucedido, com cores vibrantes).",
+            "micro_roteiro": null,
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "O Desafio da Agência Criativa V",
+                    "texto_slide": "'Perdíamos prazos e a rentabilidade de cada projeto era um mistério. Precisávamos de controle.' - CEO",
+                    "sugestao_visual_slide": "Foto profissional de uma mulher (CEO) em um escritório moderno, com a citação em destaque."
+                },
+                {
+                    "titulo_slide": "ANTES: 5 ferramentas e muita confusão",
+                    "texto_slide": "A equipe usava apps separados para projetos, finanças e comunicação. O resultado: retrabalho e falta de visão estratégica.",
+                    "sugestao_visual_slide": "Uma ilustração mostrando vários ícones de apps desconexos (planilha, e-mail, chat) com setas caóticas entre eles."
+                },
+                {
+                    "titulo_slide": "A SOLUÇÃO: Gestão unificada com Tech Solutions",
+                    "texto_slide": "Implementamos nossa plataforma para centralizar projetos, finanças e a gestão da equipe em um único lugar.",
+                    "sugestao_visual_slide": "Os mesmos ícones do slide anterior, agora organizados dentro de um grande círculo com o logo da Tech Solutions no centro, mostrando integração."
+                },
+                {
+                    "titulo_slide": "DEPOIS: Resultados que falam por si",
+                    "texto_slide": "✅ 40% menos tempo em tarefas admin\n✅ 100% dos projetos no prazo\n✅ Visão clara da lucratividade em tempo real",
+                    "sugestao_visual_slide": "Três infográficos simples e impactantes, um para cada métrica, com cores vibrantes e positivas."
+                },
+                {
+                    "titulo_slide": "'Ganhamos paz de espírito para focar no crescimento.'",
+                    "texto_slide": "A Tech Solutions nos deu o controle que precisávamos para escalar o negócio com segurança. - CEO, Agência Criativa V",
+                    "sugestao_visual_slide": "Foto da CEO novamente, agora sorrindo de forma confiante, com o logo da agência e da Tech Solutions lado a lado."
+                }
+            ]
+        },
+        {
+            "titulo": "Sua vez de ter uma gestão eficiente. Vamos conversar?",
+            "legenda_principal": "Você viu o problema, conheceu a solução, entendeu os benefícios e se inspirou com resultados reais. Agora, a pergunta é: sua PME está pronta para dar o próximo passo?\n\nChega de adiar a organização. Chega de perder tempo e dinheiro com processos manuais.\n\nNossa equipe de especialistas está pronta para mostrar, em uma conversa rápida e sem compromisso, como o nosso software pode ser customizado para as necessidades exatas da sua empresa de serviços.\n\nClique no link da nossa bio e agende sua demonstração gratuita. É hora de transformar sua gestão e acelerar seu crescimento. 📈",
+            "variacoes_legenda": [
+                "A semana inteira falamos sobre os 5 pilares da gestão. Agora, queremos te mostrar como fortalecê-los na prática. Agende uma demonstração gratuita e veja ao vivo como nossa plataforma pode organizar sua empresa. Link na bio!",
+                "Pronto para trocar o caos pelo controle? A transformação começa com uma decisão. Dê o primeiro passo hoje mesmo. Agende sua demonstração gratuita pelo link na bio e descubra o potencial de uma gestão verdadeiramente integrada."
+            ],
+            "hashtags": [
+                "#ChamadaParaAcao",
+                "#AgendeSuaDemonstracao",
+                "#SoftwareDeGestao",
+                "#CrescimentoPME",
+                "#EficienciaEmpresarial",
+                "#TechSolutions",
+                "#GestaoInteligente"
+            ],
+            "sugestao_formato": "Imagem única (Infográfico com CTA)",
+            "post_strategy_rationale": "Este post é o clímax da campanha, projetado para converter. Após uma semana construindo valor e confiança, o público está preparado para a oferta. Usamos uma imagem que resume os '5 pilares' discutidos, reforçando a mensagem da semana, e a legenda foca em um Call to Action (CTA) claro, direto e de baixo atrito ('demonstração gratuita'), visando capturar os leads qualificados e atingir o objetivo semanal.",
+            "micro_briefing": "Concluir a narrativa da semana com uma chamada para ação (CTA) forte e direta, incentivando os seguidores a agendar uma demonstração e, assim, convertê-los em leads qualificados.",
+            "visual_prompt_suggestion": "A visually appealing, simple infographic. The headline at the top: 'Os 5 Pilares da Gestão Eficiente'. Below, five icons in a row, each representing one pillar (Finance, Projects, Clients, HR, Data). Below the icons, a large, prominent button-like graphic with the text 'Agende sua Demonstração Gratuita'. The background is a clean white or light gray, with the brand's blue and teal colors used for the icons and CTA button. The design is uncluttered, professional, and focuses the viewer's eye on the call to action.",
+            "visual_description_portuguese": "Um infográfico limpo e direto. No topo, o título 'Os 5 Pilares da Gestão Eficiente'. Abaixo, cinco ícones alinhados representando finanças, projetos, clientes, RH e dados. Na parte inferior, um gráfico grande que simula um botão com o texto 'Agende sua Demonstração Gratuita', criando um forte apelo visual para a ação.",
+            "micro_roteiro": null,
+            "carrossel_slides": []
+        }
+    ]
+}

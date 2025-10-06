@@ -1,6 +1,6 @@
 --- Prompt Log (content_generation) ---
 Cliente: Tech Solutions Ltda.
-Data/Hora: 2025-10-06 15:49:14
+Data/Hora: 2025-10-06 20:06:18
 -------------------------------------
 
 Você é um copywriter especializado em mídias sociais. Atuando sob as diretrizes de nicho: {"subnicho": "Software de Gest\u00e3o Empresarial", "exemplos_de_nicho": null}. Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente.
@@ -38,6 +38,7 @@ A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando
 - `micro_roteiro`: Se `sugestao_formato` for "Vídeo curto" ou "Reel", inclua um micro-roteiro detalhando cenas, falas/textos e chamadas para ação.
 - `carrossel_slides`: Se `sugestao_formato` for "Carrossel de imagens", inclua uma lista de objetos, onde cada objeto representa um slide do carrossel, contendo `titulo_slide`, `texto_slide` e `sugestao_visual_slide`.
 - `visual_prompt_suggestion`: Uma descrição detalhada da imagem ou vídeo principal para o post, incluindo estilo, cores, elementos e atmosfera, para ser usada por uma IA de geração de imagens.
+- `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.
 
 Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
 ```json
@@ -56,6 +57,7 @@ Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
             "post_strategy_rationale": "Justificativa estratégica para este post.",
             "micro_briefing": "Breve resumo do objetivo do post.",
             "visual_prompt_suggestion": "Descrição detalhada para IA de geração de imagens.",
+            "visual_description_portuguese": "Descrição em português da imagem ou vídeo principal.",
             "micro_roteiro": [
                 {
                     "cena": 1,

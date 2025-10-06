@@ -40,6 +40,15 @@ def _build_post_section(styles: dict, post: dict, post_number: int) -> list:
     post_story.append(Spacer(1, 7.2))
 
     post_story.append(Paragraph("Sugestões Visuais Detalhadas:", styles['BrownSubtitle']))
+    
+    # Adiciona a descrição em português da imagem
+    visual_description = post.get('visual_description_portuguese', 'N/A')
+    if visual_description != 'N/A':
+        post_story.append(Paragraph(visual_description, styles['PostContent']))
+        post_story.append(Spacer(1, 7.2))
+
+    # Adiciona o título para o prompt da IA
+    post_story.append(Paragraph("Prompt para IA Geradora de Imagens:", styles['StrongPurpleSubtitle']))
     post_story.append(Paragraph(post.get('visual_prompt_suggestion', 'N/A'), styles['PostContent']))
     post_story.append(Spacer(1, 14.4))
 

@@ -127,6 +127,7 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("- `micro_roteiro`: Se `sugestao_formato` for \"Vídeo curto\" ou \"Reel\", inclua um micro-roteiro detalhando cenas, falas/textos e chamadas para ação.")
     user_message_parts.append("- `carrossel_slides`: Se `sugestao_formato` for \"Carrossel de imagens\", inclua uma lista de objetos, onde cada objeto representa um slide do carrossel, contendo `titulo_slide`, `texto_slide` e `sugestao_visual_slide`.")
     user_message_parts.append("- `visual_prompt_suggestion`: Uma descrição detalhada da imagem ou vídeo principal para o post, incluindo estilo, cores, elementos e atmosfera, para ser usada por uma IA de geração de imagens.")
+    user_message_parts.append("- `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.")
 
     user_message_parts.append("\nRetorne o conteúdo em formato JSON, seguindo a estrutura abaixo:")
     user_message_parts.append("```json")
@@ -145,6 +146,7 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("            \"post_strategy_rationale\": \"Justificativa estratégica para este post.\",")
     user_message_parts.append("            \"micro_briefing\": \"Breve resumo do objetivo do post.\",")
     user_message_parts.append("            \"visual_prompt_suggestion\": \"Descrição detalhada para IA de geração de imagens.\",")
+    user_message_parts.append("            \"visual_description_portuguese\": \"Descrição em português da imagem ou vídeo principal.\",")
     user_message_parts.append("            \"micro_roteiro\": [")
     user_message_parts.append("                {")
     user_message_parts.append("                    \"cena\": 1,")
