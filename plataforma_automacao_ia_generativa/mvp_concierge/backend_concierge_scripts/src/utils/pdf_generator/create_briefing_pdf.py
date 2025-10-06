@@ -9,7 +9,7 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.lib.colors import HexColor
 from datetime import datetime
 
-from ..config import COMPANY_NAME, LOGO_PATH
+from ...config import COMPANY_NAME, LOGO_PATH
 from ._header_footer import _header_footer
 from ._build_cover_page import _build_cover_page
 from ._build_executive_summary import _build_executive_summary

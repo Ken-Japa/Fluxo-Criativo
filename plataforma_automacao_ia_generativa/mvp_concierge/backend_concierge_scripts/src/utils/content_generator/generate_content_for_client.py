@@ -1,10 +1,11 @@
 import os
 import json
 import time
+import re
 
 from ...prompt_manager import PromptManager
 from ..cache_manager import get_cache_key, get_from_cache, set_to_cache
-from ..llm_client.gemini_client import generate_text_content
+from ...llm_client.gemini_client import generate_text_content
 
 
 
@@ -43,7 +44,7 @@ def generate_content_for_client(
         cached_result["status"] = "success_from_cache"
         return cached_result
 
-    prompt_manager = PromptManager(client_profile)
+    prompt_manager = PromptManager()
 
     # Realiza a análise estratégica inicial
     strategic_analysis_result = prompt_manager.analyze_briefing_for_strategy(
@@ -52,6 +53,8 @@ def generate_content_for_client(
     )
 
     prompt = prompt_manager.build_prompt(
+        client_profile,
+        client_profile.get("niche_guidelines"),
         content_type,
         weekly_themes,
         weekly_goal,
@@ -90,30 +93,24 @@ def generate_content_for_client(
 
             if response_data["status"] == "success":
                 raw_content = response_data["generated_content"]
-                # Tenta extrair o JSON de um bloco de código markdown
-                json_start = raw_content.find("```json")
-                json_end = raw_content.rfind("```")
-
-                if json_start != -1 and json_end != -1 and json_start < json_end:
-                    json_string = raw_content[json_start + len("```json"):json_end].strip()
+                # Tenta extrair o JSON de um bloco de código markdown ou de qualquer lugar na string
+                json_match = re.search(r"```json\n([\s\S]*?)\n```", raw_content)
+                if json_match:
+                    json_string = json_match.group(1).strip()
                 else:
-                    # Fallback: tenta encontrar o JSON bruto
-                    json_start = raw_content.find("{")
-                    json_end = raw_content.rfind("}")
-                    if json_start != -1 and json_end != -1 and json_start < json_end:
-                        json_string = raw_content[json_start : json_end + 1].strip()
+                    # Fallback: tenta encontrar o JSON bruto usando regex para {.*}
+                    json_match = re.search(r"\{([\s\S]*?)\}", raw_content)
+                    if json_match:
+                        json_string = "{" + json_match.group(1).strip() + "}"
                     else:
-                        # Se não encontrar JSON em bloco de código nem bruto, tenta extrair a primeira e última chaves
-                        json_string = raw_content.strip()
-                        if not (json_string.startswith("{") and json_string.endswith("}")):
-                            raise ValueError("Não foi possível encontrar uma estrutura JSON válida na resposta da IA.")
+                        raise ValueError("Não foi possível encontrar uma estrutura JSON válida na resposta da IA.")
 
                 try:
                     generated_content = json.loads(json_string)
                 except json.JSONDecodeError as e:
                     print(f"Erro de decodificação JSON: {e}")
                     print(f"Conteúdo JSON bruto que causou o erro: {json_string}")
-                    raise ValueError(f"Erro ao decodificar JSON da resposta da IA: {e}\nConteúdo bruto: {json.dumps(json_string)}")
+                    raise ValueError(f"Erro ao decodificar JSON da resposta da IA: {e}\nConteúdo bruto: {json_string}")
                 
                 # Validação básica da estrutura JSON esperada (ex: verificar se 'weekly_strategy_summary' existe)
                 if "weekly_strategy_summary" not in generated_content:

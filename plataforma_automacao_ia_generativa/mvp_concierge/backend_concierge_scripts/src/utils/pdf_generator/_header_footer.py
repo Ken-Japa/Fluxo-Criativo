@@ -2,7 +2,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.colors import HexColor
 from reportlab.pdfgen import canvas
 
-from ..config import COMPANY_NAME
+from ...config import COMPANY_NAME
 
 def _header_footer(canvas_obj: canvas.Canvas, doc) -> None:
     """

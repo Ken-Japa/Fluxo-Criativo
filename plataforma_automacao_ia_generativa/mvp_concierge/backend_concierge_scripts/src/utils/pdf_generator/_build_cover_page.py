@@ -6,7 +6,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.lib.colors import HexColor
 
-from ..config import COMPANY_NAME, LOGO_PATH
+from ...config import COMPANY_NAME, LOGO_PATH
 
 def _build_cover_page(styles: dict, client_name: str, period: str) -> list:
     """

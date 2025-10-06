@@ -4,6 +4,9 @@ Este documento resume as principais atividades e desenvolvimentos realizados no 
 
 Popular o client_briefing.json com os dados do cliente.
 Ir para a pasta backend_concierge_scripts e executar o script "python -m src.main"
+(cd plataforma_automacao_ia_generativa)
+(cd mvp_concirge)
+(cd backend_concierge_scripts)
 
 ## Visão Geral do Projeto
 

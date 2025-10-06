@@ -1,3 +1,5 @@
+import json
+
 from .utils.prompt_manager.build_prompt import build_prompt
 from .utils.prompt_manager.analyze_briefing_for_strategy import analyze_briefing_for_strategy
 from .utils.prompt_manager.build_image_prompt import build_image_prompt
@@ -43,7 +45,7 @@ class PromptManager:
         Returns:
             dict: Um dicionário com informações estratégicas analisadas.
         """
-        return analyze_briefing_for_strategy(client_profile, niche_guidelines)
+        return analyze_briefing_for_strategy(json.dumps(client_profile))
 
     def build_image_prompt(self, client_profile: dict, post_content: dict) -> str:
         """

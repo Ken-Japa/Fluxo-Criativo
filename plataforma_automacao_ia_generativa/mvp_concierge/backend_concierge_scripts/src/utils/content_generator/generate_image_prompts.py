@@ -1,5 +1,5 @@
-from ..prompt_manager import PromptManager
-from ..llm_client.gemini_client import generate_image_description
+from ...prompt_manager import PromptManager
+from ...llm_client.gemini_client import generate_image_description
 
 def generate_image_prompts(post_content: dict, client_profile: dict) -> dict:
     """
@@ -12,8 +12,8 @@ def generate_image_prompts(post_content: dict, client_profile: dict) -> dict:
     Returns:
         dict: Um dicionário contendo o prompt visual gerado, informações de tokens e custo.
     """
-    prompt_manager = PromptManager(client_profile, {})
-    prompt = prompt_manager.build_image_prompt(post_content)
+    prompt_manager = PromptManager(client_profile)
+    prompt = prompt_manager.build_image_prompt(client_profile, post_content)
 
     estimated_tokens = prompt_manager.get_token_count(prompt)
     estimated_cost = (estimated_tokens / 1000) * 0.0002

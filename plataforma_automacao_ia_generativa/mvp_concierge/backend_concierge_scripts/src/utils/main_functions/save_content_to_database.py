@@ -1,5 +1,6 @@
+import json
 from datetime import datetime
-from src.data_storage import insert_briefing_data, insert_generated_content
+from src.data_storage import insert_brief
 
 def save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd):
     """
@@ -16,18 +17,16 @@ def save_content_to_database(brief_data, nome_do_cliente, generated_content, pro
     print("\n--- Salvando Conteúdo no Banco de Dados ---")
     try:
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        briefing_id = insert_briefing_data(
+        subniche = brief_data.get('subniche', 'N/A') # Assumindo que 'subniche' está em brief_data
+        briefing_id = insert_brief(
             client_name=nome_do_cliente,
-            briefing_data=brief_data,
-            timestamp=timestamp
-        )
-        insert_generated_content(
-            briefing_id=briefing_id,
-            generated_content=generated_content,
+            subniche=subniche,
+            brief_data=brief_data,
+            generated_content=json.loads(generated_content), # Convertendo para dict
             prompt_used=prompt_used_for_content_generation,
             tokens_consumed=tokens_consumed,
             api_cost_usd=api_cost_usd,
-            timestamp=timestamp
+            delivery_date=timestamp
         )
         print("Briefing e conteúdo salvos no banco de dados com sucesso!")
     except Exception as e:
