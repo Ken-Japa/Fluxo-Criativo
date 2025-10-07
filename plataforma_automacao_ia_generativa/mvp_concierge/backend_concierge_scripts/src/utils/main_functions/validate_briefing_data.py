@@ -28,8 +28,7 @@ def validate_briefing_data(brief_data: dict):
 
     # Validação específica para conteudos_semanais
     if "conteudos_semanais" in brief_data:
-        if not brief_data["conteudos_semanais"]:
-            raise ValueError("A lista 'conteudos_semanais' não pode estar vazia.")
+
         for i, item in enumerate(brief_data["conteudos_semanais"]):
             if not isinstance(item, dict):
                 raise ValueError(f"Item {i} em 'conteudos_semanais' deve ser um dicionário.")

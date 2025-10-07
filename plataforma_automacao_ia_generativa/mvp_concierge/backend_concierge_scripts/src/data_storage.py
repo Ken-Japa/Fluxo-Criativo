@@ -14,7 +14,8 @@ from mvp_concierge.backend_concierge_scripts.src.utils.data_storage import (
     get_client_profile,
     get_all_briefs,
     update_brief_feedback,
-    export_all_briefs_to_json
+    export_all_briefs_to_json,
+    update_client_profile
 )
 
 if __name__ == '__main__':

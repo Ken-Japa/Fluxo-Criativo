@@ -13,7 +13,8 @@ def generate_content_for_client(
     niche_data: Dict,
     weekly_themes: List[str],
     weekly_goal: str,
-    campaign_type: str
+    campaign_type: str,
+    content_type: str
 ) -> Dict:
     """
     Gera conteúdo de mídia social para um cliente usando a API Google Gemini.
@@ -30,7 +31,8 @@ def generate_content_for_client(
     """
 
     prompt_manager = PromptManager(client_data, niche_data)
-    prompt = prompt_manager.build_prompt(content_type="social_media_post", weekly_themes=weekly_themes, weekly_goal=weekly_goal, campaign_type=campaign_type)
+    strategic_analysis = prompt_manager.analyze_briefing_for_strategy()
+    prompt = prompt_manager.build_prompt(content_type=content_type, weekly_themes=weekly_themes, weekly_goal=weekly_goal, campaign_type=campaign_type, strategic_analysis=strategic_analysis)
 
     # Tenta carregar do cache primeiro
     cache_key_data = {

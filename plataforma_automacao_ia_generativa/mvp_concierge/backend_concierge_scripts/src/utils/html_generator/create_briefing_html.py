@@ -157,6 +157,7 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         html_content += f"""
             <div class="post-section">
                 <h3>Post #{i + 1}: {post.get("titulo", "Sem Título")}</h3>
+                {f"<p><strong>Tema:</strong> {post.get("tema", "N/A")}</p>" if post.get("tema") else ""}
                 <p><strong>Justificativa Estratégica:</strong> {post.get("post_strategy_rationale", "N/A")}</p>
                 <p><strong>Briefing:</strong> {post.get("micro_briefing", "N/A")}</p>
                 <p><strong>Legenda:</strong> {post.get("legenda_principal", "N/A")}</p>
@@ -167,6 +168,8 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         html_content += f"""
                 </ul>
                 <p><strong>Hashtags:</strong> {" ".join(post.get("hashtags", []))}</p>
+                {f"<p><strong>Chamada para Ação (CTA):</strong> {post.get("cta_individual", "N/A")}</p>" if post.get("cta_individual") else ""}
+                {f"<p><strong>Sugestões de Interação/Engajamento:</strong> {post.get("interacao", "N/A")}</p>" if post.get("interacao") else ""}
                 <p><strong>Formato Sugerido:</strong> {post.get("sugestao_formato", "N/A")}</p>
                 <p><strong>Sugestões Visuais (Português):</strong> {post.get("visual_description_portuguese", "N/A")}</p>
                 <p><strong>Sugestões Visuais (English Prompt):</strong> {post.get("visual_prompt_suggestion", "N/A")}</p>

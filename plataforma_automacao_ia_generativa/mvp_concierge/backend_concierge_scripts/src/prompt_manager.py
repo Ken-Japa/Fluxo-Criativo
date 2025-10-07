@@ -36,18 +36,17 @@ class PromptManager:
         """
         return build_prompt(self.client_profile, self.niche_guidelines, content_type, weekly_themes, weekly_goal, campaign_type, strategic_analysis)
 
-    def analyze_briefing_for_strategy(self, client_profile: dict, niche_guidelines: dict = None) -> dict:
+    def analyze_briefing_for_strategy(self) -> dict:
         """
         Analisa o briefing do cliente e as diretrizes de nicho para extrair informações estratégicas.
-
-        Args:
-            client_profile (dict): Dicionário contendo o perfil do cliente.
-            niche_guidelines (dict): Dicionário contendo diretrizes específicas do nicho.
 
         Returns:
             dict: Um dicionário com informações estratégicas analisadas.
         """
-        return analyze_briefing_for_strategy(json.dumps(client_profile))
+        return analyze_briefing_for_strategy(
+            client_profile=self.client_profile,
+            niche_guidelines=self.niche_guidelines
+        )
 
     def build_image_prompt(self, client_profile: dict, post_content: dict) -> str:
         """

@@ -29,12 +29,24 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
             "tom_de_voz": brief_data.get("tom_de_voz"),
             "exemplos_de_nicho": brief_data.get("exemplos_de_nicho"),
             "estilo_de_comunicacao": brief_data.get("estilo_de_comunicacao"),
-            "vocabulario_da_marca": brief_data.get("vocabulario_da_marca")
+            "vocabulario_da_marca": brief_data.get("vocabulario_da_marca"),
+            "canais_de_distribuicao": brief_data.get("canais_de_distribuicao"),
+            "subnicho": brief_data.get("subnicho"),
+            "analise_swot": brief_data.get("analise_swot"),
+            "publico_alvo_detalhado": brief_data.get("publico_alvo_detalhado"),
+            "objetivos_de_marketing": brief_data.get("objetivos_de_marketing"),
+            "topicos_principais": brief_data.get("topicos_principais"),
+            "palavras_chave": brief_data.get("palavras_chave"),
+            "chamada_para_acao": brief_data.get("chamada_para_acao"),
+            "restricoes_e_diretrizes": brief_data.get("restricoes_e_diretrizes"),
+            "informacoes_adicionais": brief_data.get("informacoes_adicionais"),
+            "referencias_de_estilo_e_formato": brief_data.get("referencias_de_estilo_e_formato")
         }
 
         niche_data = {
             "subnicho": brief_data.get("subnicho"),
-            "exemplos_de_nicho": brief_data.get("exemplos_de_nicho")
+            "exemplos_de_nicho": brief_data.get("exemplos_de_nicho"),
+            "analise_de_concorrentes_referencias": brief_data.get("analise_de_concorrentes_referencias")
         }
 
         generated_data = generate_content_for_client(
@@ -42,7 +54,8 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
             niche_data=niche_data,
             weekly_themes=weekly_themes_list,
             weekly_goal=objetivos_de_marketing,
-            campaign_type=campaign_type
+            campaign_type=campaign_type,
+            content_type=tipo_de_conteudo
         )
 
         if generated_data.get("status") == "error":

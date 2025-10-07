@@ -12,7 +12,8 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
         content_type (str): O tipo de conteúdo a ser gerado (ex: 'instagram_post').
         weekly_themes (list[str]): Uma lista de temas a serem abordados na semana.
         weekly_goal (str): O objetivo principal do conteúdo para a semana.
-        strategic_analysis (dict): O resultado da análise estratégica do briefing.
+            campaign_type (str): O tipo de campanha (ex: 'autoridade').
+            strategic_analysis (dict): O resultado da análise estratégica do briefing.
 
     Returns:
         str: O prompt completo formatado para a API do Gemini.
@@ -35,6 +36,7 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     informacoes_adicionais = client_profile.get("informacoes_adicionais", "")
     referencias_de_concorrentes = client_profile.get("referencias_de_concorrentes", [])
     referencias_de_estilo_e_formato = client_profile.get("referencias_de_estilo_e_formato", [])
+    posts_anteriores = client_profile.get("posts_anteriores", [])
 
     # Sugerir métricas com base no tipo de campanha e objetivos de marketing
     sugerir_metricas = suggest_metrics(campaign_type, objetivos_de_marketing)
@@ -116,8 +118,11 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
         user_message_parts.append(f"- Chamada para Ação (CTA): {chamada_para_acao}")
     if restricoes_e_diretrizes:
         user_message_parts.append(f"- Restrições e Diretrizes: {restricoes_e_diretrizes}")
-    if informacoes_adicionais:
-        user_message_parts.append(f"- Informações Adicionais: {informacoes_adicionais}")
+    if posts_anteriores:
+        user_message_parts.append("\n**Posts Anteriores:**")
+        user_message_parts.append("Considere os seguintes posts já publicados e evite repetir temas ou abordagens de forma idêntica. Busque originalidade e complementariedade.")
+        for post in posts_anteriores:
+            user_message_parts.append(f"- Tema: {post.get('tema', 'Não especificado')}")
     if referencias_de_concorrentes:
         user_message_parts.append(f"- Concorrentes/Referências: {', '.join(referencias_de_concorrentes)}")
     if referencias_de_estilo_e_formato:
@@ -136,6 +141,7 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append(" Busque se possivel inserir stroytelling ou casos ficticios no texto. Busque também inserir dados concretos, números ou estatísticas pertinentes mesmo que sejam aproximados no texto se fizer sentido.")
     user_message_parts.extend(generate_campaign_narrative(campaign_type))
     user_message_parts.append("- `titulo`: Um título conciso para o post.")
+    user_message_parts.append("- `tema`: Resumo do tema abordado no post.")
     user_message_parts.append("- `legenda_principal`: A legenda principal do post.")
     user_message_parts.append("- `variacoes_legenda`: Uma lista de 2-3 variações da legenda principal.")
     user_message_parts.append("- `hashtags`: Uma lista de hashtags relevantes.")
@@ -146,24 +152,29 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("- `carrossel_slides`: Se `sugestao_formato` for \"Carrossel de imagens\", inclua uma lista de objetos, onde cada objeto representa um slide do carrossel, contendo `titulo_slide`, `texto_slide` e `sugestao_visual_slide`.")
     user_message_parts.append("- `visual_prompt_suggestion`: Uma descrição detalhada da imagem ou vídeo principal para o post, incluindo estilo, cores, elementos e atmosfera, para ser usada por uma IA de geração de imagens.")
     user_message_parts.append("- `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.")
-
+    user_message_parts.append("- `cta_individual`: Uma chamada para ação específica para este post.")
+    user_message_parts.append("- `interacao`: Sugerir uma pergunta para a audiência ou uma forma de incentivar comentários, aumentando o engajamento além da simples publicação..")
     user_message_parts.append("\nRetorne o conteúdo em formato JSON, seguindo a estrutura abaixo:")
     user_message_parts.append("{{")
     user_message_parts.append("    \"weekly_strategy_summary\": \"Resumo da estratégia semanal para a campanha.\",")
     user_message_parts.append("    \"posts\": [")
     user_message_parts.append("        {{")
     user_message_parts.append("            \"titulo\": \"Título do Post 1\",")
+    user_message_parts.append("            \"tema\": \"Resumo do tema abordado no post 1\",")
     user_message_parts.append("            \"legenda_principal\": \"Legenda principal do post 1.\",")
     user_message_parts.append("            \"variacoes_legenda\": [")
     user_message_parts.append("                \"Variação 1 da legenda 1.\",")
     user_message_parts.append("                \"Variação 2 da legenda 1.\"")
     user_message_parts.append("            ],")
     user_message_parts.append("            \"hashtags\": [\"#Hashtag1\", \"#Hashtag2\"],")
+    user_message_parts.append("            \"horario_de_postagem\": \"Horário sugerido para postagem\",")
     user_message_parts.append("            \"sugestao_formato\": \"Carrossel de imagens\",")
     user_message_parts.append("            \"post_strategy_rationale\": \"Justificativa estratégica para este post.\",")
     user_message_parts.append("            \"micro_briefing\": \"Breve resumo do objetivo do post.\",")
     user_message_parts.append("            \"visual_prompt_suggestion\": \"Descrição detalhada para IA de geração de imagens.\",")
     user_message_parts.append("            \"visual_description_portuguese\": \"Descrição em português da imagem ou vídeo principal.\",")
+    user_message_parts.append("            \"cta_individual\": \"Chamada para ação específica para este post.\",")
+    user_message_parts.append("            \"interacao\": \"Formas de como aumentar a interação com este post.\",")
     user_message_parts.append("            \"micro_roteiro\": [")
     user_message_parts.append("                {")
     user_message_parts.append("                    \"cena\": 1,")
@@ -182,7 +193,6 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("        }}")
     user_message_parts.append("    ],")
     user_message_parts.append("    \"metricas_de_sucesso_sugeridas\": " + json.dumps(sugerir_metricas, indent=4, ensure_ascii=False).replace("\n", "\n    ") + ",")
-    user_message_parts.append("    \"horario_de_postagem\": \"Horário sugerido para postagem\"")
     user_message_parts.append("}}")
 
     user_message = "\n".join(user_message_parts)

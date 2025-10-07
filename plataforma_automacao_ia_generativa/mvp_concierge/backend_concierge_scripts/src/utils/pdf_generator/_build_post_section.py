@@ -15,6 +15,10 @@ def _build_post_section(styles: dict, post: dict, post_number: int) -> list:
     post_story = []
     post_story.append(Paragraph(f"Post {post_number}: {post.get('titulo', 'N/A')}", styles['PostTitle']))
     post_story.append(Spacer(1, 7.2))
+    post_story.append(Paragraph("Tema:", styles['BlackSubtitle']))
+    post_story.append(Spacer(1, 3.6))
+    post_story.append(Paragraph(f"{post.get('tema')}", styles['NormalText']))
+    post_story.append(Spacer(1, 7.2))
 
     post_story.append(Paragraph("Justificativa Estratégica:", styles['BlackSubtitle']))
     post_story.append(Spacer(1, 3.6))
@@ -44,6 +48,18 @@ def _build_post_section(styles: dict, post: dict, post_number: int) -> list:
     post_story.append(Paragraph(" ".join(post.get('hashtags', [])), styles['PostHashtag']))
     post_story.append(Spacer(1, 7.2))
 
+    post_story.append(Paragraph("Chamada para Ação Individual:", styles['BlackSubtitle']))
+    post_story.append(Spacer(1, 3.6))
+    post_story.append(Paragraph(post.get('cta_individual'), styles['PostContent']))
+    post_story.append(Spacer(1, 7.2))
+
+    # Adiciona o campo de interação
+    if post.get('interacao'):
+        post_story.append(Paragraph("Sugestões de Interação/Engajamento:", styles['BlackSubtitle']))
+        post_story.append(Spacer(1, 3.6))
+        post_story.append(Paragraph(post.get('interacao'), styles['PostContent']))
+        post_story.append(Spacer(1, 7.2))
+        
     post_story.append(Paragraph("Sugestão de Formato:", styles['DarkGreenSubtitle']))
     post_story.append(Spacer(1, 3.6))
     post_story.append(Paragraph(post.get('sugestao_formato', 'N/A'), styles['PostContent']))

@@ -1,15 +1,11 @@
---- Prompt Log (content_generation) ---
-Cliente: Auge Invest
-Data/Hora: 2025-10-07 10:54:59
--------------------------------------
+Você é um copywriter especializado em mídias sociais. O nicho é Investimentos e tecnologia financeira. Seu objetivo é criar conteúdo altamente engajador, viral e relevante para o público-alvo do cliente.
 
-Você é um copywriter especializado em mídias sociais. para Investimentos e tecnologia financeira. Atuando sob as diretrizes de nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro. Seu objetivo é criar conteúdo altamente engajador, viral e relevante para o público-alvo do cliente.
-
-Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para social_media_post.
+Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para os seguintes canais: Instagram, LinkedIn, YouTube (curtos informativos), Blog da Auge Invest, E-mail marketing.
 Evite soar como uma IA, busque um estilo de texto humanizado, evite clichês de copy genérica.
 
 **Perfil do Cliente:**
 - Nome do Cliente: Auge Invest
+- Subnicho: Investimentos e tecnologia financeira
 - Tom de Voz: Profissional, confiável, educativo e inspirador — com uma linguagem acessível e visual moderno, transmitindo autoridade e inovação.
 - Busque criar o texto como se fosse: Como se fosse uma conversa entre assessor financeiro e cliente em uma reunião. Use frases naturais, com pausas, perguntas retóricas e expressões comuns do dia a dia.
 - O cliente costuma usar o vocabulário e ou frases como: Auge Invest, mercado financeiro, investimentos inteligentes, oportunidades de crescimento, análise de dados, decisões estratégicas, futuro financeiro
@@ -17,24 +13,33 @@ Evite soar como uma IA, busque um estilo de texto humanizado, evite clichês de 
 - Público-Alvo: Investidores iniciantes e intermediários no Brasil que buscam entender o mercado financeiro, encontrar oportunidades de investimento e utilizar ferramentas modernas para análise de ativos.
 
 **Análise Estratégica Inicial:**
-- Informações Adicionais e Diretrizes Específicas:  subnicho: Investimentos e tecnologia financeira. exemplos_de_nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro.. Incorpore essas informações para refinar a estratégia de conteúdo.
+- Contexto do Subnicho: O cliente atua no subnicho de Investimentos e tecnologia financeira. Compreenda as nuances e particularidades deste segmento para gerar conteúdo altamente relevante.
+- Análise de Concorrentes/Referências: Considere o estilo e as estratégias de conteúdo dos seguintes concorrentes/referências: Status Invest, Fundamentus, Investidor10, TC (Traders Club). Identifique oportunidades e diferenciais.
+- Informações Adicionais e Diretrizes Específicas: A plataforma possui design moderno, dark mode inspirado no estilo Matrix, com ferramentas de análise, gráficos interativos e atualizações diárias de preços e indicadores.. Incorpore essas informações para refinar a estratégia de conteúdo.
+
+**Informações Estratégicas do Briefing:**
+- Analise Swot: Forças: Marca forte; Fraquezas: Pouca presença online; Oportunidades: Crescimento do mercado; Ameaças: Concorrência acirrada
+- Publico Alvo Detalhado: Jovens adultos (25-35 anos) interessados em tecnologia e finanças.
+- Objetivos de Marketing: Lançar a plataforma Auge Invest, atrair os primeiros usuários, gerar autoridade no mercado e incentivar o cadastro na versão gratuita e no período de testes.
 - Exemplos de Nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro
-- Informações Adicionais:  subnicho: Investimentos e tecnologia financeira. exemplos_de_nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro.
+- Canais de Distribuição: Instagram, LinkedIn, YouTube (curtos informativos), Blog da Auge Invest, E-mail marketing
+- Tópicos Principais: Apresentação da plataforma Auge Invest, Como usar a análise técnica e fundamentalista para investir melhor, Panorama da economia brasileira e internacional, Educação financeira: juros, inflação e oportunidades, Alertas e insights sobre o mercado
+- Palavras-Chave: investimentos, Auge Invest, mercado financeiro, ações, FIIs, ETFs, economia, plataforma de investimentos, educação financeira, análise técnica, análise fundamentalista
+- Chamada para Ação (CTA): Experimente a Auge Invest gratuitamente e tenha acesso a análises detalhadas e ferramentas exclusivas para tomar decisões mais inteligentes no mercado.
+- Restrições e Diretrizes: Evitar promessas de lucro fácil. Sempre destacar que investimentos envolvem riscos. Utilizar linguagem clara, sem jargões técnicos excessivos.
+- Concorrentes/Referências: Status Invest, Fundamentus, Investidor10, TC (Traders Club)
+- Referências de Estilo e Formato: Estilo visual do Nubank (limpo e moderno), Conteúdo educativo da Suno Research, Postagens explicativas e analíticas da Nord Research
 
 **Contexto Semanal:**
-- Temas da Semana: Apresentar a plataforma e gerar curiosidade sobre seus diferenciais e ferramentas exclusivas., Educar o público e mostrar como a Auge Invest facilita essas análises com dados e gráficos intuitivos., Oferecer valor informativo e posicionar a marca como fonte confiável de insights macroeconômicos., Mostrar a praticidade e a tecnologia da plataforma, reforçando o uso diário e o trial gratuito., Explicar conceitos e apresentar a Auge Invest como aliada para decisões conscientes., Destacar os diferenciais tecnológicos e criar percepção de valor no serviço premium., Converter seguidores e visitantes em usuários da plataforma durante o lançamento.
-- Objetivo Semanal: Lançar a plataforma Auge Invest, atrair os primeiros usuários, gerar autoridade no mercado e incentivar o cadastro na versão gratuita e no período de testes.
+- Temas da Semana: Tema de Exemplo 1, Tema de Exemplo 2
+- Objetivo Semanal: Aumentar o engajamento em 15%
 
 **Instruções de Formato:**
 Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 ideias de posts. Para cada post, inclua:
  Os 5 Posts serão postados na seguinte ordem: sexta, sábado, domingo, segunda e quarta. Baseado no nicho, objetivo e nos dias da semana, retorne também um horário recomendado para postagem.
  Busque se possivel inserir stroytelling ou casos ficticios no texto. Busque também inserir dados concretos, números ou estatísticas pertinentes mesmo que sejam aproximados no texto se fizer sentido.
-A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando:
-- Post 1: Apresentação do Problema/Desafio do público-alvo.
-- Post 2: Introdução da Solução (produto/serviço do cliente).
-- Post 3: Detalhamento dos Benefícios e Vantagens da solução.
-- Post 4: Prova Social/Exemplos de Sucesso/Depoimentos.
-- Post 5: Chamada para Ação (CTA) clara e direta.
+A lógica aqui não é seguir um arco narrativo de 5 posts conectados, mas sim gerar ideias independentes, originais e variadas, pensadas no estilo do criador.
+Lista de ideias → Formato → Objetivo → Estrutura resumida.
 - `titulo`: Um título conciso para o post.
 - `legenda_principal`: A legenda principal do post.
 - `variacoes_legenda`: Uma lista de 2-3 variações da legenda principal.
@@ -59,6 +64,7 @@ Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
                 "Variação 2 da legenda 1."
             ],
             "hashtags": ["#Hashtag1", "#Hashtag2"],
+            "horario_de_postagem": "Horário sugerido para postagem",
             "sugestao_formato": "Carrossel de imagens",
             "post_strategy_rationale": "Justificativa estratégica para este post.",
             "micro_briefing": "Breve resumo do objetivo do post.",
@@ -82,18 +88,17 @@ Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
         }}
     ],
     "metricas_de_sucesso_sugeridas": {
-        "objetivo_principal": "",
+        "objetivo_principal": "Lançar a plataforma Auge Invest, atrair os primeiros usuários, gerar autoridade no mercado e incentivar o cadastro na versão gratuita e no período de testes.",
         "indicadores_chave": [
-            "Taxa de cliques no link da bio (CTR)",
-            "Número de conversões (cadastros, downloads, trials)",
-            "Taxa de conversão da landing page (%)"
+            "Crescimento de seguidores por semana",
+            "Taxa de engajamento média",
+            "Alcance orgânico por post",
+            "Taxa de compartilhamento"
         ],
         "metricas_secundarias": [
-            "Impressões totais",
-            "Alcance dos posts",
-            "Visualizações de vídeo (especialmente Post 2 ou 4)",
-            "Engajamento no CTA final (comentários, cliques no botão)"
+            "Tempo médio de visualização em Reels",
+            "CTR em experimentos de conteúdo",
+            "Feedback qualitativo nos comentários"
         ]
     },
-    "horario_de_postagem": "Horário sugerido para postagem"
 }}
