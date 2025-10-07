@@ -2,10 +2,10 @@ import json
 import re
 from typing import List, Dict
 
-from src.llm_client.gemini_client import generate_text_content
+from src.llm_client.gemini_client import generate_text_content as generate_gemini_content
+from src.llm_client.deepseek_client import generate_text_content as generate_deepseek_content
 from src.prompt_manager import PromptManager
 from src.utils.cache_manager import get_cache_key, get_from_cache, set_to_cache
-
 
 
 def generate_content_for_client(
@@ -14,10 +14,11 @@ def generate_content_for_client(
     weekly_themes: List[str],
     weekly_goal: str,
     campaign_type: str,
-    content_type: str
+    content_type: str,
+    use_deepseek: bool = False
 ) -> Dict:
     """
-    Gera conteúdo de mídia social para um cliente usando a API Google Gemini.
+    Gera conteúdo de mídia social para um cliente usando a API Google Gemini ou DeepSeek.
 
     Args:
         client_data (Dict): Dados do cliente.
@@ -25,6 +26,7 @@ def generate_content_for_client(
         weekly_themes (List[str]): Temas semanais para o conteúdo.
         weekly_goal (str): Objetivo semanal de marketing.
         campaign_type (str): O tipo de campanha (e.g., "lancamento", "autoridade").
+        use_deepseek (bool): Se True, usa o DeepSeek; caso contrário, usa o Gemini.
 
     Returns:
         Dict: O conteúdo gerado para mídia social.
@@ -39,7 +41,8 @@ def generate_content_for_client(
         "client_data": client_data,
         "niche_data": niche_data,
         "weekly_themes": weekly_themes,
-        "weekly_goal": weekly_goal
+        "weekly_goal": weekly_goal,
+        "use_deepseek": use_deepseek
     }
     cache_key = get_cache_key(cache_key_data)
     cached_content = get_from_cache(cache_key)
@@ -47,9 +50,9 @@ def generate_content_for_client(
         print("Conteúdo carregado do cache.")
         return cached_content
 
-    print("Gerando novo conteúdo com a API Gemini...")
+    print(f"Gerando novo conteúdo com a API {'DeepSeek' if use_deepseek else 'Gemini'}...")
     
-    llm_response = generate_text_content(prompt)
+    llm_response = generate_deepseek_content(prompt) if use_deepseek else generate_gemini_content(prompt)
 
     if llm_response["status"] == "success":
         generated_content = llm_response["generated_content"]
@@ -62,7 +65,8 @@ def generate_content_for_client(
             "token_usage": {
                 "estimated_input_tokens": len(prompt.split()),
                 "estimated_cost_usd": (len(prompt.split()) / 1000) * 0.0002
-            }
+            },
+            "llm_used": "DeepSeek" if use_deepseek else "Gemini"
         }
     else:
         print("DEBUG: Entrando no bloco ELSE (erro).")

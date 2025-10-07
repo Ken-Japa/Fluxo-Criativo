@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 from src.html_generator import create_briefing_html
 
-def generate_briefing_html(generated_content, nome_do_cliente, output_dir):
+def generate_briefing_html(generated_content, nome_do_cliente, output_dir, ai_prefix: str = ""):
     """
     Gera um arquivo HTML do briefing com o conteúdo gerado.
 
@@ -10,13 +10,19 @@ def generate_briefing_html(generated_content, nome_do_cliente, output_dir):
         generated_content (str): O conteúdo gerado para incluir no HTML.
         nome_do_cliente (str): O nome do cliente para nomear o arquivo HTML.
         output_dir (str): O diretório onde o HTML será salvo.
+        ai_prefix (str): O prefixo da IA (ex: "Deepseek-", "Gemini-").
 
     Returns:
         str: O caminho completo do arquivo HTML gerado, ou None em caso de erro.
     """
     print("\n--- Gerando Relatório HTML ---")
     timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    output_html_filename = os.path.join(output_dir, f"briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.html")
+    
+    # Criar o diretório específico para a IA dentro de output_dir
+    ai_output_subdir = os.path.join(output_dir, ai_prefix.replace("-", ""))
+    os.makedirs(ai_output_subdir, exist_ok=True)
+
+    output_html_filename = os.path.join(ai_output_subdir, f"{ai_prefix}briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.html")
     try:
         create_briefing_html(generated_content, nome_do_cliente, output_html_filename)
         return output_html_filename

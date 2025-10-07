@@ -4,7 +4,7 @@ from datetime import datetime
 
 from src.utils.pdf_generator.create_briefing_pdf import create_briefing_pdf
 
-def generate_briefing_pdf(content_json: dict, client_name: str, output_dir: str, target_audience: str, tone_of_voice: str, marketing_objectives: str):
+def generate_briefing_pdf(content_json: dict, client_name: str, output_dir: str, target_audience: str, tone_of_voice: str, marketing_objectives: str, ai_prefix: str = ""):
     """
     Gera um briefing em PDF com base no conteúdo JSON fornecido.
 
@@ -15,10 +15,16 @@ def generate_briefing_pdf(content_json: dict, client_name: str, output_dir: str,
         target_audience (str): O público-alvo do briefing.
         tone_of_voice (str): O tom de voz a ser utilizado no briefing.
         marketing_objectives (str): Os objetivos de marketing do briefing.
+        ai_prefix (str): O prefixo da IA (ex: "Deepseek-", "Gemini-").
     """
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    pdf_filename = f"briefing_{client_name}_{timestamp}.pdf"
-    output_filepath = os.path.join(output_dir, pdf_filename)
+    
+    # Criar o diretório específico para a IA dentro de output_dir
+    ai_output_subdir = os.path.join(output_dir, ai_prefix.replace("-", ""))
+    os.makedirs(ai_output_subdir, exist_ok=True)
+
+    pdf_filename = f"{ai_prefix}briefing_{client_name}_{timestamp}.pdf"
+    output_filepath = os.path.join(ai_output_subdir, pdf_filename)
 
     suggested_metrics = content_json.get('metricas_de_sucesso_sugeridas', {})
 
