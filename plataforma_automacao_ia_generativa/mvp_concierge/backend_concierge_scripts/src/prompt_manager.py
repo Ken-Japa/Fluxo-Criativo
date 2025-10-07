@@ -18,7 +18,7 @@ class PromptManager:
         self.client_profile = client_profile
         self.niche_guidelines = niche_guidelines
 
-    def build_prompt(self, content_type: str, weekly_themes: list[str], weekly_goal: str, strategic_analysis: dict = None) -> str:
+    def build_prompt(self, content_type: str, weekly_themes: list[str], weekly_goal: str, campaign_type: str, strategic_analysis: dict = None) -> str:
         """
         Constrói o prompt completo para a API do Gemini, utilizando a função build_prompt refatorada.
 
@@ -28,12 +28,13 @@ class PromptManager:
             content_type (str): O tipo de conteúdo a ser gerado (ex: 'instagram_post').
             weekly_themes (list[str]): Uma lista de temas a serem abordados na semana.
             weekly_goal (str): O objetivo principal do conteúdo para a semana.
+            campaign_type (str): O tipo de campanha (e.g., "lancamento", "autoridade").
             strategic_analysis (dict): O resultado da análise estratégica do briefing.
 
         Returns:
             str: O prompt completo formatado para a API do Gemini.
         """
-        return build_prompt(self.client_profile, self.niche_guidelines, content_type, weekly_themes, weekly_goal, strategic_analysis)
+        return build_prompt(self.client_profile, self.niche_guidelines, content_type, weekly_themes, weekly_goal, campaign_type, strategic_analysis)
 
     def analyze_briefing_for_strategy(self, client_profile: dict, niche_guidelines: dict = None) -> dict:
         """

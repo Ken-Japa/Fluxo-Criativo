@@ -1,6 +1,7 @@
 import json
+from .campaign_narrative_generator import generate_campaign_narrative
 
-def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str, weekly_themes: list[str], weekly_goal: str, strategic_analysis: dict = None) -> str:
+def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str, weekly_themes: list[str], weekly_goal: str, campaign_type: str, strategic_analysis: dict = None) -> str:
     """
     Constrói o prompt completo para a API do Gemini, combinando o perfil do cliente, diretrizes de nicho, contexto semanal e instruções de formato.
 
@@ -111,12 +112,7 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
 
     user_message_parts.append("\n**Instruções de Formato:**")
     user_message_parts.append("Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 ideias de posts. Para cada post, inclua:")
-    user_message_parts.append("A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando:")
-    user_message_parts.append("- Post 1: Apresentação do Problema/Desafio do público-alvo.")
-    user_message_parts.append("- Post 2: Introdução da Solução (produto/serviço do cliente).")
-    user_message_parts.append("- Post 3: Detalhamento dos Benefícios e Vantagens da solução.")
-    user_message_parts.append("- Post 4: Prova Social/Exemplos de Sucesso/Depoimentos.")
-    user_message_parts.append("- Post 5: Chamada para Ação (CTA) clara e direta.")
+    user_message_parts.extend(generate_campaign_narrative(campaign_type))
     user_message_parts.append("- `titulo`: Um título conciso para o post.")
     user_message_parts.append("- `legenda_principal`: A legenda principal do post.")
     user_message_parts.append("- `variacoes_legenda`: Uma lista de 2-3 variações da legenda principal.")

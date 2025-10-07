@@ -20,6 +20,7 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
     print("\n--- Gerando Conteúdo para Redes Sociais ---")
     try:
         weekly_themes_list = [item.get("objetivo_do_conteudo_individual", "") for item in conteudos_semanais]
+        campaign_type = brief_data.get("tipo_de_campanha", "lancamento")
 
         client_data = {
             "nome_do_cliente": nome_do_cliente,
@@ -38,7 +39,8 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
             client_data=client_data,
             niche_data=niche_data,
             weekly_themes=weekly_themes_list,
-            weekly_goal=objetivos_de_marketing
+            weekly_goal=objetivos_de_marketing,
+            campaign_type=campaign_type
         )
 
         if generated_data.get("status") == "error":

@@ -47,12 +47,14 @@
     "Investidor10",
     "TC (Traders Club)"
   ],
+  "campaign_type": "",
   "referencias_de_estilo_e_formato": [
     "Estilo visual do Nubank (limpo e moderno)",
     "Conteúdo educativo da Suno Research",
     "Postagens explicativas e analíticas da Nord Research"
   ],
   "tipo_de_conteudo": "Conteúdos para redes sociais e blog (carrosséis, posts explicativos e artigos educativos)",
+  "tipo_de_campanha": "lancamento",
   "conteudos_semanais": [
     {
       "chamada_para_acao_individual": "Descubra a Auge Invest: a nova plataforma que vai simplificar sua jornada de investimentos.",
