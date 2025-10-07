@@ -49,6 +49,26 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         if marketing_objectives:
             summary_html += f"        <h3>Objetivos de Marketing:</h3><p>{marketing_objectives}</p>\n"
 
+    # --- Métricas Sugeridas ---
+    metrics_html = ""
+    suggested_metrics = content_json.get("metricas_de_sucesso_sugeridas", {})
+
+    if suggested_metrics:
+        metrics_html += "        <h2>Métricas Sugeridas</h2>\n"
+        metrics_html += f"        <h3>Objetivo Principal:</h3><p>{suggested_metrics.get("objetivo_principal", "N/A")}</p>\n"
+        if suggested_metrics.get("indicadores_chave"):
+            metrics_html += "        <h3>Indicadores Chave:</h3>\n"
+            metrics_html += "        <ul>\n"
+            for indicador in suggested_metrics["indicadores_chave"]:
+                metrics_html += f"            <li>{indicador}</li>\n"
+            metrics_html += "        </ul>\n"
+        if suggested_metrics.get("metricas_secundarias"):
+            metrics_html += "        <h3>Métricas Secundárias:</h3>\n"
+            metrics_html += "        <ul>\n"
+            for metrica in suggested_metrics["metricas_secundarias"]:
+                metrics_html += f"            <li>{metrica}</li>\n"
+            metrics_html += "        </ul>\n"
+
     # --- Calendário de Publicação ---
     today = datetime.now()
     posts = content_json.get('posts', [])
@@ -59,12 +79,12 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         calendar_html += "        <h2>Calendário de Publicação</h2>\n"
         calendar_html += "        <table class=\"calendar-table\">\n"
         calendar_html += "            <thead>\n"
-        calendar_html += "                <tr><th>Dia</th><th>Data</th><th>Post</th></tr>\n"
+        calendar_html += "                <tr><th>Dia</th><th>Data</th><th>Horário</th><th>Post</th></tr>\n"
         calendar_html += "            </thead>\n"
         calendar_html += "            <tbody>\n        """
         for entry in publication_calendar:
             for sub_entry in entry['entries']:
-                calendar_html += f"                <tr><td>{entry['day'].split(', ')[0]}</td><td>{entry['day'].split(', ')[1]}</td><td>{sub_entry['content']}</td></tr>\n"
+                calendar_html += f"                <tr><td>{entry['day'].split(', ')[0]}</td><td>{entry['day'].split(', ')[1]}</td><td>{sub_entry['time']}</td><td>{sub_entry['content']}</td></tr>\n"
         calendar_html += "            </tbody>\n"
         calendar_html += "        </table>\n"
 
@@ -74,8 +94,18 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
     if publication_checklist:
         checklist_html += "        <h2>Checklist de Publicação</h2>\n"
         checklist_html += "        <ul class=\"checklist\">\n"
-        for item in publication_checklist:
-            checklist_html += f"            <li>{item}</li>\n"
+        for day_entry in publication_checklist:
+            checklist_html += f"            <li><strong>{day_entry['date']}</strong></li>\n"
+            checklist_html += "            <ul>\n"
+            for task in day_entry['tasks']:
+                # Prioridade: Postar (negrito), Preparar, Responder comentários
+                task_type = task['type']
+                task_title = task['title']
+                if "Postar" in task_type:
+                    checklist_html += f"                <li><strong>{task_type} Post #{task['post_number']}: {task_title}</strong></li>\n"
+                else:
+                    checklist_html += f"                <li>{task_type} Post #{task['post_number']}: {task_title}</li>\n"
+            checklist_html += "            </ul>\n"
         checklist_html += "        </ul>\n"
 
 
@@ -118,7 +148,6 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
 
         {summary_html}
         {calendar_html}
-        {checklist_html}
 
         <h2>Posts Sugeridos</h2>
         """
@@ -128,17 +157,41 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         html_content += f"""
             <div class="post-section">
                 <h3>Post #{i + 1}: {post.get("titulo", "Sem Título")}</h3>
+                <p><strong>Justificativa Estratégica:</strong> {post.get("post_strategy_rationale", "N/A")}</p>
+                <p><strong>Briefing:</strong> {post.get("micro_briefing", "N/A")}</p>
                 <p><strong>Legenda:</strong> {post.get("legenda_principal", "N/A")}</p>
                 <p><strong>Variações:</strong></p>
-                <ul>
         """
         for variation in post.get("variacoes_legenda", []):
             html_content += f"                <li>{variation}</li>\n"
         html_content += f"""
                 </ul>
                 <p><strong>Hashtags:</strong> {" ".join(post.get("hashtags", []))}</p>
-                <p><strong>Formato Sugerido:</strong> {post.get("formato_sugerido", "N/A")}</p>
-                <p><strong>Sugestões Visuais:</strong> [ESPAÇO PARA SUGESTÕES VISUAIS - PREENCHER MANUALMENTE OU COM IA FUTURA]</p>
+                <p><strong>Formato Sugerido:</strong> {post.get("sugestao_formato", "N/A")}</p>
+                <p><strong>Sugestões Visuais (Português):</strong> {post.get("visual_description_portuguese", "N/A")}</p>
+                <p><strong>Sugestões Visuais (English Prompt):</strong> {post.get("visual_prompt_suggestion", "N/A")}</p>
+        """
+        if post.get("sugestao_formato") == "Carrossel de imagens":
+            html_content += f"""
+                <h4>Slides do Carrossel:</h4>
+                <ol>
+            """
+            for slide in post.get("carrossel_slides", []):
+                html_content += f"                    <li><strong>{slide.get("titulo_slide", "")}</strong>: {slide.get("texto_slide", "")} (Visual: {slide.get("sugestao_visual_slide", "")})</li>\n"
+            html_content += f"""
+                </ol>
+            """
+        elif post.get("sugestao_formato") == "Vídeo":
+            html_content += f"""
+                <h4>Micro Roteiro (Vídeo):</h4>
+                <ol>
+            """
+            for cena in post.get("micro_roteiro", []):
+                html_content += f"                    <li><strong>Cena:</strong> {cena.get("cena", "")} - <strong>Descrição Visual:</strong> {cena.get("descricao_visual", "")} - <strong>Texto/Locução:</strong> {cena.get("texto_locucao", "")}</li>\n"
+            html_content += f"""
+                </ol>
+            """
+        html_content += f"""
                 <p><strong>Checklist de Publicação:</strong></p>
                 <ul class="checklist">
                     <li>Revisar texto e gramática.</li>
@@ -148,6 +201,10 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
                 </ul>
             </div>
         """
+    html_content += f"""
+        {metrics_html}
+        {checklist_html}
+"""
 
     # Adiciona o rodapé e fechamento do HTML
     html_content += """
