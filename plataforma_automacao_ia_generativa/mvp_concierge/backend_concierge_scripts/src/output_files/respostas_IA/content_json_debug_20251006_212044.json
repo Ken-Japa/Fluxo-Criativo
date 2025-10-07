@@ -1,0 +1,257 @@
+{
+    "weekly_strategy_summary": "Esta campanha semanal de lançamento para a Auge Invest foi desenhada para criar uma narrativa coesa e progressiva em 5 posts. Começamos identificando a dor do público (sobrecarga de informação), introduzimos a Auge Invest como a solução, detalhamos seus benefícios tecnológicos, demonstramos seu valor na prática através de um caso de uso e, finalmente, convertemos o interesse gerado com uma chamada para ação clara para o trial gratuito. O objetivo é construir autoridade, educar sobre o produto e impulsionar os cadastros iniciais na plataforma.",
+    "posts": [
+        {
+            "titulo": "Excesso de Informação, Falta de Decisão?",
+            "legenda_principal": "Você já se sentiu perdido em um mar de gráficos, notícias e planilhas na hora de investir? 🌊 A paralisia por análise é real e afeta milhares de investidores, transformando a busca por boas oportunidades em uma fonte de estresse.\n\nPassar horas compilando dados para, no fim, ainda se sentir inseguro sobre qual ação ou FII escolher... Soa familiar?\n\nEsse excesso de informação, sem as ferramentas certas para filtrá-la, mais atrapalha do que ajuda. Mas e se houvesse uma forma de transformar o caos em clareza? Fique de olho nos nossos próximos posts.",
+            "variacoes_legenda": [
+                "Gráficos indecifráveis, dezenas de abas abertas e a sensação de que você está sempre um passo atrás do mercado. Se essa é a sua realidade ao analisar investimentos, você não está sozinho. A sobrecarga de dados é o maior inimigo do investidor decidido. Estamos prestes a mudar isso.",
+                "Investir deveria ser sobre estratégia, não sobre decifrar planilhas complexas. Muitos se perdem no 'como' analisar e esquecem do 'porquê' investir. Se a complexidade do mercado financeiro te impede de tomar decisões com confiança, saiba que existe um caminho mais inteligente. Fique ligado."
+            ],
+            "hashtags": [
+                "#Investimentos",
+                "#EducaçãoFinanceira",
+                "#MercadoFinanceiro",
+                "#AnaliseDeAcoes",
+                "#ParalisiaPorAnalise",
+                "#BolsaDeValores"
+            ],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Este primeiro post estabelece a conexão com o público-alvo ao abordar um problema central e universal: a sobrecarga de informação e a 'paralisia por análise'. Ao validar essa dor, geramos empatia e preparamos o terreno para apresentar nossa solução nos posts seguintes. O gancho no final ('Mas e se...?) cria curiosidade e incentiva o seguidor a acompanhar a continuação da narrativa.",
+            "micro_briefing": "Apresentar o problema da sobrecarga de informação no mundo dos investimentos, gerando identificação e curiosidade pela solução que virá.",
+            "visual_prompt_suggestion": "A high-quality, professional photo illustration. A brazilian investor, looking thoughtful and slightly overwhelmed, sits in front of a modern laptop. Abstract, glowing data streams, stock charts, and financial news headlines float around them in a 3D space. The color palette is modern, with dark blues, grays, and highlights in the Auge Invest brand color (e.g., a vibrant green or orange). The atmosphere is one of information overload but with a hint of potential clarity on the horizon. Style: realistic, clean, tech-focused.",
+            "visual_description_portuguese": "Um investidor com aparência pensativa e um pouco sobrecarregada, sentado em frente a um laptop. Ao seu redor, flutuam graficamente fluxos de dados, gráficos de ações e manchetes de notícias financeiras, criando uma atmosfera de excesso de informação. O estilo é moderno e tecnológico.",
+            "micro_roteiro": null,
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "O Dilema do Investidor Moderno",
+                    "texto_slide": "Muitos dados, pouca clareza. Você se identifica?",
+                    "sugestao_visual_slide": "Imagem principal do post, com o investidor sobrecarregado de informações."
+                },
+                {
+                    "titulo_slide": "Sintoma #1: Mar de Planilhas",
+                    "texto_slide": "Passar mais tempo atualizando planilhas do que traçando estratégias. A análise manual consome seu tempo e energia.",
+                    "sugestao_visual_slide": "Ícone estilizado de uma planilha complexa com setas apontando para todos os lados, simbolizando confusão."
+                },
+                {
+                    "titulo_slide": "Sintoma #2: Gráficos Intimidadores",
+                    "texto_slide": "Linhas, velas, indicadores... Às vezes, os gráficos parecem um idioma totalmente novo e difícil de decifrar rapidamente.",
+                    "sugestao_visual_slide": "Um gráfico de ações complexo e estilizado, com um grande ponto de interrogação sobreposto."
+                },
+                {
+                    "titulo_slide": "Sintoma #3: Insegurança na Decisão",
+                    "texto_slide": "Depois de toda a pesquisa, a dúvida ainda permanece: 'Será que estou fazendo a escolha certa?'. A falta de confiança paralisa.",
+                    "sugestao_visual_slide": "Ícone de uma balança desequilibrada, representando a indecisão entre comprar ou vender um ativo."
+                },
+                {
+                    "titulo_slide": "Existe uma forma mais inteligente.",
+                    "texto_slide": "E se você pudesse transformar todo esse ruído em um sinal claro? Acompanhe nossos próximos posts e descubra como.",
+                    "sugestao_visual_slide": "Logo da Auge Invest sutilmente no canto, com um fundo limpo e a frase em destaque, criando expectativa."
+                }
+            ]
+        },
+        {
+            "titulo": "O GPS do seu Portfólio Chegou.",
+            "legenda_principal": "Chega de se perder em dados confusos. Apresentamos a Auge Invest: a plataforma que traduz a complexidade do mercado financeiro em decisões inteligentes.\n\nNós unimos tecnologia de ponta e design intuitivo para criar o seu novo centro de comando para investimentos. Análise de ações, FIIs, ETFs e dados macroeconômicos, tudo em um só lugar.\n\nA clareza que você buscava para investir com confiança está prestes a ser lançada. Bem-vindo ao futuro da análise de ativos. Bem-vindo à Auge Invest.",
+            "variacoes_legenda": [
+                "O fim da análise complicada. O começo do investimento inteligente. A Auge Invest chega para ser o seu co-piloto no mercado financeiro, oferecendo dados, insights e a clareza que você precisa para alcançar seus objetivos. Prepare-se para uma nova era.",
+                "Imagine ter um GPS que não apenas mostra o caminho, mas também analisa o terreno, o clima e o trânsito antes de você acelerar. Essa é a Auge Invest para os seus investimentos. Uma plataforma robusta, com dados confiáveis e uma interface que você vai adorar usar. O lançamento está próximo!"
+            ],
+            "hashtags": [
+                "#AugeInvest",
+                "#Lançamento",
+                "#TecnologiaFinanceira",
+                "#Fintech",
+                "#InvestimentoInteligente",
+                "#InovaçãoFinanceira"
+            ],
+            "sugestao_formato": "Vídeo curto (Reel)",
+            "post_strategy_rationale": "Após apresentar o problema, este post introduz a Auge Invest como a solução heróica. O formato de vídeo curto (Reel) é ideal para gerar impacto e curiosidade, mostrando vislumbres da interface moderna da plataforma sem revelar tudo. O objetivo é posicionar a marca como inovadora e criar o desejo de conhecer mais a fundo a ferramenta.",
+            "micro_briefing": "Introduzir a Auge Invest como a solução para o problema apresentado no post anterior, gerando curiosidade e posicionando a marca como moderna e tecnológica.",
+            "visual_prompt_suggestion": "A fast-paced, sleek, and modern promotional video. It starts with a shot of blurry, confusing stock charts. A finger taps the screen, and it transitions to the crisp Auge Invest logo reveal. Followed by quick, dynamic shots of the platform's UI in dark mode: beautifully animated graphs simplifying, key financial metrics (P/L, ROE) popping up, a map showing macroeconomic data. The video ends with the tagline 'Auge Invest. Sua clareza para investir.' and a 'Lançamento em Breve' message. Music is upbeat and tech-inspired.",
+            "visual_description_portuguese": "Um vídeo curto e dinâmico (Reel). Começa com gráficos confusos que se transformam na interface limpa e moderna da Auge Invest. Cenas rápidas mostram gráficos intuitivos, métricas importantes e o logo da marca, com uma música tecnológica e inspiradora, terminando com um teaser do lançamento.",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Close-up de um gráfico de ações complexo e embaçado. Som de ruído estático.",
+                    "texto_tela": "",
+                    "fala": ""
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Um dedo toca o centro da tela. Efeito de transição rápido (swipe/glitch).",
+                    "texto_tela": "",
+                    "fala": ""
+                },
+                {
+                    "cena": 3,
+                    "descricao": "O logo da Auge Invest se materializa com uma animação limpa. A música tech começa.",
+                    "texto_tela": "",
+                    "fala": ""
+                },
+                {
+                    "cena": 4,
+                    "descricao": "Cortes rápidos mostrando a UI da plataforma: um gráfico de pizza de alocação de ativos se formando, a busca por uma ação (ex: 'PETR4'), e os principais indicadores (P/L, DY) aparecendo animados.",
+                    "texto_tela": "Dados complexos.",
+                    "fala": ""
+                },
+                {
+                    "cena": 5,
+                    "descricao": "Mais um vislumbre da UI: um mapa do Brasil com dados macroeconômicos (inflação/juros) sobrepostos.",
+                    "texto_tela": "Clareza instantânea.",
+                    "fala": ""
+                },
+                {
+                    "cena": 6,
+                    "descricao": "Tela final com o logo e a mensagem.",
+                    "texto_tela": "Auge Invest. Sua clareza para investir. Lançamento em breve.",
+                    "fala": ""
+                }
+            ],
+            "carrossel_slides": null
+        },
+        {
+            "titulo": "Menos Planilhas, Mais Estratégia.",
+            "legenda_principal": "Qual o verdadeiro poder da Auge Invest? É devolver o seu tempo e te dar confiança.\n\nNossa plataforma não é apenas sobre dados, é sobre o que você faz com eles. Transformamos análises que levariam horas em insights de minutos. Veja como:\n\n📊 Análise Fundamentalista Simplificada: Acesse os múltiplos, balanços e indicadores de qualquer empresa da bolsa de forma visual e intuitiva.\n\n🏡 Raio-X de FIIs e ETFs: Compare fundos imobiliários e ETFs com filtros inteligentes e encontre os que mais se alinham com seus objetivos.\n\n🌍 Contexto Macro na Mão: Entenda como a taxa de juros, inflação e câmbio impactam seus investimentos sem precisar sair da plataforma.\n\nCom a Auge Invest, você foca no que importa: tomar as melhores decisões para o seu patrimônio.",
+            "variacoes_legenda": [
+                "Abra o capô da Auge Invest e veja o motor da sua nova tomada de decisão. De P/L a ROE, de vacância de FIIs à curva de juros, centralizamos tudo que você precisa. Diga adeus a dezenas de abas e olá para a análise integrada. Sua estratégia de investimentos acaba de ganhar um upgrade.",
+                "Imagine ter um analista particular trabalhando para você 24/7. É essa a sensação de usar a Auge Invest. Nós processamos os dados para que você possa focar na estratégia. Descubra os principais indicadores de ações, FIIs e do cenário macroeconômico em uma interface limpa e poderosa."
+            ],
+            "hashtags": [
+                "#PlataformaDeInvestimentos",
+                "#AnaliseFundamentalista",
+                "#FundosImobiliarios",
+                "#ETFs",
+                "#Macroeconomia",
+                "#FerramentasFinanceiras"
+            ],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Agora que a solução foi apresentada, este post detalha os benefícios e vantagens específicas da plataforma. Usando um carrossel, podemos dedicar cada slide a uma funcionalidade chave, traduzindo-a em um benefício claro para o usuário (ex: 'Raio-X de FIIs'). Isso educa o público sobre o valor concreto do produto e solidifica a percepção da Auge Invest como uma ferramenta completa e indispensável.",
+            "micro_briefing": "Detalhar as principais funcionalidades e benefícios da plataforma Auge Invest, mostrando como ela resolve problemas específicos dos investidores.",
+            "visual_prompt_suggestion": "A series of clean, professional carousel slides. Each slide features a mockup of the Auge Invest platform on a smartphone or tablet, visually highlighting the specific feature being discussed. Use a consistent, modern design with the brand's color palette. For example, the 'Fundamental Analysis' slide shows a screen with clear P/L, ROE, and Debt/Equity charts. The 'Macro Context' slide shows a stylized map of Brazil with key economic indicators. The style is minimalist, data-driven, and highly polished.",
+            "visual_description_portuguese": "Um carrossel de imagens com um design limpo e profissional. Cada slide mostra um mockup da plataforma Auge Invest em um celular ou tablet, destacando visualmente uma funcionalidade específica, como a tela de análise de ações, o comparador de FIIs ou o painel de dados macroeconômicos.",
+            "micro_roteiro": null,
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "O Poder da Análise Integrada",
+                    "texto_slide": "Menos tempo procurando dados, mais tempo investindo com inteligência. Conheça os pilares da Auge Invest.",
+                    "sugestao_visual_slide": "Mockup de um dashboard principal da Auge Invest em um tablet, mostrando uma visão geral de um portfólio."
+                },
+                {
+                    "titulo_slide": "Ações: Análise Profunda, Visualmente Simples",
+                    "texto_slide": "Acesse balanços, DREs, múltiplos e indicadores históricos. Tudo em gráficos que fazem sentido.",
+                    "sugestao_visual_slide": "Close-up na tela de análise de uma ação, destacando os gráficos de Lucro por Ação (LPA) e Preço/Lucro (P/L)."
+                },
+                {
+                    "titulo_slide": "FIIs e ETFs: Compare e Escolha o Melhor",
+                    "texto_slide": "Use nossos filtros para encontrar os fundos com o Dividend Yield, vacância ou setor que você procura.",
+                    "sugestao_visual_slide": "Mockup mostrando a ferramenta de comparação lado a lado de dois Fundos Imobiliários, com métricas em destaque."
+                },
+                {
+                    "titulo_slide": "Macroeconomia: O Contexto que Importa",
+                    "texto_slide": "Entenda o impacto da Selic, IPCA e Câmbio nos seus investimentos com dados atualizados e integrados.",
+                    "sugestao_visual_slide": "Tela exibindo um gráfico da evolução da Taxa Selic ao longo do tempo, com anotações sobre seu impacto."
+                },
+                {
+                    "titulo_slide": "Tecnologia a seu Favor",
+                    "texto_slide": "Alertas inteligentes, listas personalizadas e uma interface rápida. Tudo para otimizar sua jornada como investidor.",
+                    "sugestao_visual_slide": "Mockup de uma tela de notificações/alertas personalizados dentro do app."
+                },
+                {
+                    "titulo_slide": "Pronto para ter esse poder em suas mãos?",
+                    "texto_slide": "O lançamento está cada vez mais próximo. Prepare-se para elevar o nível dos seus investimentos.",
+                    "sugestao_visual_slide": "Logo da Auge Invest com a chamada 'Prepare-se' em destaque."
+                }
+            ]
+        },
+        {
+            "titulo": "Analisando uma Ação em Menos de 1 Minuto.",
+            "legenda_principal": "Teoria é uma coisa, prática é outra. Veja como a Auge Invest transforma a análise de uma empresa em um processo rápido, intuitivo e poderoso.\n\nNeste vídeo, analisamos os pontos-chave de uma ação popular em segundos: saúde financeira, rentabilidade, preço justo e dividendos. O que antes levava horas de pesquisa em várias fontes, agora está a um clique de distância.\n\nÉ isso que queremos dizer com 'investimento inteligente'. Menos fricção, mais convicção. Imagine o que você pode fazer com esse poder nas suas mãos.",
+            "variacoes_legenda": [
+                "De analista amador a investidor confiante em 60 segundos. Demonstração real de como a plataforma Auge Invest simplifica a análise fundamentalista. Veja na prática como é fácil ter uma visão 360° de uma empresa e tomar decisões baseadas em dados sólidos.",
+                "Cansado de procurar o P/L de uma ação em um site, o balanço em outro e as notícias em um terceiro? Veja a mágica da centralização. Este é um tour rápido pelo poder da Auge Invest, mostrando como uma análise completa pode ser feita de forma ágil e eficiente. Dê o play!"
+            ],
+            "hashtags": [
+                "#Demonstração",
+                "#ComoInvestir",
+                "#AnaliseDeAcoes",
+                "#BolsaDeValores",
+                "#AugeInvestNaPratica",
+                "#Investidor"
+            ],
+            "sugestao_formato": "Vídeo curto (Reel)",
+            "post_strategy_rationale": "Este post serve como prova social e demonstração prática. Ao invés de apenas falar sobre os benefícios, nós os mostramos em ação. Um vídeo rápido no estilo 'screen recording' de uma análise de ação cria uma percepção de valor imediata e tangível. Isso valida as promessas dos posts anteriores, quebra objeções sobre a complexidade e mostra a eficiência da ferramenta, deixando o público ansioso para testá-la.",
+            "micro_briefing": "Demonstrar a facilidade e o poder da Auge Invest na prática, através de um vídeo rápido que simula a análise de uma ação conhecida.",
+            "visual_prompt_suggestion": "A well-edited screen recording video (Reel). It starts with the text 'Analisar uma ação: Modo Antigo' over a frustrating scene of someone switching between multiple browser tabs with ugly tables and ads. A quick transition shows 'Modo Auge Invest'. The rest of the video is a clean screen recording of the platform. The user types a famous stock ticker (e.g., MGLU3), and the dashboard loads instantly. The cursor highlights key metrics like ROE and Dividend Yield, interacts with a beautiful historical price chart, and scrolls through a simplified balance sheet. Use animated callouts and zoom-ins to emphasize the most important data. The video ends with the platform logo and the text 'Sua análise, potencializada'.",
+            "visual_description_portuguese": "Um vídeo (Reel) no formato de gravação de tela. Começa mostrando a forma 'antiga' e confusa de analisar. Em seguida, transiciona para a interface da Auge Invest, onde um usuário pesquisa por uma ação famosa e navega de forma fluida pelos principais indicadores, gráficos e balanços, com textos e destaques animados para explicar cada passo.",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Cena rápida mostrando 3 abas de navegador com sites diferentes de finanças, lotados de banners. Uma mão parece frustrada. Música lenta.",
+                    "texto_tela": "Analisar uma ação: Modo antigo",
+                    "fala": ""
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Transição rápida. A música muda para algo moderno e focado.",
+                    "texto_tela": "Modo Auge Invest",
+                    "fala": ""
+                },
+                {
+                    "cena": 3,
+                    "descricao": "Gravação de tela da plataforma. O cursor digita 'ITSA4' na barra de busca e clica.",
+                    "texto_tela": "",
+                    "fala": ""
+                },
+                {
+                    "cena": 4,
+                    "descricao": "A tela da ação carrega. O cursor circula o Dividend Yield. Um texto animado aparece: 'Dividendos na hora'.",
+                    "texto_tela": "Dividendos na hora",
+                    "fala": ""
+                },
+                {
+                    "cena": 5,
+                    "descricao": "O cursor rola para os gráficos de receita e lucro. Ele interage com o gráfico, mostrando os valores de anos anteriores. Texto animado: 'Crescimento é visível'.",
+                    "texto_tela": "Crescimento é visível",
+                    "fala": ""
+                },
+                {
+                    "cena": 6,
+                    "descricao": "O cursor clica na aba 'Múltiplos'. O P/L e P/VP são destacados. Texto animado: 'Está cara ou barata?'.",
+                    "texto_tela": "Está cara ou barata?",
+                    "fala": ""
+                },
+                {
+                    "cena": 7,
+                    "descricao": "Tela final com o logo e a mensagem.",
+                    "texto_tela": "Auge Invest. Sua análise, potencializada.",
+                    "fala": ""
+                }
+            ],
+            "carrossel_slides": null
+        },
+        {
+            "titulo": "As Portas Estão Abertas. Teste a Auge Invest Grátis.",
+            "legenda_principal": "A espera acabou. A revolução na sua forma de analisar investimentos começa AGORA.\n\nA Auge Invest está oficialmente no ar e você é nosso convidado especial para ser um dos primeiros a experimentar o futuro da análise de ativos. Chega de achismos, chega de planilhas intermináveis.\n\n✅ Acesse dados consolidados de Ações, FIIs e ETFs.\n✅ Entenda o cenário macroeconômico.\n✅ Tome decisões com mais confiança e agilidade.\n\nClique no link da nossa bio, faça seu cadastro e comece seu teste gratuito. Eleve o nível da sua jornada como investidor hoje mesmo.",
+            "variacoes_legenda": [
+                "Está lançado! A ferramenta que transforma dados complexos em clareza para seus investimentos já está disponível. Queremos que você sinta o poder da Auge Invest na prática. Por isso, estamos liberando um período de teste gratuito para os primeiros usuários. O link está na bio. Não perca tempo, seu portfólio agradece.",
+                "Sua jornada para se tornar um investidor mais confiante e estratégico começa com um clique. A Auge Invest está oficialmente disponível! Criamos a plataforma que sempre sonhamos em usar, e agora queremos compartilhá-la com você. Cadastre-se para o seu trial gratuito através do link na bio e descubra uma nova forma de investir."
+            ],
+            "hashtags": [
+                "#LançamentoAugeInvest",
+                "#TesteGratis",
+                "#PlataformaFinanceira",
+                "#MercadoDeAcoes",
+                "#FintechBrasil",
+                "#ComeceAInvestir"
+            ],
+            "sugestao_formato": "Imagem estática ou GIF animado",
+            "post_strategy_rationale": "Este é o clímax da campanha. Após construir a necessidade, apresentar a solução, detalhar os benefícios e provar seu valor, este post faz a chamada para ação (CTA) final e direta. O objetivo é converter o interesse e a curiosidade acumulados ao longo da semana em cadastros. A oferta do 'teste gratuito' remove a barreira de entrada, tornando a decisão de experimentar a plataforma fácil e sem riscos. A linguagem é direta, energética e focada na ação.",
+            "micro_briefing": "Anunciar oficialmente o lançamento da plataforma e direcionar o tráfego para a página de cadastro do trial gratuito com uma chamada para ação clara e convincente.",
+            "visual_prompt_suggestion": "A bold, high-impact static image. A dark, professional background with the Auge Invest brand colors. In the center, large, confident typography says 'ACESSO LIBERADO'. Below that, in a slightly smaller font, 'Teste a Auge Invest. 100% Gratuito.' A stylized, modern button graphic underneath reads 'CLIQUE NO LINK DA BIO'. The Auge Invest logo is prominently displayed at the top or bottom. The overall feel is premium, exciting, and trustworthy. For a GIF, the text could animate in sequentially to build excitement.",
+            "visual_description_portuguese": "Uma imagem estática de alto impacto ou um GIF. Fundo escuro e profissional com as cores da marca. No centro, um texto grande e arrojado: 'ACESSO LIBERADO'. Abaixo, 'Teste a Auge Invest. 100% Gratuito.' e um botão estilizado com a chamada 'CLIQUE NO LINK DA BIO'. O logo da Auge Invest está em destaque. A atmosfera é de lançamento, confiança e exclusividade.",
+            "micro_roteiro": null,
+            "carrossel_slides": null
+        }
+    ]
+}

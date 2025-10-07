@@ -8,14 +8,14 @@ from reportlab.lib.colors import HexColor
 
 from src.config import COMPANY_NAME, LOGO_PATH
 
-def _build_cover_page(styles: dict, client_name: str, formatted_period_end_date: str, formatted_generation_date: str) -> list:
+def _build_cover_page(styles: dict, client_name: str, formatted_period: str, formatted_generation_date: str) -> list:
     """
     Constrói a página de capa do PDF.
 
     Args:
         styles (dict): Dicionário de estilos do ReportLab.
         client_name (str): Nome do cliente para personalizar o PDF.
-        formatted_period_end_date (str): A data final do período do briefing, já formatada (ex: "06/10/25").
+        formatted_period (str): O período completo do briefing, já formatado (ex: "Período 06/10/25 a 15/10/25").
         formatted_generation_date (str): A data de geração do PDF, já formatada (ex: "06/10/25").
 
     Returns:
@@ -26,7 +26,7 @@ def _build_cover_page(styles: dict, client_name: str, formatted_period_end_date:
     cover_story.append(Paragraph(f"Calendário Semanal de Conteúdo", styles['TitleStyle']))
     cover_story.append(Paragraph(f"para {client_name}", styles['SubtitleStyle']))
     cover_story.append(Spacer(1, 14.4))
-    cover_story.append(Paragraph(f"Período: {formatted_period_end_date}", styles['SubtitleStyle']))
+    cover_story.append(Paragraph(formatted_period, styles['SubtitleStyle']))
     cover_story.append(Spacer(1, 36))
     cover_story.append(Paragraph(COMPANY_NAME, styles['SubtitleStyle']))
 

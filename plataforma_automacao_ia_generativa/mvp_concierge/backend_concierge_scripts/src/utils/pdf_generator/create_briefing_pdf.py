@@ -15,14 +15,13 @@ from src.utils.pdf_generator.calendar_logic import generate_publication_calendar
 from src.utils.pdf_generator.checklist_logic import generate_publication_checklist
 
 
-def create_briefing_pdf(content_json: dict, client_name: str, period: str, output_filename: str, target_audience: str = "", tone_of_voice: str = "", marketing_objectives: str = ""):
+def create_briefing_pdf(content_json: dict, client_name: str, output_filename: str, target_audience: str = "", tone_of_voice: str = "", marketing_objectives: str = ""):
     """
     Converte o JSON de conteúdo gerado em um "PDF de Briefing Profissional".
 
     Args:
         content_json (dict): O objeto JSON com os posts, legendas, variações, hashtags e formatos.
         client_name (str): Nome do cliente para personalizar o PDF.
-        period (str): O período do briefing (ex: "10/03/2024 - 16/03/2024").
         output_filename (str): Nome do arquivo PDF a ser salvo.
         target_audience (str): O público-alvo do briefing.
         tone_of_voice (str): O tom de voz a ser utilizado no briefing.
@@ -46,10 +45,17 @@ def create_briefing_pdf(content_json: dict, client_name: str, period: str, outpu
     elif not isinstance(content_json, dict):
         content_json = {}
 
+    posts = content_json.get('posts', [])
+    if isinstance(posts, str):
+        try:
+            posts = json.loads(posts)
+        except json.JSONDecodeError:
+            posts = []
+    if not isinstance(posts, list):
+        posts = []
+
     styles = get_pdf_styles()
     story = []
-
-    # Definir frames para o template de página normal
     frame_width = letter[0] - 2 * inch
     frame_height = letter[1] - 2 * inch
     normal_frame = Frame(inch,
@@ -66,25 +72,36 @@ def create_briefing_pdf(content_json: dict, client_name: str, period: str, outpu
     today = datetime.now()
     formatted_generation_date = today.strftime('%d/%m/%y')
 
-    # Extract end date from the period string (e.g., "DD/MM/YYYY - DD/MM/YYYY")
-    period_parts = period.split(' - ')
-    if len(period_parts) == 2:
-        period_end_date_str = period_parts[1]
-        try:
-            period_end_date = datetime.strptime(period_end_date_str, "%d/%m/%Y")
-            formatted_period_end_date = period_end_date.strftime('%d/%m/%y')
-        except ValueError:
-            # Fallback if parsing fails, use the original string
-            formatted_period_end_date = period_end_date_str
+    # --- Calendário de Publicação ---
+    # Gerar o calendário de publicação com base na data atual e na lista de posts
+    publication_calendar = generate_publication_calendar(today, posts)
+
+    # Extrair a última data do calendário de publicação para o período final
+    latest_date = None
+    if publication_calendar:
+        for entry in publication_calendar:
+            # A data está na string 'day', por exemplo "Sexta-feira, 26/07"
+            day_str = entry['day'].split(', ')[1] # Pega "26/07"
+            # Adiciona o ano atual para criar um objeto datetime completo
+            current_calendar_date = datetime.strptime(f"{day_str}/{today.year}", "%d/%m/%Y")
+            if latest_date is None or current_calendar_date > latest_date:
+                latest_date = current_calendar_date
+
+    start_date = datetime.now()
+    if latest_date:
+        # Formata a data para o padrão DD/MM/AA
+        formatted_period = f"{start_date.strftime('%d/%m/%y')} a {latest_date.strftime('%d/%m/%y')}"
     else:
-        # Fallback if period format is unexpected, use the entire period string
-        formatted_period_end_date = period
+        formatted_period = f"{start_date.strftime('%d/%m/%y')}"
 
     # --- Página de Rosto ---
-    story.extend(_build_cover_page(styles, client_name, formatted_period_end_date, formatted_generation_date))
+    story.extend(_build_cover_page(styles, client_name, formatted_period, formatted_generation_date))
 
     # --- Sumário Executivo / Visão Geral da Semana ---
     story.append(PageBreak()) # Adiciona quebra de página antes do sumário executivo
+    print(f"DEBUG: target_audience antes de _build_executive_summary: {target_audience}")
+    print(f"DEBUG: tone_of_voice antes de _build_executive_summary: {tone_of_voice}")
+    print(f"DEBUG: marketing_objectives antes de _build_executive_summary: {marketing_objectives}")
     weekly_strategy_summary_content = content_json.get('weekly_strategy_summary', '')
     if isinstance(weekly_strategy_summary_content, str):
         # Se for uma string, tenta carregar como JSON. Se falhar, usa a string como summary.
@@ -103,15 +120,6 @@ def create_briefing_pdf(content_json: dict, client_name: str, period: str, outpu
     story.append(Paragraph("Ideias de Conteúdo para a Semana", styles['SectionTitle']))
     story.append(Spacer(1, 36)) 
 
-    posts = content_json.get('posts', [])
-    if isinstance(posts, str):
-        try:
-            posts = json.loads(posts)
-        except json.JSONDecodeError:
-            posts = []
-    if not isinstance(posts, list):
-        posts = []
-
     for i, post in enumerate(posts):
         # Garante que cada 'post' individual é um dicionário
         if isinstance(post, str):
@@ -127,12 +135,10 @@ def create_briefing_pdf(content_json: dict, client_name: str, period: str, outpu
 
     # --- Calendário de Publicação ---
     # Gerar o calendário de publicação com base na data atual e na lista de posts
-    today = datetime.now()
-    publication_calendar = generate_publication_calendar(today, posts)
     story.extend(_build_publication_calendar(styles, publication_calendar))
-
+    
+    
     # --- Checklist de Publicação ---
-    # story.append(PageBreak()) # Removido, pois o PageBreak anterior já cuida disso
     story.append(Spacer(1, 36))
 
     publication_checklist = generate_publication_checklist(publication_calendar)

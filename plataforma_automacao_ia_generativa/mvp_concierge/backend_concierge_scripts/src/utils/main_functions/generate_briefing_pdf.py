@@ -4,37 +4,30 @@ from datetime import datetime
 
 from src.utils.pdf_generator.create_briefing_pdf import create_briefing_pdf
 
-def generate_briefing_pdf(content_json: dict, client_name: str, output_filename: str):
+def generate_briefing_pdf(content_json: dict, client_name: str, output_dir: str, target_audience: str, tone_of_voice: str, marketing_objectives: str):
     """
     Gera um briefing em PDF com base no conteúdo JSON fornecido.
 
     Args:
         content_json (dict): O conteúdo JSON gerado pela IA.
         client_name (str): O nome do cliente.
-        output_filename (str): O nome do arquivo de saída do PDF.
+        output_dir (str): O diretório de saída para o PDF.
+        target_audience (str): O público-alvo do briefing.
+        tone_of_voice (str): O tom de voz a ser utilizado no briefing.
+        marketing_objectives (str): Os objetivos de marketing do briefing.
     """
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
-    # Caminho para o client_briefing.json
-    briefing_path = os.path.join(os.path.dirname(__file__), "..", "client_briefing.json")
-    
-    target_audience = "N/A"
-    tone_of_voice = "N/A"
-    marketing_objectives = "N/A"
-
-    if os.path.exists(briefing_path):
-        with open(briefing_path, 'r', encoding='utf-8') as f:
-            briefing_data = json.load(f)
-            target_audience = briefing_data.get("publico_alvo", "N/A")
-            tone_of_voice = briefing_data.get("tom_de_voz", "N/A")
-            marketing_objectives = briefing_data.get("objetivos_de_marketing", "N/A")
+    pdf_filename = f"briefing_{client_name}_{timestamp}.pdf"
+    output_filepath = os.path.join(output_dir, pdf_filename)
+    print(f"Tentando salvar PDF em: {output_filepath}")
 
     create_briefing_pdf(
         content_json=content_json,
         client_name=client_name,
-        period=timestamp,
-        output_filename=output_filename,
+        output_filename=output_filepath,
         target_audience=target_audience,
         tone_of_voice=tone_of_voice,
         marketing_objectives=marketing_objectives
     )
+
+    return output_filepath

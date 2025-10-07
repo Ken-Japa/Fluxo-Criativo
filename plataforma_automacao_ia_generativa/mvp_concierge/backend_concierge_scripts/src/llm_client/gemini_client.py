@@ -22,16 +22,11 @@ def generate_text_content(prompt: str) -> dict:
 
     try:
         response = model.generate_content(prompt)
-        print(f"DEBUG: response.text type: {type(response.text)}")
-        print(f"DEBUG: response.text content: {response.text[:500]}") # Print first 500 chars
         try:
             # Remove os delimitadores de bloco de código Markdown se presentes
             json_string = response.text.strip()
             if json_string.startswith('```json') and json_string.endswith('```'):
                 json_string = json_string[len('```json'):-len('```')].strip()
-            
-            print(f"DEBUG: json_string type: {type(json_string)}")
-            print(f"DEBUG: json_string content: {json_string[:500]}") # Print first 500 chars
 
             generated_content = json.loads(json_string)
             return {"status": "success", "generated_content": generated_content}

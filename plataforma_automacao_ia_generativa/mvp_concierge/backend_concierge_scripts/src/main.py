@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 from src.data_storage import init_db, insert_brief, get_client_profile, get_all_briefs, insert_client_profile
 from src.content_generator import generate_content_for_client
-from src.pdf_generator import create_briefing_pdf
+from src.utils.pdf_generator.create_briefing_pdf import create_briefing_pdf
 from src.html_generator import create_briefing_html
 from src.utils.briefing_loader import load_briefing_from_json
 from src.utils.prompt_logger import log_prompt
@@ -53,7 +53,7 @@ def main():
     save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd)
 
     # 6. Gerar PDF
-    output_pdf_filename = generate_briefing_pdf(generated_content, nome_do_cliente, output_dir)
+    output_pdf_filename = generate_briefing_pdf(generated_content, nome_do_cliente, output_dir, publico_alvo, tom_de_voz, objetivos_de_marketing)
     if output_pdf_filename is None:
         return
 

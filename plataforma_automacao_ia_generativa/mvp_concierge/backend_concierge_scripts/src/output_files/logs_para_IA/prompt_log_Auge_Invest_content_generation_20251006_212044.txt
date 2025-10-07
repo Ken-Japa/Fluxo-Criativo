@@ -1,24 +1,25 @@
 --- Prompt Log (content_generation) ---
-Cliente: Tech Solutions Ltda.
-Data/Hora: 2025-10-06 20:06:18
+Cliente: Auge Invest
+Data/Hora: 2025-10-06 21:20:44
 -------------------------------------
 
-Você é um copywriter especializado em mídias sociais. Atuando sob as diretrizes de nicho: {"subnicho": "Software de Gest\u00e3o Empresarial", "exemplos_de_nicho": null}. Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente.
+Você é um copywriter especializado em mídias sociais. Atuando sob as diretrizes de nicho: {"subnicho": "Investimentos e tecnologia financeira", "exemplos_de_nicho": ["Educa\u00e7\u00e3o financeira", "An\u00e1lise de a\u00e7\u00f5es, FIIs e ETFs", "Macroeconomia e pol\u00edtica monet\u00e1ria", "Tecnologia e inova\u00e7\u00e3o no mercado financeiro"]}. Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente.
 
 Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para social_media_post.
 
 **Perfil do Cliente:**
-- Nome do Cliente: Tech Solutions Ltda.
-- Tom de Voz: Profissional, Inovador e Acessível
-- Público-Alvo: Pequenas e Médias Empresas (PMEs) no setor de serviços
+- Nome do Cliente: Auge Invest
+- Tom de Voz: Profissional, confiável, educativo e inspirador — com uma linguagem acessível e visual moderno, transmitindo autoridade e inovação.
+- Público-Alvo: Investidores iniciantes e intermediários no Brasil que buscam entender o mercado financeiro, encontrar oportunidades de investimento e utilizar ferramentas modernas para análise de ativos.
 
 **Análise Estratégica Inicial:**
-- Informações Adicionais e Diretrizes Específicas:  subnicho: Software de Gestão Empresarial. exemplos_de_nicho: None.. Incorpore essas informações para refinar a estratégia de conteúdo.
-- Informações Adicionais:  subnicho: Software de Gestão Empresarial. exemplos_de_nicho: None.
+- Informações Adicionais e Diretrizes Específicas:  subnicho: Investimentos e tecnologia financeira. exemplos_de_nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro.. Incorpore essas informações para refinar a estratégia de conteúdo.
+- Exemplos de Nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro
+- Informações Adicionais:  subnicho: Investimentos e tecnologia financeira. exemplos_de_nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro.
 
 **Contexto Semanal:**
-- Temas da Semana: Apresentar os 5 pilares da gestão eficiente para PMEs., Demonstrar como a automação pode economizar tempo e dinheiro., Destacar os benefícios do novo módulo de RH para a gestão de talentos.
-- Objetivo Semanal: Aumentar o reconhecimento da marca em 20% e gerar 100 novos leads qualificados no próximo trimestre.
+- Temas da Semana: Apresentar a plataforma e gerar curiosidade sobre seus diferenciais e ferramentas exclusivas., Educar o público e mostrar como a Auge Invest facilita essas análises com dados e gráficos intuitivos., Oferecer valor informativo e posicionar a marca como fonte confiável de insights macroeconômicos., Mostrar a praticidade e a tecnologia da plataforma, reforçando o uso diário e o trial gratuito., Explicar conceitos e apresentar a Auge Invest como aliada para decisões conscientes., Destacar os diferenciais tecnológicos e criar percepção de valor no serviço premium., Converter seguidores e visitantes em usuários da plataforma durante o lançamento.
+- Objetivo Semanal: Lançar a plataforma Auge Invest, atrair os primeiros usuários, gerar autoridade no mercado e incentivar o cadastro na versão gratuita e no período de testes.
 
 **Instruções de Formato:**
 Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 ideias de posts. Para cada post, inclua:
