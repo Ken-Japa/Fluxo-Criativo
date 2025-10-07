@@ -4,6 +4,8 @@
   "informacoes_de_contato": "capitalauge@gmail.com.br",
   "publico_alvo": "Investidores iniciantes e intermediários no Brasil que buscam entender o mercado financeiro, encontrar oportunidades de investimento e utilizar ferramentas modernas para análise de ativos.",
   "tom_de_voz": "Profissional, confiável, educativo e inspirador — com uma linguagem acessível e visual moderno, transmitindo autoridade e inovação.",
+  "estilo_de_comunicacao": "Como se fosse uma conversa entre assessor financeiro e cliente em uma reunião. Use frases naturais, com pausas, perguntas retóricas e expressões comuns do dia a dia.",
+  "vocabulario_da_marca": ["Auge Invest", "mercado financeiro", "investimentos inteligentes", "oportunidades de crescimento", "análise de dados", "decisões estratégicas", "futuro financeiro"],
   "exemplos_de_nicho": [
     "Educação financeira",
     "Análise de ações, FIIs e ETFs",
@@ -47,7 +49,6 @@
     "Investidor10",
     "TC (Traders Club)"
   ],
-  "campaign_type": "",
   "referencias_de_estilo_e_formato": [
     "Estilo visual do Nubank (limpo e moderno)",
     "Conteúdo educativo da Suno Research",

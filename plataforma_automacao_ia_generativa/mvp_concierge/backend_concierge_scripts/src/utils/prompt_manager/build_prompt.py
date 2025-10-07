@@ -1,5 +1,6 @@
 import json
 from .campaign_narrative_generator import generate_campaign_narrative
+from ...metric_suggester import suggest_metrics
 
 def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str, weekly_themes: list[str], weekly_goal: str, campaign_type: str, strategic_analysis: dict = None) -> str:
     """
@@ -21,6 +22,8 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     nome_do_cliente = client_profile.get("nome_do_cliente", "")
     subnicho = client_profile.get("subnicho", "")
     tom_de_voz = client_profile.get("tom_de_voz", "")
+    estilo_de_comunicacao = client_profile.get("estilo_de_comunicacao", "")
+    vocabulario_da_marca = client_profile.get("vocabulario_da_marca", [])
     publico_alvo = client_profile.get("publico_alvo", "")
     objetivos_de_marketing = client_profile.get("objetivos_de_marketing", "")
     exemplos_de_nicho = client_profile.get("exemplos_de_nicho", [])
@@ -33,6 +36,9 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     referencias_de_concorrentes = client_profile.get("referencias_de_concorrentes", [])
     referencias_de_estilo_e_formato = client_profile.get("referencias_de_estilo_e_formato", [])
 
+    # Sugerir métricas com base no tipo de campanha e objetivos de marketing
+    sugerir_metricas = suggest_metrics(campaign_type, objetivos_de_marketing)
+
     # Adicionar diretrizes de nicho, se existirem
     if niche_guidelines:
         for key, value in niche_guidelines.items():
@@ -44,15 +50,24 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     # System Message: Define o papel da IA
     system_message = f"Você é um copywriter especializado em mídias sociais."
     if subnicho:
-        system_message += f" para {subnicho}."
+        system_message += f" O nicho é {subnicho}."
     if niche_guidelines:
-        system_message += f" Atuando sob as diretrizes de nicho: {json.dumps(niche_guidelines)}."
-    system_message += f" Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente."
+        if 'subnicho' in niche_guidelines and niche_guidelines['subnicho']:
+            system_message += f" para {niche_guidelines['subnicho']}."
+        if 'exemplos_de_nicho' in niche_guidelines and niche_guidelines['exemplos_de_nicho']:
+            exemplos_str = ', '.join(niche_guidelines['exemplos_de_nicho'])
+            system_message += f" Atuando sob as diretrizes de nicho: {exemplos_str}."
+    system_message += f" Seu objetivo é criar conteúdo altamente engajador, viral e relevante para o público-alvo do cliente."
 
     # User Message: Combina todas as informações para criar uma instrução detalhada
-    user_message_parts = [
-        f"Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para {content_type}."
-    ]
+    user_message_parts = []
+    if canais_de_distribuicao:
+        canais_str = ', '.join(canais_de_distribuicao)
+        user_message_parts.append(f"Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para os seguintes canais: {canais_str}.")
+    elif content_type:
+        user_message_parts.append(f"Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para {content_type}.")
+
+    user_message_parts.append("Evite soar como uma IA, busque um estilo de texto humanizado, evite clichês de copy genérica.")
 
     user_message_parts.append("\n**Perfil do Cliente:**")
     if nome_do_cliente:
@@ -61,6 +76,11 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
         user_message_parts.append(f"- Subnicho: {subnicho}")
     if tom_de_voz:
         user_message_parts.append(f"- Tom de Voz: {tom_de_voz}")
+    if estilo_de_comunicacao and estilo_de_comunicacao.strip():
+        user_message_parts.append(f"- Busque criar o texto como se fosse: {estilo_de_comunicacao}")
+    if vocabulario_da_marca and len(vocabulario_da_marca) > 0:
+        user_message_parts.append(f"- O cliente costuma usar o vocabulário e ou frases como: {', '.join(vocabulario_da_marca)}")
+        user_message_parts.append(f"- Busque adaptar seu texto ao estilo do cliente de se comunicar.")
     if publico_alvo:
         user_message_parts.append(f"- Público-Alvo: {publico_alvo}")
 
@@ -112,6 +132,8 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
 
     user_message_parts.append("\n**Instruções de Formato:**")
     user_message_parts.append("Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 ideias de posts. Para cada post, inclua:")
+    user_message_parts.append(" Os 5 Posts serão postados na seguinte ordem: sexta, sábado, domingo, segunda e quarta. Baseado no nicho, objetivo e nos dias da semana, retorne também um horário recomendado para postagem.")
+    user_message_parts.append(" Busque se possivel inserir stroytelling ou casos ficticios no texto. Busque também inserir dados concretos, números ou estatísticas pertinentes mesmo que sejam aproximados no texto se fizer sentido.")
     user_message_parts.extend(generate_campaign_narrative(campaign_type))
     user_message_parts.append("- `titulo`: Um título conciso para o post.")
     user_message_parts.append("- `legenda_principal`: A legenda principal do post.")
@@ -126,7 +148,6 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("- `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.")
 
     user_message_parts.append("\nRetorne o conteúdo em formato JSON, seguindo a estrutura abaixo:")
-    user_message_parts.append("```json")
     user_message_parts.append("{{")
     user_message_parts.append("    \"weekly_strategy_summary\": \"Resumo da estratégia semanal para a campanha.\",")
     user_message_parts.append("    \"posts\": [")
@@ -159,9 +180,10 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("                }")
     user_message_parts.append("            ]")
     user_message_parts.append("        }}")
-    user_message_parts.append("    ]")
+    user_message_parts.append("    ],")
+    user_message_parts.append("    \"metricas_de_sucesso_sugeridas\": " + json.dumps(sugerir_metricas, indent=4, ensure_ascii=False).replace("\n", "\n    ") + ",")
+    user_message_parts.append("    \"horario_de_postagem\": \"Horário sugerido para postagem\"")
     user_message_parts.append("}}")
-    user_message_parts.append("```")
 
     user_message = "\n".join(user_message_parts)
 

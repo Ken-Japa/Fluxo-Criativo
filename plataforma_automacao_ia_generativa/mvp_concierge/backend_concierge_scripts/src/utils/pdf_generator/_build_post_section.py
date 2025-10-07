@@ -20,6 +20,10 @@ def _build_post_section(styles: dict, post: dict, post_number: int) -> list:
     post_story.append(Paragraph(post.get('post_strategy_rationale', 'N/A'), styles['PostContent']))
     post_story.append(Spacer(1, 7.2))
 
+    post_story.append(Paragraph("Briefing:", styles['BlackSubtitle']))
+    post_story.append(Paragraph(post.get('micro_briefing', 'N/A'), styles['PostContent']))
+    post_story.append(Spacer(1, 7.2))
+    
     post_story.append(Paragraph("Legenda Principal:", styles['PurpleSubtitle']))
     post_story.append(Paragraph(post.get('legenda_principal', 'N/A'), styles['PostContent']))
     post_story.append(Spacer(1, 7.2))
@@ -38,6 +42,28 @@ def _build_post_section(styles: dict, post: dict, post_number: int) -> list:
     post_story.append(Paragraph("Sugestão de Formato:", styles['DarkGreenSubtitle']))
     post_story.append(Paragraph(post.get('sugestao_formato', 'N/A'), styles['PostContent']))
     post_story.append(Spacer(1, 7.2))
+
+    # Adiciona detalhes específicos do formato, se existirem
+    sugestao_formato = post.get('sugestao_formato', '')
+    if "Carrossel" in sugestao_formato:
+        carrossel_slides = post.get('carrossel_slides', [])
+        if carrossel_slides:
+            post_story.append(Paragraph("Slides do Carrossel:", styles['StrongPurpleSubtitle']))
+            for i, slide in enumerate(carrossel_slides):
+                post_story.append(Paragraph(f"Slide {i+1}: {slide.get('titulo_slide', 'N/A')}", styles['PostContent']))
+                post_story.append(Paragraph(f"   Texto: {slide.get('texto_slide', 'N/A')}", styles['PostContent']))
+                post_story.append(Paragraph(f"   Visual: {slide.get('sugestao_visual_slide', 'N/A')}", styles['PostContent']))
+                post_story.append(Spacer(1, 3.6))
+            post_story.append(Spacer(1, 7.2))
+    elif "Vídeo" in sugestao_formato or "Reel" in sugestao_formato:
+        micro_roteiro = post.get('micro_roteiro', [])
+        if micro_roteiro:
+            post_story.append(Paragraph("Micro Roteiro:", styles['StrongPurpleSubtitle']))
+            for i, cena in enumerate(micro_roteiro):
+                post_story.append(Paragraph(f"Cena {cena.get('cena', i+1)}: {cena.get('descricao', 'N/A')}", styles['PostContent']))
+                post_story.append(Paragraph(f"   Texto na Tela: {cena.get('texto_tela', 'N/A')}", styles['PostContent']))
+                post_story.append(Spacer(1, 3.6))
+            post_story.append(Spacer(1, 7.2))
 
     post_story.append(Paragraph("Sugestões Visuais Detalhadas:", styles['BrownSubtitle']))
     

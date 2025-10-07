@@ -28,6 +28,7 @@ def generate_content_for_client(
     Returns:
         Dict: O conteúdo gerado para mídia social.
     """
+
     prompt_manager = PromptManager(client_data, niche_data)
     prompt = prompt_manager.build_prompt(content_type="social_media_post", weekly_themes=weekly_themes, weekly_goal=weekly_goal, campaign_type=campaign_type)
 
@@ -45,17 +46,13 @@ def generate_content_for_client(
         return cached_content
 
     print("Gerando novo conteúdo com a API Gemini...")
-    response = generate_text_content(prompt)
+    
+    llm_response = generate_text_content(prompt)
 
-    print("DEBUG: Resposta completa da API Gemini (json.dumps): " + json.dumps(response, indent=4))
-    print(f"DEBUG: Tipo de response['status']: {type(response['status'])}, Valor: {response['status']}")
-    print(f"DEBUG: Representação RAW de response['status']: {repr(response['status'])}")
-    print(f"DEBUG: 'generated_content' existe em response: {'generated_content' in response}")
-    if "generated_content" in response:
-        print("DEBUG: Entrando no bloco IF (sucesso forçado).")
-        generated_content = response["generated_content"]
+    if llm_response["status"] == "success":
+        generated_content = llm_response["generated_content"]
         set_to_cache(cache_key, generated_content)
-        print(f"DEBUG: Valor retornado por generate_content_for_client (sucesso forçado): {generated_content}")
+        print(f"DEBUG: Valor retornado por generate_content_for_client (sucesso): {generated_content}")
         return {
             "status": "success",
             "generated_content": generated_content,
@@ -67,6 +64,6 @@ def generate_content_for_client(
         }
     else:
         print("DEBUG: Entrando no bloco ELSE (erro).")
-        print("DEBUG: response['message'] no bloco else: " + str(response.get('message', 'N/A')))
-        print("Erro ao gerar conteúdo: " + str(response.get('message', 'N/A')))
-        return {"status": "error", "message": response.get("message", "Erro desconhecido")}
+        print("DEBUG: llm_response['message'] no bloco else: " + str(llm_response.get('message', 'N/A')))
+        print("Erro ao gerar conteúdo: " + str(llm_response.get('message', 'N/A')))
+        return {"status": "error", "message": llm_response.get("message", "Erro desconhecido")}

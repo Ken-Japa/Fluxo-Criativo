@@ -13,9 +13,10 @@ from src.utils.pdf_generator._build_publication_checklist import _build_publicat
 from src.utils.pdf_generator._header_footer import _header_footer
 from src.utils.pdf_generator.calendar_logic import generate_publication_calendar
 from src.utils.pdf_generator.checklist_logic import generate_publication_checklist
+from src.utils.pdf_generator._build_success_metrics import _build_success_metrics
 
 
-def create_briefing_pdf(content_json: dict, client_name: str, output_filename: str, target_audience: str = "", tone_of_voice: str = "", marketing_objectives: str = ""):
+def create_briefing_pdf(content_json: dict, client_name: str, output_filename: str, target_audience: str = "", tone_of_voice: str = "", marketing_objectives: str = "", suggested_metrics: dict = {}, posting_time: str = ""):
     """
     Converte o JSON de conteúdo gerado em um "PDF de Briefing Profissional".
 
@@ -99,9 +100,6 @@ def create_briefing_pdf(content_json: dict, client_name: str, output_filename: s
 
     # --- Sumário Executivo / Visão Geral da Semana ---
     story.append(PageBreak()) # Adiciona quebra de página antes do sumário executivo
-    print(f"DEBUG: target_audience antes de _build_executive_summary: {target_audience}")
-    print(f"DEBUG: tone_of_voice antes de _build_executive_summary: {tone_of_voice}")
-    print(f"DEBUG: marketing_objectives antes de _build_executive_summary: {marketing_objectives}")
     weekly_strategy_summary_content = content_json.get('weekly_strategy_summary', '')
     if isinstance(weekly_strategy_summary_content, str):
         # Se for uma string, tenta carregar como JSON. Se falhar, usa a string como summary.
@@ -137,6 +135,9 @@ def create_briefing_pdf(content_json: dict, client_name: str, output_filename: s
     # Gerar o calendário de publicação com base na data atual e na lista de posts
     story.extend(_build_publication_calendar(styles, publication_calendar))
     
+        # --- Métricas de Sucesso Sugeridas ---
+    story.append(PageBreak())
+    story.extend(_build_success_metrics(styles, suggested_metrics))
     
     # --- Checklist de Publicação ---
     story.append(Spacer(1, 36))

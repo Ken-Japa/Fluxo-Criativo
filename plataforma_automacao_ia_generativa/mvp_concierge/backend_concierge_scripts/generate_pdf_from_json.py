@@ -49,15 +49,16 @@ def main():
         target_audience = content_json.get('publico_alvo', '')
         tone_of_voice = content_json.get('tom_de_voz', '')
         marketing_objectives = content_json.get('objetivos_de_marketing', '')
+        posting_time = content_json.get('horario_de_postagem', '')
 
         create_briefing_pdf(
             client_name=client_name,
-            period=generation_date,
             content_json=content_json,
             output_filename=pdf_output_path,
             target_audience=target_audience,
             tone_of_voice=tone_of_voice,
-            marketing_objectives=marketing_objectives
+            marketing_objectives=marketing_objectives,
+            posting_time=posting_time
         )
         print(f"PDF gerado com sucesso em: {pdf_output_path}")
     except Exception as e:

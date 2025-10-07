@@ -1,15 +1,19 @@
 --- Prompt Log (content_generation) ---
 Cliente: Auge Invest
-Data/Hora: 2025-10-06 21:20:44
+Data/Hora: 2025-10-07 10:54:59
 -------------------------------------
 
-Você é um copywriter especializado em mídias sociais. Atuando sob as diretrizes de nicho: {"subnicho": "Investimentos e tecnologia financeira", "exemplos_de_nicho": ["Educa\u00e7\u00e3o financeira", "An\u00e1lise de a\u00e7\u00f5es, FIIs e ETFs", "Macroeconomia e pol\u00edtica monet\u00e1ria", "Tecnologia e inova\u00e7\u00e3o no mercado financeiro"]}. Seu objetivo é criar conteúdo altamente engajador e relevante para o público-alvo do cliente.
+Você é um copywriter especializado em mídias sociais. para Investimentos e tecnologia financeira. Atuando sob as diretrizes de nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro. Seu objetivo é criar conteúdo altamente engajador, viral e relevante para o público-alvo do cliente.
 
 Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para social_media_post.
+Evite soar como uma IA, busque um estilo de texto humanizado, evite clichês de copy genérica.
 
 **Perfil do Cliente:**
 - Nome do Cliente: Auge Invest
 - Tom de Voz: Profissional, confiável, educativo e inspirador — com uma linguagem acessível e visual moderno, transmitindo autoridade e inovação.
+- Busque criar o texto como se fosse: Como se fosse uma conversa entre assessor financeiro e cliente em uma reunião. Use frases naturais, com pausas, perguntas retóricas e expressões comuns do dia a dia.
+- O cliente costuma usar o vocabulário e ou frases como: Auge Invest, mercado financeiro, investimentos inteligentes, oportunidades de crescimento, análise de dados, decisões estratégicas, futuro financeiro
+- Busque adaptar seu texto ao estilo do cliente de se comunicar.
 - Público-Alvo: Investidores iniciantes e intermediários no Brasil que buscam entender o mercado financeiro, encontrar oportunidades de investimento e utilizar ferramentas modernas para análise de ativos.
 
 **Análise Estratégica Inicial:**
@@ -23,6 +27,8 @@ Com base no perfil do cliente e nas diretrizes do nicho, crie conteúdo para soc
 
 **Instruções de Formato:**
 Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 ideias de posts. Para cada post, inclua:
+ Os 5 Posts serão postados na seguinte ordem: sexta, sábado, domingo, segunda e quarta. Baseado no nicho, objetivo e nos dias da semana, retorne também um horário recomendado para postagem.
+ Busque se possivel inserir stroytelling ou casos ficticios no texto. Busque também inserir dados concretos, números ou estatísticas pertinentes mesmo que sejam aproximados no texto se fizer sentido.
 A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando:
 - Post 1: Apresentação do Problema/Desafio do público-alvo.
 - Post 2: Introdução da Solução (produto/serviço do cliente).
@@ -42,7 +48,6 @@ A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando
 - `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.
 
 Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
-```json
 {{
     "weekly_strategy_summary": "Resumo da estratégia semanal para a campanha.",
     "posts": [
@@ -75,6 +80,20 @@ Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
                 }
             ]
         }}
-    ]
+    ],
+    "metricas_de_sucesso_sugeridas": {
+        "objetivo_principal": "",
+        "indicadores_chave": [
+            "Taxa de cliques no link da bio (CTR)",
+            "Número de conversões (cadastros, downloads, trials)",
+            "Taxa de conversão da landing page (%)"
+        ],
+        "metricas_secundarias": [
+            "Impressões totais",
+            "Alcance dos posts",
+            "Visualizações de vídeo (especialmente Post 2 ou 4)",
+            "Engajamento no CTA final (comentários, cliques no botão)"
+        ]
+    },
+    "horario_de_postagem": "Horário sugerido para postagem"
 }}
-```

@@ -27,7 +27,9 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
             "informacoes_de_contato": brief_data.get("informacoes_de_contato"),
             "publico_alvo": brief_data.get("publico_alvo"),
             "tom_de_voz": brief_data.get("tom_de_voz"),
-            "exemplos_de_nicho": brief_data.get("exemplos_de_nicho")
+            "exemplos_de_nicho": brief_data.get("exemplos_de_nicho"),
+            "estilo_de_comunicacao": brief_data.get("estilo_de_comunicacao"),
+            "vocabulario_da_marca": brief_data.get("vocabulario_da_marca")
         }
 
         niche_data = {

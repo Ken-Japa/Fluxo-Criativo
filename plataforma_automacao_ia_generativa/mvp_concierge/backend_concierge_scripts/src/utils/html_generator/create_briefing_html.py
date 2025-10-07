@@ -61,9 +61,10 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
         calendar_html += "            <thead>\n"
         calendar_html += "                <tr><th>Dia</th><th>Data</th><th>Post</th></tr>\n"
         calendar_html += "            </thead>\n"
-        calendar_html += "            <tbody>\n"
+        calendar_html += "            <tbody>\n        """
         for entry in publication_calendar:
-            calendar_html += f"                <tr><td>{entry['day'].split(', ')[0]}</td><td>{entry['day'].split(', ')[1]}</td><td>{entry['title']}</td></tr>\n"
+            for sub_entry in entry['entries']:
+                calendar_html += f"                <tr><td>{entry['day'].split(', ')[0]}</td><td>{entry['day'].split(', ')[1]}</td><td>{sub_entry['content']}</td></tr>\n"
         calendar_html += "            </tbody>\n"
         calendar_html += "        </table>\n"
 
@@ -160,4 +161,3 @@ def create_briefing_html(content_json: dict, client_name: str, output_filename: 
 
     with open(output_filename, "w", encoding="utf-8") as f:
         f.write(html_content)
-    print(f"Briefing HTML gerado com sucesso: {output_filename}")

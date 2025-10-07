@@ -8,12 +8,9 @@ def init_db():
     se elas não existirem. Garante que o diretório 'data' exista.
     """
     DATA_DIR = os.path.dirname(DATABASE_PATH)
-    print(f"[DEBUG] DATA_DIR: {DATA_DIR}")
-    print(f"[DEBUG] DATABASE_PATH: {DATABASE_PATH}")
     # Criar o diretório 'data' se ele não existir
     try:
         os.makedirs(DATA_DIR, exist_ok=True)
-        print(f"[DEBUG] Diretório 'data' criado ou já existente: {DATA_DIR}")
     except Exception as e:
         print(f"[ERROR] Erro ao criar diretório 'data': {e}")
         raise # Re-raise a exceção para não mascarar o erro

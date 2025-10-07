@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import time
 import google.generativeai as genai
 import google.api_core.exceptions
@@ -21,13 +22,9 @@ def generate_text_content(prompt: str) -> dict:
     model = genai.GenerativeModel('gemini-2.5-pro')
 
     try:
-        response = model.generate_content(prompt)
+        response = model.generate_content(str(prompt))
         try:
-            # Remove os delimitadores de bloco de código Markdown se presentes
-            json_string = response.text.strip()
-            if json_string.startswith('```json') and json_string.endswith('```'):
-                json_string = json_string[len('```json'):-len('```')].strip()
-
+            json_string = re.sub(r"```json\n|```", "", response.text.strip())
             generated_content = json.loads(json_string)
             return {"status": "success", "generated_content": generated_content}
         except json.JSONDecodeError as e:

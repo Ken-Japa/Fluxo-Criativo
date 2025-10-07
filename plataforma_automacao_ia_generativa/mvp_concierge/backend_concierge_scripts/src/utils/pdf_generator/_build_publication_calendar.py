@@ -23,7 +23,10 @@ def _build_publication_calendar(styles: dict, publication_calendar: list) -> lis
     for day_entry in publication_calendar:
         calendar_story.append(Paragraph(day_entry.get('day', 'N/A'), styles['CalendarTitle']))
         for entry in day_entry.get('entries', []):
-            calendar_story.append(Paragraph(f"Post {entry.get('post_number')}: {entry.get('content', 'N/A')}", styles['CalendarEntry']))
+            # Formato desejado: "18:00 - Post 1: Sextou..."
+            # O horário deve vir em negrito.
+            formatted_time = f"<b>{entry.get('time', 'Horário não informado')}</b>" if entry.get('time') else "Horário não informado"
+            calendar_story.append(Paragraph(f"{formatted_time} - Post {entry.get('post_number')}: {entry.get('content', 'N/A')}", styles['CalendarEntry']))
         calendar_story.append(Spacer(1, 14.4))
 
     return calendar_story

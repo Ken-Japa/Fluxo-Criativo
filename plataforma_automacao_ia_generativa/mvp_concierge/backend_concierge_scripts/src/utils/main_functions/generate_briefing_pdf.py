@@ -19,7 +19,8 @@ def generate_briefing_pdf(content_json: dict, client_name: str, output_dir: str,
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     pdf_filename = f"briefing_{client_name}_{timestamp}.pdf"
     output_filepath = os.path.join(output_dir, pdf_filename)
-    print(f"Tentando salvar PDF em: {output_filepath}")
+
+    suggested_metrics = content_json.get('metricas_de_sucesso_sugeridas', {})
 
     create_briefing_pdf(
         content_json=content_json,
@@ -27,7 +28,8 @@ def generate_briefing_pdf(content_json: dict, client_name: str, output_dir: str,
         output_filename=output_filepath,
         target_audience=target_audience,
         tone_of_voice=tone_of_voice,
-        marketing_objectives=marketing_objectives
+        marketing_objectives=marketing_objectives,
+        suggested_metrics=suggested_metrics
     )
 
     return output_filepath

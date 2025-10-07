@@ -19,7 +19,6 @@ def generate_briefing_html(generated_content, nome_do_cliente, output_dir):
     output_html_filename = os.path.join(output_dir, f"briefing_{nome_do_cliente.replace(' ', '_')}_{timestamp}.html")
     try:
         create_briefing_html(generated_content, nome_do_cliente, output_html_filename)
-        print(f"Relatório HTML gerado em: {output_html_filename}")
         return output_html_filename
     except Exception as e:
         print(f"Erro ao gerar HTML: {e}")

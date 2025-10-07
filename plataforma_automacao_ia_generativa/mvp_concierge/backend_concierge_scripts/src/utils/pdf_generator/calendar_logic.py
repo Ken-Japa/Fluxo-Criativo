@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+import json
 
 def generate_publication_calendar(start_date: datetime, posts_list: list) -> list:
     """
@@ -49,7 +50,29 @@ def generate_publication_calendar(start_date: datetime, posts_list: list) -> lis
             
             entries = []
             for assigned_post in assigned_posts_by_day[day_index]:
-                entries.append({"time": "", "content": assigned_post["post_data"].get("titulo", "Título não disponível"), "post_number": assigned_post["post_number"]})
+                horarios_raw = assigned_post["post_data"].get("horario_de_postagem", "Horário não informado")
+
+                post_time = "Horário não informado"
+                if isinstance(horarios_raw, str):
+                    # Se for uma string, tenta extrair apenas o horário se houver um dia da semana
+                    if "," in horarios_raw:
+                        parts = horarios_raw.split(",", 1) # Divide apenas na primeira vírgula
+                        if len(parts) > 1:
+                            post_time = parts[1].strip() # Pega a parte depois da vírgula e remove espaços
+                        else:
+                            post_time = horarios_raw.strip() # Se não houver vírgula, usa a string inteira
+                    else:
+                        post_time = horarios_raw.strip() # Se não houver vírgula, usa a string inteira
+                elif isinstance(horarios_raw, dict):
+                    # Se for um dicionário, tenta extrair pelo dia da semana
+                    day_name_lower = day_name.split(',')[0].lower()
+                    if "-feira" in day_name_lower:
+                        day_name_key = day_name_lower.replace("-feira", "")
+                    else:
+                        day_name_key = day_name_lower
+                    post_time = horarios_raw.get(day_name_key, "Horário não informado")
+
+                entries.append({"time": post_time, "content": assigned_post["post_data"].get("titulo", "Título não disponível"), "post_number": assigned_post["post_number"]})
             
             calendar.append({"day": day_name, "entries": entries})
 
