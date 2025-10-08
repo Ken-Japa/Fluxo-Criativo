@@ -3,5 +3,3 @@ python-dotenv
 reportlab
 uvicorn
 fastapi
-openai
-requests

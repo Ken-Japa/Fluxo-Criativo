@@ -1,0 +1,228 @@
+{
+    "weekly_strategy_summary": "Esta campanha semanal foi desenhada como uma jornada narrativa para o potencial cliente, começando pela identificação de uma dor comum (a preocupação com o desempenho escolar) e culminando em uma solução clara e urgente (as aulas de Dalila). A progressão dos posts visa construir confiança e valor: primeiro, gerando empatia (Post 1), depois apresentando a solução de forma acolhedora (Post 2), detalhando os benefícios transformadores (Post 3), provando os resultados com um caso de sucesso (Post 4) e, finalmente, criando um senso de urgência para impulsionar a conversão (Post 5). A estratégia de horários e formatos foi otimizada para maximizar o alcance e engajamento do público-alvo (pais e estudantes) em cada dia da semana.",
+    "posts": [
+        {
+            "titulo": "O Boletim Chegou... E Agora?",
+            "tema": "Apresentação do Problema/Desafio: A ansiedade dos pais e alunos com notas baixas e dificuldades em Português e Inglês.",
+            "horario_de_postagem": "Sexta-feira, 18:30",
+            "legenda_principal": "Fim de semana chegando, o boletim na mão e aquela pontinha de preocupação no coração. Eu entendo perfeitamente. Ver um filho travado na hora de escrever uma redação ou com vergonha de falar inglês pode ser angustiante.\n\nMuitas vezes, a dificuldade não é falta de esforço, mas sim uma pequena lacuna no aprendizado que, se não for cuidada, vira uma bola de neve. Aquele 'não entendi a matéria' se transforma em 'eu odeio português', e a vergonha de falar errado em inglês vira um bloqueio total.\n\nVocê já sentiu isso? A boa notícia é que toda dificuldade tem um caminho, uma forma de ser descomplicada. Aprender não precisa ser um peso. Vamos conversar sobre isso?",
+            "variacoes_legenda": [
+                "Sexta-feira, dia de relaxar... mas aí você lembra daquela nota de português ou da dificuldade do seu filho na aula de inglês. Se essa preocupação é familiar para você, saiba que não está sozinha. Muitas vezes, o que falta é apenas uma nova abordagem, um reforço escolar que realmente entenda onde está o nó. Me conta, qual o maior desafio por aí hoje?",
+                "Aquela sensação de que seu filho sabe o conteúdo, mas não consegue colocar no papel? Ou a frustração de vê-lo evitar a todo custo uma conversa em inglês? Esses são sinais claros de que um apoio direcionado pode fazer toda a diferença. Não é sobre decorar regras, é sobre construir confiança. E se a gente transformasse essa dificuldade em segurança?"
+            ],
+            "hashtags": [
+                "#ReforcoEscolar",
+                "#DificuldadeDeAprendizagem",
+                "#AulasDePortugues",
+                "#AulasDeIngles",
+                "#PaisEFilhos",
+                "#Educacao",
+                "#RedacaoENEM",
+                "#DesempenhoEscolar"
+            ],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Postado na sexta à noite, este post capta os pais no momento em que a semana escolar se encerra, e as preocupações com o desempenho acadêmico vêm à tona. O formato carrossel permite segmentar as dores do público (redação, gramática, conversação) de forma visual e organizada. O tom empático e a pergunta final ('Vamos conversar?') iniciam a jornada do cliente de forma acolhedora, sem uma venda agressiva, focando em criar conexão e identificação.",
+            "micro_briefing": "O objetivo é gerar identificação imediata com a dor do público-alvo (pais e estudantes preocupados), validando seus sentimentos e abrindo um canal para a solução que será apresentada no post seguinte.",
+            "visual_prompt_suggestion": "A realistic and warm photo. A mother with a worried but loving expression sitting at a kitchen table, looking at a school notebook with her child (around 12 years old). The scene should feel intimate and relatable, not overly dramatic. Soft, warm lighting. The focus is on the emotional connection and the shared challenge. Color palette with soft browns, whites, and a touch of pastel blue. Style: cinematic, emotional.",
+            "visual_description_portuguese": "Imagem acolhedora de uma mãe com expressão carinhosa, mas preocupada, olhando um caderno escolar ao lado de seu filho em uma mesa. A iluminação é suave e o clima é de intimidade e desafio compartilhado.",
+            "cta_individual": "Se você se identificou, me conta nos comentários qual o maior desafio do seu filho hoje.",
+            "interacao": "Qual a maior dificuldade que você ou seu filho enfrenta: gramática, redação ou a conversação em inglês? Comente aqui embaixo!",
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "“A redação dele não sai do lugar...”",
+                    "texto_slide": "A folha em branco parece um pesadelo? A dificuldade em organizar as ideias é um dos maiores bloqueios para uma redação nota 1000.",
+                    "sugestao_visual_slide": "Uma imagem de uma mão de um jovem segurando uma caneta, pairando sobre uma folha de papel em branco, com uma expressão de frustração."
+                },
+                {
+                    "titulo_slide": "“Ele até entende inglês, mas na hora de falar, trava.”",
+                    "texto_slide": "O medo de errar a pronúncia ou de não encontrar as palavras certas impede a fluidez na conversação prática. A confiança é a chave.",
+                    "sugestao_visual_slide": "Close-up no rosto de um adolescente em uma chamada de vídeo, com uma expressão de hesitação e ansiedade."
+                },
+                {
+                    "titulo_slide": "“Crase, vírgula, concordância... um bicho de 7 cabeças?”",
+                    "texto_slide": "A gramática parece um conjunto de regras impossíveis? Ela não precisa ser. É possível descomplicar e entender a lógica por trás de cada ponto.",
+                    "sugestao_visual_slide": "Uma ilustração estilizada de um cérebro com vários pontos de interrogação saindo dele, sobre um fundo com regras gramaticais."
+                },
+                {
+                    "titulo_slide": "Mas e se existisse um caminho mais leve?",
+                    "texto_slide": "Um aprendizado que respeita o ritmo do seu filho, focado em transformar a dificuldade em confiança. Continue acompanhando para saber como.",
+                    "sugestao_visual_slide": "Uma imagem suave e inspiradora de uma lâmpada se acendendo sobre um livro aberto."
+                }
+            ]
+        },
+        {
+            "titulo": "O Segredo de um Aprendizado que Transforma",
+            "tema": "Introdução da Solução: Apresentação de Dalila Realino e sua metodologia de ensino personalizada e acolhedora.",
+            "horario_de_postagem": "Sábado, 11:00",
+            "legenda_principal": "Lembra daquela preocupação que conversamos ontem? Hoje eu quero te mostrar a solução. Meu nome é Dalila Realino e, como professora formada em Letras pela UFOP, minha paixão é transformar a maneira como meus alunos veem o Português e o Inglês.\n\nEu não acredito em fórmulas prontas. Acredito em um aprendizado que acolhe, que entende onde está a dúvida e trabalha nela com paciência e método. Nas minhas aulas, a gente descomplica a gramática, organiza as ideias para aquela redação nota 1000 e destrava a conversação em inglês, passo a passo.\n\nO objetivo é simples: fazer com que seu filho (ou você!) não apenas aprenda a matéria, mas domine a língua com confiança e segurança. Porque aprender é uma jornada, e eu estou aqui para ser a guia.",
+            "variacoes_legenda": [
+                "Depois de identificar a dificuldade, o próximo passo é encontrar o apoio certo. Com minha formação na UFOP e anos de experiência, desenvolvi um método onde o aluno é o centro de tudo. Aulas 100% online e personalizadas para focar exatamente no que importa. Vamos juntos transformar o aprendizado?",
+                "E se eu te dissesse que a aula de reforço pode ser o momento mais esperado da semana? Meu trabalho é criar um ambiente seguro e inspirador para que cada aluno floresça. Da análise do discurso à conversação prática em inglês, cada aula é uma nova descoberta. A educação pode e deve ser prazerosa."
+            ],
+            "hashtags": [
+                "#ProfessoraParticular",
+                "#AulasOnline",
+                "#MetodologiaDeEnsino",
+                "#EducacaoPersonalizada",
+                "#DalilaRealino",
+                "#LetrasUFOP",
+                "#GramaticaDescomplicada",
+                "#ConversacaoEmIngles"
+            ],
+            "sugestao_formato": "Vídeo curto (Reel)",
+            "post_strategy_rationale": "Postado no sábado de manhã, um horário mais leve, o vídeo cria uma conexão pessoal e humana com a professora Dalila. Após gerar empatia na sexta, este post apresenta a solução de forma inspiradora e profissional. A menção à formação na UFOP constrói autoridade, enquanto o tom acolhedor reforça a promessa de um ensino diferenciado. O formato de vídeo é ideal para transmitir personalidade e confiança.",
+            "micro_briefing": "Apresentar Dalila como a solução para os problemas levantados no post anterior. O objetivo é construir autoridade (formação, experiência) e confiança (tom de voz acolhedor), mostrando o 'rosto' por trás do serviço.",
+            "visual_prompt_suggestion": "A warm and inviting short video. Dalila Realino, smiling kindly, in a well-lit home office or study space with bookshelves in the background. She speaks directly to the camera as if having a conversation. The atmosphere is professional yet comfortable. Use soft lighting and a clean, organized background. She could be holding a book or gesturing gently as she speaks. Style: authentic, professional, welcoming.",
+            "visual_description_portuguese": "Vídeo curto e acolhedor de Dalila Realino, sorrindo, em seu escritório com livros ao fundo. Ela fala diretamente para a câmera de forma calma e convidativa, criando uma conexão pessoal.",
+            "cta_individual": "Quer entender como minhas aulas funcionam na prática? Me mande um 'Olá' no direct!",
+            "interacao": "O que você mais valoriza em um professor particular? Comente aqui!",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Close-up em Dalila sorrindo para a câmera, ambiente aconchegante ao fundo.",
+                    "texto_tela": "Preocupado com as notas?",
+                    "fala": "(Som ambiente suave ou música inspiradora) Olá! Eu sou a Dalila. E eu sei que ver um filho com dificuldades pode ser desafiador."
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Corte rápido para um diploma ou livro com o logo da UFOP visível. Em seguida, volta para Dalila.",
+                    "texto_tela": "Formada em Letras pela UFOP",
+                    "fala": "Mas com a minha metodologia, nós vamos transformar essa história."
+                },
+                {
+                    "cena": 3,
+                    "descricao": "Imagens dinâmicas: um trecho de lousa digital com um mapa mental de redação, depois uma bandeira do Reino Unido/EUA.",
+                    "texto_tela": "Redação nota 1000 | Inglês sem travas",
+                    "fala": "Juntos, vamos descomplicar a gramática, destravar a conversação e construir redações que impressionam."
+                },
+                {
+                    "cena": 4,
+                    "descricao": "Dalila olha para a câmera, com um sorriso confiante e acolhedor.",
+                    "texto_tela": "O aprendizado pode ser incrível.",
+                    "fala": "Porque o meu objetivo é que seu filho domine a língua com total confiança. Vamos começar essa jornada?"
+                }
+            ]
+        },
+        {
+            "titulo": "Mais que uma Aula, uma Transformação",
+            "tema": "Detalhamento dos Benefícios e Vantagens da solução.",
+            "horario_de_postagem": "Domingo, 20:00",
+            "legenda_principal": "Imagine esta cena: seu filho te mostrando, com orgulho, um 9,5 na redação que antes era um 6. Ou participando de uma chamada de vídeo em inglês, sem aquela antiga timidez. Isso não é mágica, é resultado de um trabalho focado e personalizado.\n\nO que você ganha com as minhas aulas vai além do reforço escolar. É sobre...\n✅ Confiança para expor ideias no papel e na fala.\n✅ Autonomia para estudar e resolver questões sozinho.\n✅ Repertório cultural através da literatura e da análise de discursos.\n✅ Preparo real para os desafios do vestibular, concursos e da vida.\n\nE o melhor: tudo isso no conforto da sua casa, com aulas 100% online e material completo já incluso. O investimento é de R$80/hora para ver uma transformação que não tem preço. Preparado para ver essa mudança acontecer?",
+            "variacoes_legenda": [
+                "Uma aula particular pode ser muito mais que apenas 'passar a matéria'. É sobre acender a curiosidade, construir a autoconfiança e dar ferramentas para que o aluno caminhe com as próprias pernas. Com aulas online, material incluso e foco total no desenvolvimento individual, o sucesso acadêmico se torna uma consequência natural. Vamos investir no futuro?",
+                "Gramática descomplicada, conversação prática e redação nota 1000. Estes são os pilares. Mas o resultado final é um aluno mais seguro, autônomo e preparado. Por R$80/hora, você oferece um acompanhamento de excelência (formação UFOP!) que fará toda a diferença na jornada educacional do seu filho."
+            ],
+            "hashtags": [
+                "#BeneficiosEducacionais",
+                "#SucessoEscolar",
+                "#ConfiancaNosEstudos",
+                "#PreparacaoVestibular",
+                "#AulasParticularesOnline",
+                "#InvestimentoEmEducacao",
+                "#ResultadosReais",
+                "#PortuguesParaConcursos"
+            ],
+            "sugestao_formato": "Carrossel de imagens",
+            "post_strategy_rationale": "Domingo à noite é o momento de planejamento da semana, onde pais e alunos pensam nas metas e desafios. Este post foca nos 'benefícios' e na 'transformação', conectando as características do serviço (aulas online, material incluso) com os resultados emocionais e práticos desejados pelo público (confiança, autonomia, orgulho). O carrossel é perfeito para listar esses benefícios de forma clara e visualmente agradável.",
+            "micro_briefing": "Detalhar os benefícios tangíveis e intangíveis das aulas, mostrando o valor do serviço para além do preço. O objetivo é fazer o cliente visualizar a transformação positiva na vida do aluno.",
+            "visual_prompt_suggestion": "A series of uplifting and clean graphics. The main color palette should be professional and warm (e.g., navy blue, white, and a touch of gold or a warm orange). Each slide uses icons and short, powerful text to convey a benefit. The overall style is modern, trustworthy, and inspiring. Use a consistent, clean font. Style: minimalist, infographic, corporate but friendly.",
+            "visual_description_portuguese": "Carrossel com design limpo e profissional. Fundo com cores sóbrias (como azul marinho e branco) e detalhes em dourado. Cada slide destaca um benefício com um ícone e texto curto, transmitindo confiança e clareza.",
+            "cta_individual": "Pronto para investir na transformação do seu filho? Clique no link da bio para saber mais!",
+            "interacao": "Qual desses benefícios é o mais importante para você nesse momento? Me conta nos comentários!",
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "Deixe a Insegurança para Trás",
+                    "texto_slide": "Imagine seu filho levantando a mão na aula, escrevendo sem medo de errar e falando inglês com naturalidade. Isso é confiança.",
+                    "sugestao_visual_slide": "Um ícone de um escudo ou de uma pessoa com uma capa de super-herói, simbolizando proteção e confiança."
+                },
+                {
+                    "titulo_slide": "Rumo à Redação Nota 1000",
+                    "texto_slide": "Com técnicas de argumentação, estrutura e repertório, o ENEM e os vestibulares se tornam desafios superáveis. Dominar a escrita é dominar o futuro.",
+                    "sugestao_visual_slide": "Um ícone de um alvo com uma flecha no centro ou um troféu."
+                },
+                {
+                    "titulo_slide": "100% Online e Personalizado",
+                    "texto_slide": "Aulas no conforto da sua casa, seguindo o ritmo do aluno e focando exatamente nas suas necessidades. Material completo incluso.",
+                    "sugestao_visual_slide": "Ícone de um computador com um símbolo de coração ou de uma pessoa dentro, indicando personalização e cuidado."
+                },
+                {
+                    "titulo_slide": "Formação de Excelência (UFOP)",
+                    "texto_slide": "Conte com a expertise de uma profissional graduada em uma das melhores universidades do país para guiar essa jornada.",
+                    "sugestao_visual_slide": "Ícone de um chapéu de formatura (capelo) ou um selo de qualidade."
+                },
+                {
+                    "titulo_slide": "O Primeiro Passo para a Mudança",
+                    "texto_slide": "A transformação começa com uma decisão. Vamos juntos? Agende uma aula experimental e veja a diferença.",
+                    "sugestao_visual_slide": "Uma imagem de um botão de 'play' ou de uma seta apontando para cima, com a frase 'Agende Agora'."
+                }
+            ]
+        },
+        {
+            "titulo": "A História do Lucas: Do 5,0 ao 9,0 em Redação",
+            "tema": "Prova Social: Apresentação de um caso de sucesso para gerar credibilidade e confiança.",
+            "horario_de_postagem": "Segunda-feira, 12:30",
+            "legenda_principal": "Quero compartilhar com vocês a história do Lucas (nome fictício para preservar a identidade). Quando a mãe dele me procurou, ela estava desanimada. O Lucas era um menino inteligente, cheio de ideias, mas as notas em redação não passavam de 5,0. Ele simplesmente travava na frente do papel.\n\nComeçamos nosso trabalho focado em duas frentes: organização de pensamento e perda do medo de errar. Em dois meses, com encontros semanais aos sábados, o Lucas não só aprendeu a estruturar uma dissertação, como descobriu o prazer de defender suas ideias.\n\nO resultado? Na última prova do bimestre, ele tirou 9,0. A mãe me mandou uma mensagem que eu guardo com carinho: 'Dalila, não foi só a nota que mudou. Foi a confiança dele. Obrigada!'.\n\nHistórias como a do Lucas são o meu maior combustível. E a próxima pode ser a do seu filho.",
+            "variacoes_legenda": [
+                "Resultados falam mais que palavras. O caso do Lucas, que saltou de uma nota 5,0 para 9,0 em redação em apenas dois meses, mostra como um acompanhamento direcionado faz a diferença. O segredo não foi decorar regras, foi construir confiança e método. A transformação do seu filho também é possível.",
+                "“Dalila, a confiança dele mudou completamente.” - essa frase da mãe de um aluno resume tudo. Passamos de redações medianas para textos que ele se orgulha de assinar. Esse é o poder de um ensino que entende e acolhe. Quer ver uma história de sucesso assim na sua casa?"
+            ],
+            "hashtags": [
+                "#DepoimentoDeAluno",
+                "#ProvaSocial",
+                "#CaseDeSucesso",
+                "#ResultadosComprovados",
+                "#TransformacaoEducacional",
+                "#AntesEDepois",
+                "#ReforcoEscolarFunciona",
+                "#HistoriasQueInspiram"
+            ],
+            "sugestao_formato": "Imagem única (formato de citação/depoimento)",
+            "post_strategy_rationale": "Postado na segunda, no horário de almoço, este post funciona como uma poderosa prova social. Histórias conectam e vendem mais do que listas de benefícios. Usar um caso de sucesso fictício, mas verossímil, torna a transformação prometida nos posts anteriores em algo tangível e real. Isso quebra objeções e cria um forte senso de confiança e desejo pelo mesmo resultado. O formato de imagem única com a citação em destaque é rápido de consumir e altamente compartilhável.",
+            "micro_briefing": "Validar a eficácia do método de Dalila através de uma história de sucesso convincente, focando na transformação do aluno (notas e confiança). O objetivo é gerar credibilidade e mostrar que os resultados são alcançáveis.",
+            "visual_prompt_suggestion": "A clean and elegant graphic designed as a testimonial card. A soft, neutral-colored background (like light beige or grey). A large, impactful quote in a beautiful serif font: 'Não foi só a nota que mudou. Foi a confiança dele. Obrigada!'. Below the quote, in a smaller, clean sans-serif font: '- Mãe do Lucas, aluno de Redação'. In a corner, discreetly, Dalila's logo or name. The design should feel premium and trustworthy. Style: minimalist, elegant, testimonial.",
+            "visual_description_portuguese": "Imagem com design elegante, como um card de depoimento. Fundo em cor neutra, com a frase 'Não foi só a nota que mudou. Foi a confiança dele. Obrigada!' em destaque. Abaixo, o crédito '- Mãe do Lucas'. Transmite seriedade e confiança.",
+            "cta_individual": "Quer construir uma história de sucesso como a do Lucas? O link para agendar sua primeira aula está na bio!",
+            "interacao": "Marque aqui um amigo ou amiga que adoraria ver uma transformação como essa!"
+        },
+        {
+            "titulo": "Sua Vaga para a Transformação Está Aqui (Mas Não por Muito Tempo!)",
+            "tema": "Chamada para Ação (CTA) clara e direta, com senso de urgência.",
+            "horario_de_postagem": "Quarta-feira, 19:00",
+            "legenda_principal": "A jornada que começamos a conversar na sexta-feira, passando pela metodologia, pelos benefícios e pela história do Lucas, chega ao seu passo mais importante: a sua decisão.\n\nAs vagas para minhas turmas de acompanhamento aos sábados são extremamente limitadas, pois prezo por dar atenção máxima a cada aluno. Neste momento, restam apenas **3 (TRÊS)** horários disponíveis.\n\nSe você quer garantir uma dessas vagas e começar a transformar a relação do seu filho com o Português e o Inglês ainda este mês, a hora é AGORA.\n\n✅ Aulas 100% Online e Personalizadas\n✅ Professora especialista formada pela UFOP\n✅ Material Completo Incluso\n\nNão deixe para depois a confiança e o sucesso que seu filho pode começar a construir hoje. Clique no link da bio e agende sua aula. Estou te esperando!",
+            "variacoes_legenda": [
+                "Depois de tudo que vimos essa semana, só falta uma coisa: agir. Tenho apenas 3 vagas restantes para as aulas aos sábados. É a sua chance de garantir um acompanhamento de excelência que realmente traz resultados. Garanta seu horário antes que acabem. Link na bio!",
+                "Vagas limitadas! Se você sentiu que meu método é o que seu filho precisa para destravar o aprendizado em Português ou Inglês, não espere mais. Os últimos 3 horários de sábado estão disponíveis. Clique no link na bio e vamos começar essa transformação juntos!"
+            ],
+            "hashtags": [
+                "#UltimasVagas",
+                "#VagasLimitadas",
+                "#AgendeSuaAula",
+                "#MatriculasAbertas",
+                "#ProfessoraDePortugues",
+                "#ProfessoraDeIngles",
+                "#NaoPerca",
+                "#CTA"
+            ],
+            "sugestao_formato": "Imagem única com texto em destaque",
+            "post_strategy_rationale": "Postado na quarta à noite, este post é o clímax da campanha. Ele capitaliza toda a confiança e o valor construídos ao longo da semana. O uso da escassez ('apenas 3 vagas') cria um senso de urgência que motiva a ação imediata. A legenda recapitula a jornada da semana ('começamos na sexta...') e apresenta uma oferta clara e direta. O objetivo não é mais educar, mas converter os leads aquecidos em clientes.",
+            "micro_briefing": "Converter o interesse gerado durante a semana em agendamentos de aulas, utilizando o gatilho da escassez para acelerar a tomada de decisão.",
+            "visual_prompt_suggestion": "A bold and eye-catching graphic. A solid, strong-colored background (like a deep blue or vibrant teal). Large, unmissable text in a modern, bold font: 'ÚLTIMAS 3 VAGAS'. Below it, slightly smaller: 'AULAS AOS SÁBADOS'. At the bottom, a clear call to action: 'Clique no Link da Bio e Garanta a Sua!'. The design should feel urgent and direct, but still professional. No clutter. Style: direct, bold, high-contrast.",
+            "visual_description_portuguese": "Imagem de alto impacto com fundo de cor sólida e vibrante. Texto grande e em negrito: 'ÚLTIMAS 3 VAGAS'. Abaixo, 'AULAS AOS SÁBADOS' e uma chamada para ação clara. O design é direto e cria um senso de urgência.",
+            "cta_individual": "Garanta uma das últimas 3 vagas para aulas aos sábados! Clique no link da bio AGORA!",
+            "interacao": "Ainda tem alguma dúvida? Me mande no direct que eu respondo rapidinho para você não perder sua vaga!"
+        }
+    ],
+    "metricas_de_sucesso_sugeridas": {
+        "objetivo_principal": "Atrair novos alunos e preencher as vagas limitadas para as aulas de sábado.",
+        "indicadores_chave": [
+            "Número de cliques no link da bio.",
+            "Número de mensagens diretas (DMs) e contatos via WhatsApp solicitando informações ou agendando aulas.",
+            "Número de vagas preenchidas ao final da campanha."
+        ],
+        "metricas_secundarias": [
+            "Taxa de engajamento em cada post (curtidas, comentários, salvamentos, compartilhamentos).",
+            "Alcance e impressões da campanha.",
+            "Crescimento no número de seguidores."
+        ]
+    }
+}

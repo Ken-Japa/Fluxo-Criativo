@@ -154,7 +154,7 @@ def build_prompt(client_profile: dict, niche_guidelines: dict, content_type: str
     user_message_parts.append("- `visual_description_portuguese`: Uma descrição em português da imagem ou vídeo principal, para ser exibida no briefing.")
     user_message_parts.append("- `cta_individual`: Uma chamada para ação específica para este post.")
     user_message_parts.append("- `interacao`: Sugerir uma pergunta para a audiência ou uma forma de incentivar comentários, aumentando o engajamento além da simples publicação..")
-    user_message_parts.append("\n É muito importante que voce retorne o conteúdo em um formato JSON válido, seguindo a estrutura abaixo:")
+    user_message_parts.append("\nRetorne o conteúdo em formato JSON, seguindo a estrutura abaixo:")
     user_message_parts.append("{{")
     user_message_parts.append("    \"weekly_strategy_summary\": \"Resumo da estratégia semanal para a campanha.\",")
     user_message_parts.append("    \"posts\": [")

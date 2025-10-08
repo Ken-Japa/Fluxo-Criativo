@@ -12,5 +12,4 @@ def initialize_environment():
 
     output_dir = os.path.join(BASE_DIR, "src", "output_files", "briefings")
     os.makedirs(output_dir, exist_ok=True)
-    print(f"DEBUG: output_dir inside initialize_environment: {output_dir}")
     return output_dir

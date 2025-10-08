@@ -57,6 +57,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
   "tipo_de_conteudo": "posts educativos, conteúdos promocionais e chamadas diretas para agendamento de aulas",
+<<<<<<< HEAD
   "tipo_de_campanha": "engajamento",
 =======
   "tipo_de_conteudo": "Conteúdos para redes sociais e blog (carrosséis, posts explicativos e artigos educativos)",
@@ -66,6 +67,9 @@
   "tipo_de_conteudo": "Conteúdos para redes sociais e blog (carrosséis, posts explicativos e artigos educativos)",
   "tipo_de_campanha": "autoridade",
 >>>>>>> parent of 54e7034 (Docs)
+=======
+  "tipo_de_campanha": "captação de alunos e construção de autoridade",
+>>>>>>> parent of ef1f9d1 (Deepseek openrouter)
   "posts_anteriores": [],
   "conteudos_semanais": [
 

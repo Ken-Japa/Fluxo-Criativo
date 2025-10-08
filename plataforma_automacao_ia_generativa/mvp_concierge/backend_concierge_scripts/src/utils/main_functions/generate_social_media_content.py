@@ -1,27 +1,10 @@
 import os
-import json
-import re
-from datetime import datetime
 from src.content_generator import generate_content_for_client
 from src.utils.prompt_logger import log_prompt
 
-def _sanitize_filename(filename):
+def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo, conteudos_semanais, objetivos_de_marketing):
     """
-    Sanitiza uma string para ser usada como nome de arquivo.
-    Remove caracteres inválidos e limita o comprimento.
-    """
-    # Substitui caracteres inválidos por underscore
-    filename = re.sub(r'[<>:"/\\|?*\s]+', '_', filename)
-    # Remove underscores duplicados
-    filename = re.sub(r'_+', '_', filename)
-    # Remove underscores do início e fim
-    filename = filename.strip('_')
-    # Limita o comprimento do nome do arquivo para evitar problemas de sistema de arquivos
-    return filename[:100]
-
-def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo, conteudos_semanais, objetivos_de_marketing, output_dir):
-    """
-    Gera conteúdo para redes sociais com base nos dados do briefing do cliente, usando Gemini e DeepSeek.
+    Gera conteúdo para redes sociais com base nos dados do briefing do cliente.
 
     Args:
         brief_data (dict): Dados completos do briefing do cliente.
@@ -31,7 +14,7 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
         objetivos_de_marketing (str): Objetivos gerais de marketing.
 
     Returns:
-        tuple: Uma tupla contendo (gemini_generated_content, deepseek_generated_content, prompt_used_for_content_generation, tokens_consumed_gemini, api_cost_usd_gemini, tokens_consumed_deepseek, api_cost_usd_deepseek)
+        tuple: Uma tupla contendo (generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd)
                se o conteúdo for gerado com sucesso, caso contrário, retorna None para todos os valores.
     """
     print("\n--- Gerando Conteúdo para Redes Sociais ---")
@@ -66,73 +49,30 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
             "analise_de_concorrentes_referencias": brief_data.get("analise_de_concorrentes_referencias")
         }
 
-        # # Gerar conteúdo com Gemini
-        # print("Gerando conteúdo com Gemini...")
-        # gemini_generated_data = generate_content_for_client(
-        #     client_data=client_data,
-        #     niche_data=niche_data,
-        #     weekly_themes=weekly_themes_list,
-        #     weekly_goal=objetivos_de_marketing,
-        #     campaign_type=campaign_type,
-        #     content_type=tipo_de_conteudo,
-        #     use_deepseek=False
-        # )
-
-        # if gemini_generated_data.get("status") == "error":
-        #     print(f"Erro ao gerar conteúdo com Gemini: {gemini_generated_data.get("message", "Erro desconhecido")}")
-        #     return None, None, None, None, None, None, None
-
-        # gemini_content = gemini_generated_data["generated_content"]
-        # prompt_used_for_content_generation = gemini_generated_data["prompt_sent"]
-        # tokens_consumed_gemini = gemini_generated_data["token_usage"]["estimated_input_tokens"]
-        # api_cost_usd_gemini = gemini_generated_data["token_usage"]["estimated_cost_usd"]
-        # print("Conteúdo Gemini gerado com sucesso!")
-
-        # # Salvar JSON do Gemini
-        # output_dir = os.path.join(os.getcwd(), "output_files", "respostas_IA")
-        # os.makedirs(output_dir, exist_ok=True)
-        # gemini_output_path = os.path.join(output_dir, f"Gemini-{nome_do_cliente}-{tipo_de_conteudo}.json")
-        # with open(gemini_output_path, "w", encoding="utf-8") as f:
-        #     json.dump(gemini_content, f, ensure_ascii=False, indent=4)
-        # print(f"Conteúdo Gemini salvo em: {gemini_output_path}")
-
-        # Gerar conteúdo com DeepSeek
-        print("Gerando conteúdo com DeepSeek...")
-        deepseek_generated_data = generate_content_for_client(
+        generated_data = generate_content_for_client(
             client_data=client_data,
             niche_data=niche_data,
             weekly_themes=weekly_themes_list,
             weekly_goal=objetivos_de_marketing,
             campaign_type=campaign_type,
-            content_type=tipo_de_conteudo,
-            use_deepseek=True
+            content_type=tipo_de_conteudo
         )
 
-        if deepseek_generated_data.get("status") == "error":
-            print(f"Erro ao gerar conteúdo com DeepSeek: {deepseek_generated_data.get("message", "Erro desconhecido")}")
-            return None, None, None, None, None, None, None
+        if generated_data.get("status") == "error":
+            print(f"Erro ao gerar conteúdo: {generated_data.get("message", "Erro desconhecido")}")
+            return None, None, None, None
 
-        deepseek_content = deepseek_generated_data["generated_content"]
-        prompt_used_for_content_generation = deepseek_generated_data["prompt_sent"]
-        tokens_consumed_deepseek = deepseek_generated_data["token_usage"]["estimated_input_tokens"]
-        api_cost_usd_deepseek = deepseek_generated_data["token_usage"]["estimated_cost_usd"]
-        print("Conteúdo DeepSeek gerado com sucesso!")
+        generated_content = generated_data["generated_content"]
+        prompt_used_for_content_generation = generated_data["prompt_sent"]
+        tokens_consumed = generated_data["token_usage"]["estimated_input_tokens"]
+        api_cost_usd = generated_data["token_usage"]["estimated_cost_usd"]
+        print("Conteúdo gerado com sucesso!")
 
-        # Salvar JSON do DeepSeek
-        sanitized_client_name = _sanitize_filename(nome_do_cliente)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        deepseek_output_path = os.path.join(output_dir, f"Deepseek-{sanitized_client_name}_{timestamp}.json")
-        with open(deepseek_output_path, "w", encoding="utf-8") as f:
-            json.dump(deepseek_content, f, ensure_ascii=False, indent=4)
-        print(f"Conteúdo DeepSeek salvo em: {deepseek_output_path}")
-
-        print("Conteúdo gerado com sucesso por DeepSeek!")
-
-        # Log do prompt utilizado (o prompt é o mesmo para ambas as IAs)
+        # Log do prompt utilizado
         log_prompt(nome_do_cliente, prompt_used_for_content_generation, "content_generation")
         
-        return None, deepseek_content, prompt_used_for_content_generation, None, None, tokens_consumed_deepseek, api_cost_usd_deepseek
+        return generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd
 
     except Exception as e:
         print(f"Erro ao gerar conteúdo: {e}")
-        return None, None, None, None, None, None, None
+        return None, None, None, None

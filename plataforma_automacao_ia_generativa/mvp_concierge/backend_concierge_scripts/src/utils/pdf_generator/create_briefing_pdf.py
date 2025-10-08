@@ -147,4 +147,4 @@ def create_briefing_pdf(content_json: dict, client_name: str, output_filename: s
 
     doc.build(story)
 
-    return output_filename
+    return story
