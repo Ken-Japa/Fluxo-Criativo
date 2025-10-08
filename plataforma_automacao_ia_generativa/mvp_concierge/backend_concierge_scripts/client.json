@@ -4,8 +4,6 @@
   "informacoes_de_contato": "capitalauge@gmail.com.br",
   "publico_alvo": "Investidores iniciantes e intermediários no Brasil que buscam entender o mercado financeiro, encontrar oportunidades de investimento e utilizar ferramentas modernas para análise de ativos.",
   "tom_de_voz": "Profissional, confiável, educativo e inspirador — com uma linguagem acessível e visual moderno, transmitindo autoridade e inovação.",
-  "estilo_de_comunicacao": "Como se fosse uma conversa entre assessor financeiro e cliente em uma reunião. Use frases naturais, com pausas, perguntas retóricas e expressões comuns do dia a dia.",
-  "vocabulario_da_marca": ["Auge Invest", "mercado financeiro", "investimentos inteligentes", "oportunidades de crescimento", "análise de dados", "decisões estratégicas", "futuro financeiro"],
   "exemplos_de_nicho": [
     "Educação financeira",
     "Análise de ações, FIIs e ETFs",
@@ -55,9 +53,34 @@
     "Postagens explicativas e analíticas da Nord Research"
   ],
   "tipo_de_conteudo": "Conteúdos para redes sociais e blog (carrosséis, posts explicativos e artigos educativos)",
-  "tipo_de_campanha": "autoridade",
-  "posts_anteriores": [],
   "conteudos_semanais": [
-
+    {
+      "chamada_para_acao_individual": "Descubra a Auge Invest: a nova plataforma que vai simplificar sua jornada de investimentos.",
+      "objetivo_do_conteudo_individual": "Apresentar a plataforma e gerar curiosidade sobre seus diferenciais e ferramentas exclusivas."
+    },
+    {
+      "chamada_para_acao_individual": "Aprenda como identificar boas oportunidades com análise técnica e fundamentalista.",
+      "objetivo_do_conteudo_individual": "Educar o público e mostrar como a Auge Invest facilita essas análises com dados e gráficos intuitivos."
+    },
+    {
+      "chamada_para_acao_individual": "Fique por dentro das tendências econômicas que impactam seus investimentos.",
+      "objetivo_do_conteudo_individual": "Oferecer valor informativo e posicionar a marca como fonte confiável de insights macroeconômicos."
+    },
+    {
+      "chamada_para_acao_individual": "Monte sua estratégia com ferramentas inteligentes e dados atualizados.",
+      "objetivo_do_conteudo_individual": "Mostrar a praticidade e a tecnologia da plataforma, reforçando o uso diário e o trial gratuito."
+    },
+    {
+      "chamada_para_acao_individual": "Quer investir com mais confiança? Conheça os indicadores que os profissionais analisam.",
+      "objetivo_do_conteudo_individual": "Explicar conceitos e apresentar a Auge Invest como aliada para decisões conscientes."
+    },
+    {
+      "chamada_para_acao_individual": "Descubra como os alertas inteligentes da Auge Invest podem antecipar oportunidades.",
+      "objetivo_do_conteudo_individual": "Destacar os diferenciais tecnológicos e criar percepção de valor no serviço premium."
+    },
+    {
+      "chamada_para_acao_individual": "Cadastre-se hoje e explore gratuitamente o futuro das análises financeiras.",
+      "objetivo_do_conteudo_individual": "Converter seguidores e visitantes em usuários da plataforma durante o lançamento."
+    }
   ]
 }
