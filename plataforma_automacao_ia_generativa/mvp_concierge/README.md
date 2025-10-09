@@ -8,6 +8,8 @@ cd plataforma_automacao_ia_generativa
 cd mvp_concierge
 cd backend_concierge_scripts
 
+ou modal run -m llama_modal.py
+
 ## Visão Geral do Projeto
 
 O projeto `mvp_concierge` é composto por três módulos principais:

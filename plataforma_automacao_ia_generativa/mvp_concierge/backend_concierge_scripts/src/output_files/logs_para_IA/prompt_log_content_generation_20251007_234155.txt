@@ -1,6 +1,6 @@
 --- Prompt Log (content_generation) ---
 Cliente: Auge Invest
-Data/Hora: 2025-10-07 14:52:30
+Data/Hora: 2025-10-07 23:41:55
 -------------------------------------
 
 Você é um copywriter especializado em mídias sociais. O nicho é Investimentos e tecnologia financeira. para Investimentos e tecnologia financeira. Atuando sob as diretrizes de nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro. Seu objetivo é criar conteúdo altamente engajador, viral e relevante para o público-alvo do cliente.
@@ -47,11 +47,11 @@ Crie uma campanha semanal *coesa e com narrativa progressiva*, composta por 5 id
  Os 5 Posts serão postados na seguinte ordem: sexta, sábado, domingo, segunda e quarta. Baseado no nicho, objetivo e nos dias da semana, retorne também um horário recomendado para postagem.
  Busque se possivel inserir stroytelling ou casos ficticios no texto. Busque também inserir dados concretos, números ou estatísticas pertinentes mesmo que sejam aproximados no texto se fizer sentido.
 A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando:
-- Post 1: Dica ou Insight da Semana: Conteúdo educativo com valor imediato.
-- Post 2: Bastidores: Mostrar como a solução é construída (processo, equipe, metodologia).
-- Post 3: Estudo de Caso: Provar resultados ou demonstrar expertise com um exemplo real.
-- Post 4: FAQ / Quebra de Objeções: Responder dúvidas comuns e reforçar autoridade.
-- Post 5: Evento ou CTA Premium: Convidar para um webinar, e-book, consultoria, etc.
+- Post 1: Enquete ou Pergunta: Criar uma conversa com o público.
+- Post 2: Peça de Opinião: Pedir que comentem ideias, dores ou experiências.
+- Post 3: Desafio ou Participação: Propor que executem algo (ex: “Desafio 7 dias”).
+- Post 4: Live ou Sessão de Q&A: Interação direta em tempo real.
+- Post 5: Resumo/Compilado: Mostrar as melhores respostas, resultados ou insights.
 - `titulo`: Um título conciso para o post.
 - `tema`: Resumo do tema abordado no post.
 - `legenda_principal`: A legenda principal do post.
@@ -108,15 +108,15 @@ Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
     "metricas_de_sucesso_sugeridas": {
         "objetivo_principal": "Lançar a plataforma Auge Invest, atrair os primeiros usuários, gerar autoridade no mercado e incentivar o cadastro na versão gratuita e no período de testes.",
         "indicadores_chave": [
-            "Compartilhamentos por post",
-            "Salvamentos por post",
-            "Tempo médio de leitura (em artigos ou blog)",
-            "Cliques em conteúdos educativos (e-book, whitepaper)"
+            "Taxa de engajamento (%) [(likes + comentários + compartilhamentos) / alcance]",
+            "Número de comentários por post",
+            "Respostas a stories ou enquetes",
+            "Participações em desafios ou interações diretas"
         ],
         "metricas_secundarias": [
-            "Novos seguidores orgânicos",
-            "Número de comentários com dúvidas ou perguntas",
-            "Menções externas ou backlinks"
+            "Cliques em stickers",
+            "Visualizações de stories ou lives",
+            "Número de conteúdos gerados pelo usuário (UGC)"
         ]
     },
 }}
