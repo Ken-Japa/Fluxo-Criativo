@@ -1,0 +1,247 @@
+{
+    "weekly_strategy_summary": "    Esta campanha semanal foi projetada para lançar a **Auge Invest** com uma narrativa progressiva que engaja o público desde o primeiro contato. A estratégia combina **educação financeira + interatividade**, usando:    - **Perguntas provocativas** (sexta) para mapear o perfil do público.    - **Compartilhamento de experiências** (sábado) para criar identificação e validar dores.    - **Desafio prático** (domingo) para demonstrar o valor da plataforma de forma tangível.    - **Live de tiradúvidas** (segunda) para humanizar a marca e gerar autoridade.    - **Compilado de insights** (quarta) para reforçar aprendizados e converter engajamento em cadastros.    O tom é **conversacional e analítico**, com dados concretos e storytelling para evitar o 'marketing genérico'. Cada post direciona para a **CTA principal**: experimentar a Auge Invest gratuitamente, destacando sempre que investimentos têm riscos.   ",
+    "posts": [
+        {
+            "titulo": "O que te impede de investir melhor?",
+            "tema": "Enquete para identificar as principais dores dos investidores (falta de tempo, análise complexa, medo de errar).",
+            "legenda_principal": "            Vamos ser sinceros: **todo mundo quer investir melhor**, mas algo sempre atrapalha.            Para alguns, é a **falta de tempo** para analisar ações. Para outros, é o **medo de tomar uma decisão errada** e perder dinheiro. E tem quem simplesmente **não sabe por onde começar** com tanta informação solta por aí.            **Qual é o seu maior desafio hoje?** 👇            (Vota aí e nos conta nos comentários — a gente vai usar essas respostas para criar conteúdo que **realmente ajude** você.)            #DicaExtra: Se você marcou mais de uma opção, é sinal de que precisa de **ferramentas que simplifiquem** sua vida financeira. 😉            ",
+            "variacoes_legenda": [
+                "                **Investir não deveria ser um bicho de sete cabeças.** Mas a verdade é que a maioria dos brasileiros ainda esbarra em 3 problemas:                1️⃣ **Análise demorada** (quem tem tempo para ficar olhando gráfico o dia todo?)                2️⃣ **Informação desorganizada** (notícia aqui, relatório ali… como juntar tudo?)                3️⃣ **Medos e incertezas** (será que estou fazendo certo?)                **Qual é o seu?** Vote e comente — vamos debater!                ",
+                "                **Confessa aí:** o que mais te **frusta** na hora de investir?                - Passar horas analisando e mesmo assim **ficar na dúvida**?                - Ver oportunidades passarem porque você **não entendeu a tempo**?                - Sentir que está **perdendo dinheiro** por falta de ferramentas?                **Escolhe uma (ou todas) e nos conta nos comentários!** 👇                "
+            ],
+            "hashtags": [
+                "#InvestimentosInteligentes",
+                "#MercadoFinanceiro",
+                "#AugeInvest",
+                "#DecisõesEstratégicas",
+                "#EducacaoFinanceira",
+                "#DesafiosDoInvestidor"
+            ],
+            "horario_de_postagem": "18h (sexta-feira — horário de 'descompressão' pós-trabalho, quando o público está mais receptivo a reflexões)",
+            "sugestao_formato": "Story interativo (enquete) + Post no feed (carrossel com resultados em tempo real)",
+            "post_strategy_rationale": "            **Por que este post?**            - **Mapear o público:** A enquete ajuda a identificar as dores predominantes (ex: se 70% votarem em 'falta de tempo', os próximos conteúdos podem focar em automação de análises).            - **Gerar engajamento inicial:** Perguntas pessoais têm 3x mais comentários (fonte: HubSpot).            - **Validar a proposta da Auge Invest:** As respostas servirão para mostrar, nos posts seguintes, como a plataforma resolve cada dor.            - **Algoritmo amigável:** Enquetes e comentários aumentam o alcance orgânico no Instagram.            ",
+            "micro_briefing": "            Objetivo: **Quebrar o gelo** com o público, coletar insights sobre suas frustrações e preparar o terreno para apresentar a Auge Invest como solução. Tom: **empático e direto**, como um assessor perguntando 'onde dói?' em uma reunião.            ",
+            "visual_prompt_suggestion": "            Image style: **Dark mode futuristic**, inspired by The Matrix code rain but with a clean, Nubank-like minimalism.            - **Background:** Deep blue gradient (#0A192F to #112240) with subtle glowing grid lines (like a digital stock chart).            - **Foreground:** A split-screen effect:                - **Left side:** A stressed person staring at multiple screens with chaotic stock charts (symbolizing information overload).                - **Right side:** A calm person using a sleek tablet with the Auge Invest logo, showing a single, clear graph with a 'Buy' signal.            - **Text overlay (optional):** 'Qual é o seu maior desafio?' in a modern sans-serif font (e.g., Space Grotesk).            - **Color palette:** Electric blue (#00D4FF) for highlights, dark gray (#1E293B) for text.            ",
+            "visual_description_portuguese": "            Imagem em estilo **dark mode futurista**, com gradiente azul escuro e linhas de grade sutis lembrando um gráfico de ações. Dividida em duas partes:            - **Lado esquerdo:** Pessoa estressada diante de várias telas com gráficos bagunçados (sobrecarga de informações).            - **Lado direito:** Pessoa tranquila usando um tablet com a logo da Auge Invest e um gráfico limpo com sinal de compra.            - Texto opcional: 'Qual é o seu maior desafio?' em fonte moderna.            ",
+            "cta_individual": "Vote na enquete e comente: **qual dor você quer que a gente ajude a resolver primeiro?**",
+            "interacao": "            - **Pergunta nos comentários:** 'Se você pudesse ter **uma ferramenta mágica** para investir, o que ela faria por você?'            - **Sticker de enquete no Story:** Opções como 'Análise rápida', 'Alertas inteligentes', 'Cursos práticos' (para validar features da plataforma).            ",
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "O problema não é você, é a ferramenta.",
+                    "texto_slide": "                    63% dos investidores brasileiros perdem oportunidades por **falta de tempo ou informação clara**.                    (Fonte: Anbima, 2023)                    ",
+                    "sugestao_visual_slide": "Gráfico de pizza mostrando 63% em destaque, com ícone de relógio e lupa."
+                },
+                {
+                    "titulo_slide": "E se existisse um jeito mais simples?",
+                    "texto_slide": "                    A Auge Invest foi feita para **quem quer decisões rápidas e embasadas**, sem precisar virar um expert em análise técnica.                    ",
+                    "sugestao_visual_slide": "Print da interface da plataforma (mockup) com destaque para a seção 'Análises em 1 clique'."
+                },
+                {
+                    "titulo_slide": "Vote e ganhe um guia!",
+                    "texto_slide": "                    Participe da enquete e **ganhe um PDF exclusivo** com 3 erros que 90% dos investidores cometem (e como evitá-los).                    ",
+                    "sugestao_visual_slide": "Mockup de um e-book com a logo da Auge Invest."
+                }
+            ]
+        },
+        {
+            "titulo": "Confessa: qual foi seu pior erro nos investimentos?",
+            "tema": "Peça de opinião para coletar histórias reais de erros (e mostrar que todos cometem — até os experts).",
+            "legenda_principal": "            **Todo investidor tem uma história que não gosta de contar.** 😅            A minha? Em 2020, **comprei ações de uma empresa só porque todo mundo falava dela** — sem olhar fundamentos. Resultado: -40% em 3 meses. (Sim, eu também já caí no hype.)            **E você?** Qual foi aquele erro que te fez aprender a lição na marra?            - Comprou na euforia e viu o ativo despencar?            - Vendeu cedo demais e perdeu um rally?            - Ignorou um alerta óbvio (e se arrependeu)?            **Comenta aqui** — as melhores histórias virarem conteúdo (anônimo, claro!). E se você ainda não errou, **parabéns… mas fique esperto.** 👀            #TrueStory: O mercado perdoa quem aprende. Quem repete o erro, não.            ",
+            "variacoes_legenda": [
+                "                **Ninguém nasce sabendo.** Até o Warren Buffett já admitiu que **cometiu erros bilionários** (sim, no plural).                **Qual foi o seu?** 👇                - Seguiu uma dica de 'guru' sem checar?                - Deixou o medo te fazer vender na baixa?                - Apostou tudo em um só ativo?                **Conta pra gente** — e se quiser, diz o que mudou depois disso.                ",
+                "                **Errar é humano. Repetir o erro é… caríssimo.** 💸                Já perdi dinheiro por:                ❌ Confiar demais em 'análises' de WhatsApp.                ❌ Não ter um stop loss (sim, dói).                ❌ Achar que 'dessa vez é diferente' (spoiler: nunca é).                **E você?** Qual foi a sua **lição de R$**?                "
+            ],
+            "hashtags": [
+                "#ErrosDeInvestidor",
+                "#AprendizadosCaros",
+                "#MercadoFinanceiroReal",
+                "#AugeInvest",
+                "#HistoriasReais",
+                "#NaoRepitaMeusErros"
+            ],
+            "horario_de_postagem": "10h (sábado — horário em que as pessoas estão mais relaxadas para compartilhar experiências pessoais)",
+            "sugestao_formato": "Post no feed (imagem + legenda longa) + Story com caixinhas de 'DMs anônimos'",
+            "post_strategy_rationale": "            **Por que este post?**            - **Humanizar a marca:** Compartilhar erros cria **confiança** (o público se identifica com vulnerabilidade).            - **Gerar UGC (conteúdo gerado pelo usuário):** Histórias reais podem virar cases ou até material para o blog.            - **Educar indiretamente:** Ao discutir erros, introduzimos conceitos como diversificação, stop loss e análise fundamentalista.            - **Preparar para a solução:** Os erros mencionados (ex: seguir hype) serão **resolvidos pela Auge Invest** nos próximos posts.            ",
+            "micro_briefing": "            Objetivo: **Criar conexão emocional** com o público, mostrando que erros são normais — e que a plataforma pode ajudar a evitá-los. Tom: **descontraído mas profissional**, como um mentor contando causos em um happy hour.            ",
+            "visual_prompt_suggestion": "            Style: **Memphis design meets financial data** — bold, geometric, with a touch of humor.            - **Background:** Dark teal (#0F4C5C) with scattered 'error' symbols (red X marks, broken charts).            - **Foreground:** A split image:                - **Top:** A person looking shocked at a phone screen showing a -50% return (cartoon-style, exaggerated).                - **Bottom:** The same person, now calm, using a laptop with the Auge Invest dashboard (mockup).            - **Text overlay:** 'We’ve all been there. What’s your story?' in a bold, rounded font (e.g., Poppins).            - **Color palette:** Red (#E74C3C) for 'error', green (#2ECC71) for 'solution'.            ",
+            "visual_description_portuguese": "            Imagem em estilo **geométrico ousado**, com fundo azul-petróleo e símbolos de erro (X vermelhos, gráficos quebrados).            - **Parte superior:** Pessoa com expressão de choque olhando para um celular com queda de 50% (estilo cartoon).            - **Parte inferior:** Mesma pessoa, agora tranquila, usando um laptop com a interface da Auge Invest.            - Texto: 'Todos já passamos por isso. Qual é a sua história?'            ",
+            "cta_individual": "Comenta aqui ou manda um DM anônimo: **qual foi seu erro que virou aprendizado?** (As melhores virarem conteúdo!)",
+            "interacao": "            - **Pergunta nos comentários:** 'Se você pudesse voltar no tempo, **o que faria diferente**?'            - **Story com sticker 'Perguntas':** 'Qual erro você **ainda tem medo** de cometer?'            - **Incentivo:** 'Os 3 comentários mais honestos ganham uma análise personalizada de um ativo (grátis)!'            "
+        },
+        {
+            "titulo": "Desafio 7 Dias: Analise 1 Ação Como um Pro (Sem Ser Expert)",
+            "tema": "Desafio prático para engajar o público a usar métodos de análise básica, com suporte da Auge Invest.",
+            "legenda_principal": "            **Você acha que precisa ser um gênio para analisar ações?** Spoiler: **não precisa.**            Neste desafio de **7 dias**, a gente vai te mostrar como avaliar **uma ação real** (a gente escolheu a **MGLU3** — Magalu) usando:            🔹 **3 indicadores fundamentais** (que até sua avó entenderia).            🔹 **1 gráfico técnico** (sem ficar perdido em linhas coloridas).            🔹 **Notícias do mercado** (como filtrar o que importa).            **Como participar?**            1️⃣ **Baixe o template grátis** (link na bio).            2️⃣ **Analise a MGLU3** usando as dicas do dia (a gente posta aqui).            3️⃣ **Compartilhe sua conclusão** nos stories (marque @augeinvest).            **Prêmio:** Os 5 melhores insights ganham **1 mês de Auge Invest Pro** (sim, com alertas em tempo real!).            **#DesafioAugeInvest** — Vamos ver quem acerta a tendência! 🚀            *(Lembrando: isso é um exercício. Investir tem riscos, ok?)*            ",
+            "variacoes_legenda": [
+                "                **7 dias. 1 ação. Zero desculpas.**                A gente selecionou a **MGLU3** (Magalu) para você treinar:                - **Dia 1-2:** Fundamentos (lucro, dívida, setor).                - **Dia 3-4:** Gráfico (suporte, resistência, volume).                - **Dia 5-7:** Notícias + decisão final.                **Material grátis no link da bio.** Quem topa?                ",
+                "                **Magalu (MGLU3): Compra, segura ou vende?**                Neste desafio, você vai:                ✅ Aprender a ler um **balanço simplificado**.                ✅ Entender **sinais de compra/venda** no gráfico.                ✅ Filtrar notícias **que realmente movem o preço**.                **Participe e ganhe feedback da nossa equipe!** (Sim, a gente vai corrigir seus erros.)                "
+            ],
+            "hashtags": [
+                "#Desafio7Dias",
+                "#AnaliseDeAcoes",
+                "#AugeInvest",
+                "#AprendaInvestindo",
+                "#MGLU3",
+                "#MercadoFinanceiroNaPratica"
+            ],
+            "horario_de_postagem": "12h (domingo — horário de 'preparação para a semana', ideal para desafios)",
+            "sugestao_formato": "Reel (vídeo curto) + Post no feed (com template para download) + Stories diários com dicas",
+            "post_strategy_rationale": "            **Por que este post?**            - **Engajamento prático:** Desafios têm **5x mais participação** que posts passivos (fonte: BuzzSumo).            - **Demonstrar valor da plataforma:** Ao guiar a análise, mostramos como a Auge Invest **simplifica** esse processo.            - **Gerar leads:** O template grátis captura emails para o mailing.            - **Educar enquanto entretém:** O público aprende **fazendo**, não só lendo.            - **Social proof:** Compartilhamentos nos stories aumentam o alcance orgânico.            ",
+            "micro_briefing": "            Objetivo: **Transformar o público de 'espectador' para 'participante'**, usando a MGLU3 como estudo de caso. Tom: **motivacional e didático**, como um professor desafiando a turma.            ",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Tela dividida: à esquerda, pessoa confusa com papéis e caneta; à direita, mesma pessoa usando a Auge Invest no celular.",
+                    "texto_tela": "Antes x Depois",
+                    "fala": "Analisar ações não precisa ser assim [gestos para o lado esquerdo]. Com as ferramentas certas, dá para fazer em **10 minutos** [aponta para o lado direito]."
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Close no gráfico da MGLU3 com setas destacando suporte/resistência.",
+                    "texto_tela": "Dia 3: Gráfico técnico",
+                    "fala": "Hoje a gente vai aprender a identificar **sinais de compra** aqui [aponta]. Sem mistério."
+                },
+                {
+                    "cena": 3,
+                    "descricao": "Tela do celular mostrando notificação da Auge Invest: 'Alerta: MGLU3 rompeu resistência'.",
+                    "texto_tela": "Dia 7: Decisão final",
+                    "fala": "E se você recebesse **alertas assim** antes de todo mundo? [piscada] Baixa o template e participa!"
+                }
+            ],
+            "cta_individual": "Baixe o template GRÁTIS (link na bio) e **marque @augeinvest** no seu story com a análise! #DesafioAugeInvest",
+            "interacao": "            - **Pergunta nos comentários:** 'Qual ação você **gostaria de analisar** depois da MGLU3?'            - **Story diário:** Enquete ('Você já fez análise fundamentalista?') + caixinhas de 'Perguntas' sobre o desafio.            - **Incentivo:** 'Quem postar a análise até dia 5 ganha **feedback personalizado** da nossa equipe!'            ",
+            "visual_prompt_suggestion": "            Style: **Cyberpunk-meets-finance**, dynamic and fast-paced.            - **Scene 1:** Split screen — left side shows a person drowning in papers (chaotic desk, stressed face), right side shows the same person calmly using a futuristic tablet with Auge Invest’s interface (glowing blue graphs).            - **Scene 2:** Close-up of a stock chart (MGLU3) with neon highlights on support/resistance lines (Matrix-style green code in the background).            - **Scene 3:** Phone screen showing an Auge Invest alert ('MGLU3 broke resistance!') with a '7-Day Challenge' badge.            - **Text overlay:** 'Can you spot the buy signal?' in a techy font (e.g., Rajdhani).            - **Color palette:** Neon green (#39FF14), electric purple (#9D00FF), dark background (#0A0A0A).            ",
+            "visual_description_portuguese": "            Vídeo em estilo **cyberpunk financeiro**, com cenas rápidas:            1. **Tela dividida:** À esquerda, pessoa afogada em papéis; à direita, mesma pessoa usando tablet futurista com gráficos azuis da Auge Invest.            2. **Close no gráfico da MGLU3:** Linhas de suporte/resistência brilhando em verde neon, com código estilo Matrix ao fundo.            3. **Tela de celular:** Notificação da Auge Invest ('MGLU3 rompeu resistência!') com selo 'Desafio 7 Dias'.            Texto: 'Você consegue identificar o sinal de compra?'            "
+        },
+        {
+            "titulo": "Live: Tire Suas Dúvidas Sobre Ações, FIIs e a Economia em 2024",
+            "tema": "Sessão ao vivo para responder perguntas do público, apresentar a plataforma e gerar autoridade.",
+            "legenda_principal": "            **Hoje, 20h, a gente vai ao vivo para responder TUDO o que você sempre quis perguntar sobre investimentos — mas tinha vergonha de perguntar.** 🎤            **No cardápio:**            🔥 **Ações:** Como escolher as melhores (sem adivinhar).            🏢 **FIIs:** Quais setores vão bombar em 2024 (e quais evitar).            📉 **Economia:** Juros, inflação e como isso afeta **seu** dinheiro.            💡 **Auge Invest:** Como a plataforma pode **simplificar sua vida** (demonstração ao vivo!).            **Como participar?**            - **Deixe sua pergunta nos comentários** (a gente prioriza as mais votadas).            - **Ative o lembrete** (botão 'Interessado').            - **Traga seu café** (ou cerveja, a gente não julga).            **Bônus:** Quem assistir até o fim ganha um **guia exclusivo** com as 5 ações mais promissoras para o próximo trimestre (segundo nossa análise).            **#LiveAugeInvest** — Te esperamos lá! (E sim, vai ter memes de mercado financeiro.)            ",
+            "variacoes_legenda": [
+                "                **20h: A live que vai salvar seus investimentos em 2024.** 🚨                Vamos falar de:                - **Ações que estão baratas (mas ninguém está olhando)**.                - **FIIs: como não cair em armadilhas** (sim, tem FII que é furada).                - **Como usar a Auge Invest para tomar decisões em 5 minutos** (demonstração ao vivo).                **Manda sua dúvida agora!** (As melhores virarem conteúdo.)                ",
+                "                **Você tem dúvidas sobre investimentos?** A gente tem respostas (e dados).                Hoje, 20h, a gente explica:                ✅ **Como analisar uma ação em 3 passos** (sem precisar de MBA).                ✅ **FIIs vs. Ações: qual é melhor para você?**                ✅ **O que esperar da economia em 2024** (e como se preparar).                **Deixa sua pergunta aqui** — e não esquece de marcar os amigos que também precisam dessa live!                "
+            ],
+            "hashtags": [
+                "#LiveDeInvestimentos",
+                "#TireSuasDuvidas",
+                "#AugeInvestAoVivo",
+                "#MercadoFinanceiro2024",
+                "#FIIsOuAcoes",
+                "#EconomiaNaPratica"
+            ],
+            "horario_de_postagem": "17h (segunda-feira — post pré-live para gerar expectativa; live às 20h)",
+            "sugestao_formato": "Post no feed (anúncio da live) + Stories com contagem regressiva + Live no Instagram/YouTube",
+            "post_strategy_rationale": "            **Por que este post?**            - **Autoridade instantânea:** Lives geram **confiança** (o público vê rostos e ouve vozes reais).            - **Conversão de leads:** Demonstração ao vivo da plataforma aumenta cadastros em **até 40%** (fonte: Livestorm).            - **Conteúdo evergreen:** As perguntas podem virar posts, reels ou material para o blog.            - **Engajamento em tempo real:** Respostas ao vivo criam **conexão emocional** com a marca.            - **Urgência:** O bônus (guia exclusivo) incentiva o público a assistir até o fim.            ",
+            "micro_briefing": "            Objetivo: **Posicionar a Auge Invest como referência** em educação financeira, usando a live para **demonstrar a plataforma** e responder objeções. Tom: **descontraído mas técnico**, como uma mesa redonda com especialistas.            ",
+            "visual_prompt_suggestion": "            Style: **Futuristic talk show**, sleek and professional.            - **Background:** Dark studio with neon accents (blue/purple), LED panels displaying stock tickers (e.g., PETR4, MGLU3, IFIX).            - **Foreground:** Two hosts (one male, one female) sitting at a transparent desk with tablets showing Auge Invest’s dashboard. Behind them, a large screen with a live graph (e.g., Ibovespa performance).            - **Overlay text:** 'Your questions, our data. Live at 8 PM.' in a clean, modern font (e.g., Montserrat).            - **Color palette:** Dark blue (#1E3A8A), electric purple (#8B5CF6), white text.            ",
+            "visual_description_portuguese": "            Imagem estilo **talk show futurista**, com:            - **Fundo:** Estúdio escuro com detalhes em neon (azul/roxo), painéis LED mostrando tickers de ações (PETR4, MGLU3).            - **Primeiro plano:** Dois apresentadores (homem e mulher) em uma mesa transparente, com tablets exibindo a interface da Auge Invest. Ao fundo, tela gigante com gráfico do Ibovespa ao vivo.            - Texto: 'Suas dúvidas, nossos dados. Ao vivo às 20h.'            ",
+            "cta_individual": "Deixa sua pergunta nos comentários e **ative o lembrete**! Quem assistir até o fim ganha um guia com as **5 ações para ficar de olho** em 2024.",
+            "interacao": "            - **Pergunta nos comentários:** 'Qual é **a sua maior dúvida** sobre investimentos hoje? (Vamos responder ao vivo!)'            - **Story com sticker 'Perguntas':** 'O que você **nunca teve coragem** de perguntar sobre o mercado?'            - **Incentivo:** 'As 3 melhores perguntas ganham uma **análise personalizada** de um ativo da sua escolha!'            ",
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Apresentadores acenando, com tela ao fundo mostrando 'AO VIVO EM 3H'.",
+                    "texto_tela": "Perguntas já estão chegando!",
+                    "fala": "Galera, hoje a gente vai **destruir** as dúvidas que vocês mandaram. E olha, teve cada pergunta… [risos]."
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Close no tablet com a interface da Auge Invest, destacando a seção 'Análise Rápida'.",
+                    "texto_tela": "Como analisar uma ação em 2 min",
+                    "fala": "Vejam só como a gente faz aqui: em **dois cliques**, você sabe se uma ação tá cara ou barata. [demonstra]."
+                },
+                {
+                    "cena": 3,
+                    "descricao": "Tela dividida: à esquerda, gráfico do Ibovespa; à direita, apresentador apontando para um FII no dashboard.",
+                    "texto_tela": "FIIs: os que valem a pena",
+                    "fala": "Esse aqui, por exemplo, tem **yield de 12% ao ano** — mas tem um detalhe que ninguém fala… [pausa dramática]."
+                }
+            ]
+        },
+        {
+            "titulo": "O que aprendemos esta semana? (E como aplicar HOJE)",
+            "tema": "Compilado dos melhores insights da semana, com dicas ação e CTA forte para cadastro na Auge Invest.",
+            "legenda_principal": "            **Essa semana foi intensa — e a gente aprendeu MUITO com vocês.** 💡            **Recapitulando:**            1️⃣ **Seu maior desafio?** 68% disseram que **falta de tempo** é o vilão (a gente tem a solução).            2️⃣ **Erros que doem:** A história mais votada foi do cara que **comprou ações de uma empresa falida** porque confundiu ticker (sim, isso existe).            3️⃣ **Desafio MGLU3:** 72% acertaram que a ação tava em **zona de compra** (parabéns, time!).            4️⃣ **Live:** A pergunta mais quente foi: *'Como saber se um FII é bom só olhando o dividend yield?'* (resposta: **não dá**. Tem que ver FFO, vacância, gestão…).            **E agora?** Como aplicar isso **hoje mesmo**?            - **Baixe nosso checklist grátis** (link na bio) com os **5 passos para analisar qualquer ativo** em 10 minutos.            - **Experimente a Auge Invest** (sim, tem versão grátis) e veja como a gente **automatiza** essas análises pra você.            - **Marque um amigo** que precisa ver isso (compartilhar é cuidar do bolso dos outros).            **#AugeInvest** — Porque investir bem não deveria ser um mistério. 🚀            *(Lembrando: todo conteúdo aqui é educativo. Invista com consciência — e sempre diversifique!)*            ",
+            "variacoes_legenda": [
+                "                **Uma semana, muitas lições.** Vamos ao que importa:                🔹 **Vocês falam, a gente ouve:** O maior medo de vocês é **perder dinheiro por falta de informação** (a gente entende).                🔹 **Erros = aprendizado:** A galera que **vendeu na baixa** em 2022 hoje tá mais esperta (e com o bolso mais protegido).                🔹 **Desafio vencido:** Quem participou da análise da MGLU3 **já sabe mais** que 90% dos iniciantes.                🔹 **Live bombou:** A dúvida sobre **como escolher FIIs** virou um guia que a gente vai lançar semana que vem (fiquem ligados).                **Próximo passo?** Clica no link da bio e **começa a investir com dados, não com achismo.**                ",
+                "                **Resumão da semana (para quem perdeu):**                - **Problema:** Vocês querem investir melhor, mas **não têm tempo nem ferramentas**.                - **Solução:** A Auge Invest **faz a análise pesada** por você (e ainda te avisa quando é hora de agir).                - **Prova:** Quem participou do desafio **já tá à frente** da maioria.                **Quer entrar nesse time?** O link tá na bio. (E sim, tem versão grátis.)                "
+            ],
+            "hashtags": [
+                "#ResumoDaSemana",
+                "#AprendizadosDeInvestidor",
+                "#AugeInvest",
+                "#DecisõesInteligentes",
+                "#MercadoFinanceiroDescomplicado",
+                "#DeAchismoParaDados"
+            ],
+            "horario_de_postagem": "19h (quarta-feira — horário nobre para recaps e decisões)",
+            "sugestao_formato": "Carrossel de imagens (resumo visual) + Reel com highlights da semana",
+            "post_strategy_rationale": "            **Por que este post?**            - **Reforçar aprendizados:** Repetir insights aumenta a retenção em **40%** (Ebbinghaus).            - **CTA forte:** Após uma semana de valor, o público está **mais propenso a converter**.            - **Social proof:** Mostrar resultados do desafio/live **valida a plataforma**.            - **Conteúdo evergreen:** O carrossel pode ser reutilizado em stories ou como material para novos seguidores.            - **Senso de urgência:** O checklist grátis + versão gratuita da plataforma **reduzem a barreira de entrada**.            ",
+            "micro_briefing": "            Objetivo: **Fechar a semana com chave de ouro**, transformando engajamento em cadastros. Tom: **motivacional e direto**, como um coach resumindo os ganhos do treino.            ",
+            "visual_prompt_suggestion": "            Style: **Infographic meets cyberpunk**, clean but high-tech.            - **Slide 1:** Dark background with a 'Week Recap' header in neon blue. Below, four icons representing the week’s topics (clock for 'time', broken chart for 'errors', MGLU3 logo, live mic).            - **Slide 2:** Split screen — left side shows a person overwhelmed by papers, right side shows them using Auge Invest on a holographic screen (futuristic).            - **Slide 3:** A mockup of the Auge Invest dashboard with a 'Free Trial' button glowing.            - **Slide 4:** Text: 'Your turn. Start investing smarter today.' with a CTA button (electric green).            - **Color palette:** Dark blue (#1E293B), neon green (#00D4FF), purple (#9D00FF) for highlights.            ",
+            "visual_description_portuguese": "            Carrossel em estilo **infográfico cyberpunk**:            1. **Slide 1:** Fundo escuro com cabeçalho 'Recap da Semana' em azul neon. Abaixo, 4 ícones (relógio, gráfico quebrado, logo MGLU3, microfone de live).            2. **Slide 2:** Tela dividida: à esquerda, pessoa afogada em papéis; à direita, mesma pessoa usando a Auge Invest em uma tela holográfica.            3. **Slide 3:** Mockup do dashboard da Auge Invest com botão 'Experimente Grátis' brilhando.            4. **Slide 4:** Texto: 'Sua vez. Comece a investir com inteligência hoje.' + CTA em verde elétrico.            ",
+            "cta_individual": "Baixe o **checklist grátis** (link na bio) e **experimente a Auge Invest** — a plataforma que faz a análise pesada por você. #InvistaComDados",
+            "interacao": "            - **Pergunta nos comentários:** 'Qual foi **o maior aprendizado** dessa semana para você?'            - **Story com enquete:** 'Você já usa alguma ferramenta para analisar investimentos?' (Opções: Sim/Não/Quero testar a Auge).            - **Incentivo:** 'Os 5 primeiros a comentar 'QUERO O CHECKLIST' ganham uma **análise bônus** de um ativo à escolha!'            ",
+            "carrossel_slides": [
+                {
+                    "titulo_slide": "Seu maior desafio: FALTA DE TEMPO",
+                    "texto_slide": "                    68% de vocês disseram que **não têm tempo** para analisar ativos.                    **Solução Auge Invest:** Análises automatizadas em **1 clique** — você só decide.                    ",
+                    "sugestao_visual_slide": "Gráfico de barras mostrando 68% + mockup da ferramenta 'Análise Rápida'."
+                },
+                {
+                    "titulo_slide": "Erros que doem (mas ensinam)",
+                    "texto_slide": "                    'Comprei ações de uma empresa falida por confundir o ticker.' — Anônimo                    **Dica:** Sempre verifique o **CN PJ** da empresa (a gente mostra como na plataforma).                    ",
+                    "sugestao_visual_slide": "Print de um ticker errado (ex: 'PETR3' vs 'PETR4') com destaque em vermelho."
+                },
+                {
+                    "titulo_slide": "Desafio MGLU3: Vocês arrasaram!",
+                    "texto_slide": "                    72% acertaram que a MGLU3 tava em **zona de compra**.                    **Próximo desafio:** Vamos analisar a **VALE3**. Quer participar? Comenta 'VALE'!                    ",
+                    "sugestao_visual_slide": "Gráfico da MGLU3 com seta verde 'Compra' + ícone de troféu."
+                },
+                {
+                    "titulo_slide": "Sua vez de agir",
+                    "texto_slide": "                    1️⃣ Baixe o **checklist grátis** (5 passos para analisar qualquer ativo).                    2️⃣ Experimente a **Auge Invest** (versão gratuita).                    3️⃣ Marque um amigo que precisa disso.                    ",
+                    "sugestao_visual_slide": "Mockup do checklist + botão 'Experimente Grátis' em verde."
+                }
+            ],
+            "micro_roteiro": [
+                {
+                    "cena": 1,
+                    "descricao": "Tela com recortes dos stories/comentários da semana (ex: 'Meu erro foi…', 'No desafio, eu aprendi…').",
+                    "texto_tela": "Vocês falaram, a gente ouviu.",
+                    "fala": "Essa semana, a galera compartilhou **erros, dúvidas e até acertos** — e a gente tá aqui para transformar isso em **ações inteligentes**."
+                },
+                {
+                    "cena": 2,
+                    "descricao": "Close no gráfico da MGLU3 com a análise do desafio (setas, anotações).",
+                    "texto_tela": "72% acertaram!",
+                    "fala": "Quem participou do desafio **já sabe mais** que a maioria dos iniciantes. E olha que a gente só usou **3 indicadores simples**."
+                },
+                {
+                    "cena": 3,
+                    "descricao": "Tela do celular mostrando a interface da Auge Invest com alerta: 'VALE3: Oportunidade de compra'.",
+                    "texto_tela": "Próximo nível: automação.",
+                    "fala": "Imagina receber **alertas assim** antes de todo mundo? Na Auge Invest, você configura e **esquece a parte chata**."
+                }
+            ]
+        }
+    ],
+    "metricas_de_sucesso_sugeridas": {
+        "objetivo_principal": "Lançar a plataforma Auge Invest, atrair os primeiros usuários (meta: 500 cadastros na versão gratuita), gerar autoridade no mercado e incentivar o teste da ferramenta.",
+        "indicadores_chave": [
+            "Taxa de engajamento nos posts (mínimo 8%: (likes + comentários + compartilhamentos) / alcance)",
+            "Número de comentários por post (meta: 50+ por publicação)",
+            "Participação no desafio (meta: 200+ downloads do template)",
+            "Visualizações da live (meta: 500+ ao vivo + replays)",
+            "Cadastros na plataforma (meta: 500+ na versão gratuita)",
+            "Respostas a stories/enquetes (meta: 30% de interação)"
+        ],
+        "metricas_secundarias": [
+            "Cliques nos stickers de stories (meta: 15% de taxa de cliques)",
+            "Visualizações dos reels/vídeos (meta: 3.000+ por vídeo)",
+            "Número de menções (@augeinvest) em stories (meta: 100+)",
+            "Taxa de conversão do checklist grátis para cadastro (meta: 20%)",
+            "Compartilhamentos dos posts (meta: 100+ por semana)"
+        ]
+    }
+}

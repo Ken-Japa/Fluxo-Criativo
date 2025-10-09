@@ -1,6 +1,6 @@
 --- Prompt Log (content_generation) ---
 Cliente: Auge Invest
-Data/Hora: 2025-10-07 23:41:55
+Data/Hora: 2025-10-09 00:41:20
 -------------------------------------
 
 Você é um copywriter especializado em mídias sociais. O nicho é Investimentos e tecnologia financeira. para Investimentos e tecnologia financeira. Atuando sob as diretrizes de nicho: Educação financeira, Análise de ações, FIIs e ETFs, Macroeconomia e política monetária, Tecnologia e inovação no mercado financeiro. Seu objetivo é criar conteúdo altamente engajador, viral e relevante para o público-alvo do cliente.
@@ -67,7 +67,7 @@ A campanha deve seguir uma narrativa progressiva ao longo dos 5 posts, abordando
 - `cta_individual`: Uma chamada para ação específica para este post.
 - `interacao`: Sugerir uma pergunta para a audiência ou uma forma de incentivar comentários, aumentando o engajamento além da simples publicação..
 
-Retorne o conteúdo em formato JSON, seguindo a estrutura abaixo:
+ Gere **APENAS UM JSON VÁLIDO**, sem texto adicional, comentários ou explicações. Não inclua marcações de code block (como ```json). Retorne o conteúdo em formato JSON, com a estrutura abaixo:
 {{
     "weekly_strategy_summary": "Resumo da estratégia semanal para a campanha.",
     "posts": [

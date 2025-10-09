@@ -16,7 +16,7 @@ from src.utils.pdf_generator.checklist_logic import generate_publication_checkli
 from src.utils.pdf_generator._build_success_metrics import _build_success_metrics
 
 
-def create_briefing_pdf(content_json: dict, client_name: str, output_filename: str, target_audience: str = "", tone_of_voice: str = "", marketing_objectives: str = "", suggested_metrics: dict = {}, posting_time: str = ""):
+def create_briefing_pdf(content_json: dict, client_name: str, output_filename: str, model_name: str = "Unknown", target_audience: str = "", tone_of_voice: str = "", marketing_objectives: str = "", suggested_metrics: dict = {}, posting_time: str = ""):
     """
     Converte o JSON de conteúdo gerado em um "PDF de Briefing Profissional".
 
@@ -24,15 +24,24 @@ def create_briefing_pdf(content_json: dict, client_name: str, output_filename: s
         content_json (dict): O objeto JSON com os posts, legendas, variações, hashtags e formatos.
         client_name (str): Nome do cliente para personalizar o PDF.
         output_filename (str): Nome do arquivo PDF a ser salvo.
+        model_name (str): Nome do modelo de IA que gerou o conteúdo (ex: "Gemini", "Mistral").
         target_audience (str): O público-alvo do briefing.
         tone_of_voice (str): O tom de voz a ser utilizado no briefing.
         marketing_objectives (str): Os objetivos de marketing do briefing.
     """
     # Salvar o content_json bruto em um arquivo para depuração
-    debug_output_dir = r'c:\Users\Ken\Desktop\Prog2\Geracao-Conteudo\plataforma_automacao_ia_generativa\mvp_concierge\backend_concierge_scripts\src\output_files\respostas_IA\\'
+    current_file_path = os.path.abspath(__file__)
+    project_root = current_file_path
+    while os.path.basename(project_root) != "plataforma_automacao_ia_generativa":
+        project_root = os.path.dirname(project_root)
+        if project_root == os.path.dirname(project_root): # Reached filesystem root
+            project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', '..', '..', 'plataforma_automacao_ia_generativa')) # Fallback
+            break
+
+    debug_output_dir = os.path.join(project_root, 'mvp_concierge', 'backend_concierge_scripts', 'src', 'output_files', 'respostas_IA', model_name)
     os.makedirs(debug_output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    debug_file_path = os.path.join(debug_output_dir, f"content_json_debug_{timestamp}.json")
+    debug_file_path = os.path.join(debug_output_dir, f"{model_name}_content_json_debug_{timestamp}.json")
     with open(debug_file_path, 'w', encoding='utf-8') as f:
         json.dump(content_json, f, indent=4, ensure_ascii=False)
     print(f"Content_json salvo para depuração em: {debug_file_path}")

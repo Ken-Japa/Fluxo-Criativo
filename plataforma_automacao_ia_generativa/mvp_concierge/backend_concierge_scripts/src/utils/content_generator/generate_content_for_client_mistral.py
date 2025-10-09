@@ -54,7 +54,6 @@ def generate_content_for_client(
     if llm_response["status"] == "success":
         generated_content = llm_response["generated_content"]
         set_to_cache(cache_key, generated_content)
-        print(f"DEBUG: Valor retornado por generate_content_for_client (sucesso): {generated_content}")
         return {
             "status": "success",
             "generated_content": generated_content,

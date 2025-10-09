@@ -59,7 +59,8 @@ def generate_social_media_content(brief_data, nome_do_cliente, tipo_de_conteudo,
         )
 
         if generated_data.get("status") == "error":
-            print(f"Erro ao gerar conteúdo: {generated_data.get("message", "Erro desconhecido")}")
+            error_message = generated_data.get("message", "Erro desconhecido")
+            print(f"Erro ao gerar conteúdo: {error_message}. Por favor, tente novamente mais tarde ou verifique o status da API da Mistral AI.")
             return None, None, None, None
 
         generated_content = generated_data["generated_content"]

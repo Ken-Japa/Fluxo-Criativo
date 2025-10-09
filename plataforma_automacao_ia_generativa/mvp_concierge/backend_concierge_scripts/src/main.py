@@ -50,15 +50,15 @@ def main():
     if generated_content is None:
         return
 
-    save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd)
+    save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd, model_name="Gemini")
 
     # 6. Gerar PDF
-    output_pdf_filename = generate_briefing_pdf(generated_content, nome_do_cliente, output_dir, publico_alvo, tom_de_voz, objetivos_de_marketing)
+    output_pdf_filename = generate_briefing_pdf(generated_content, nome_do_cliente, output_dir, publico_alvo, tom_de_voz, objetivos_de_marketing, model_name="Gemini")
     if output_pdf_filename is None:
         return
 
     # 7. Gerar HTML
-    output_html_filename = generate_briefing_html(generated_content, nome_do_cliente, output_dir)
+    output_html_filename = generate_briefing_html(generated_content, nome_do_cliente, output_dir, model_name="Gemini")
     if output_html_filename is None:
         return
 

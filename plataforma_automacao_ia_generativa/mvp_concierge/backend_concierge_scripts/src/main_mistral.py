@@ -13,7 +13,7 @@ from src.config import COMPANY_NAME, BASE_DIR
 from src.utils.main_functions.initialize_environment import initialize_environment
 from src.utils.main_functions.collect_and_validate_briefing import collect_and_validate_briefing
 from src.utils.main_functions.get_or_create_client_profile import get_or_create_client_profile
-from src.utils.main_functions.generate_social_media_content import generate_social_media_content
+from src.utils.main_functions.generate_social_media_content_mistral import generate_social_media_content
 from src.utils.main_functions.save_content_to_database import save_content_to_database
 from src.utils.main_functions.generate_briefing_pdf import generate_briefing_pdf
 from src.utils.main_functions.generate_briefing_html import generate_briefing_html
@@ -50,15 +50,15 @@ def main():
     if generated_content is None:
         return
 
-    save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd)
+    save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd, model_name="Mistral")
 
     # 6. Gerar PDF
-    output_pdf_filename = generate_briefing_pdf(generated_content, nome_do_cliente, output_dir, publico_alvo, tom_de_voz, objetivos_de_marketing)
+    output_pdf_filename = generate_briefing_pdf(generated_content, nome_do_cliente, output_dir, publico_alvo, tom_de_voz, objetivos_de_marketing, model_name="Mistral")
     if output_pdf_filename is None:
         return
 
     # 7. Gerar HTML
-    output_html_filename = generate_briefing_html(generated_content, nome_do_cliente, output_dir)
+    output_html_filename = generate_briefing_html(generated_content, nome_do_cliente, output_dir, model_name="Mistral")
     if output_html_filename is None:
         return
 

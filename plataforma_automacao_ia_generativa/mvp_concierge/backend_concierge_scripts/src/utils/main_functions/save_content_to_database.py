@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 from src.data_storage import insert_brief
 
-def save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd):
+def save_content_to_database(brief_data, nome_do_cliente, generated_content, prompt_used_for_content_generation, tokens_consumed, api_cost_usd, model_name):
     """
     Salva os dados do briefing e o conteúdo gerado no banco de dados.
 
@@ -18,6 +18,17 @@ def save_content_to_database(brief_data, nome_do_cliente, generated_content, pro
     try:
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
         subniche = brief_data.get('subniche', 'N/A') # Assumindo que 'subniche' está em brief_data
+        
+        # Salvar a resposta da IA em um arquivo JSON
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))))
+        output_ia_dir = os.path.join(project_root, "src", "output_files", "repostas_IA", model_name)
+        os.makedirs(output_ia_dir, exist_ok=True)
+        ia_response_filename = f"{model_name}_resposta_ia_{nome_do_cliente.replace(' ', '_')}_{timestamp}.json"
+        ia_response_filepath = os.path.join(output_ia_dir, ia_response_filename)
+        with open(ia_response_filepath, 'w', encoding='utf-8') as f:
+            json.dump(generated_content, f, ensure_ascii=False, indent=4)
+        print(f"Resposta da IA salva em: {ia_response_filepath}")
+
         briefing_id = insert_brief(
             client_name=nome_do_cliente,
             subniche=subniche,
